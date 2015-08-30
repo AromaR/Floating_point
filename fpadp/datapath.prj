@@ -1,0 +1,5 @@
+vhdl work "../FPA/CMP1.vhd"
+vhdl work "../FPA/normalization.vhd"
+vhdl work "../FPA/mod.vhd"
+vhdl work "../FPA/CMP8.vhd"
+vhdl work "../FPA/datapath.vhd"

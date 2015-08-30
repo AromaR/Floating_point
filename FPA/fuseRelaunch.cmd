@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/hp/Documents/eda/FPA/alltb_isim_beh.exe" -prj "C:/Users/hp/Documents/eda/FPA/alltb_beh.prj" "work.alltb" 

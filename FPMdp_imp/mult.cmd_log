@@ -1,0 +1,1 @@
+vhdtdtfi -prj FPMdp_imp -o C:/Users/hp/Documents/eda/FPMdp_imp/mult.vhi -module mult -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work mult.vhd 

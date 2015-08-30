@@ -1,0 +1,24 @@
+CommandLine-Map
+
+s
+CommandLine-Ngdbuild
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\ngdbuild.exe -ise C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-5 top_mod.ngc top_mod.ngd
+s
+CommandLine-Par
+
+s
+CommandLine-Xst
+
+s
+Previous-NGD
+top_mod_prev_built.ngd
+s
+Previous-NGM
+
+s
+Previous-Packed-NCD
+
+s
+Previous-Routed-NCD
+
+s

@@ -1,0 +1,1233 @@
+Release 10.1 Map K.31 (nt)
+Xilinx Mapping Report File for Design 'top_mod'
+
+Design Information
+------------------
+Command Line   : map -ise "C:/Documents and
+Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise"
+-intstyle ise -p xc3s500e-fg320-5 -cm area -pr off -k 4 -c 100 -o
+top_mod_map.ncd top_mod.ngd top_mod.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.46 $
+Mapped Date    : Sat Apr 04 15:25:51 2015
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   83
+Logic Utilization:
+  Total Number Slice Registers:       2,201 out of   9,312   23%
+    Number used as Flip Flops:        2,199
+    Number used as Latches:               2
+  Number of 4 input LUTs:               950 out of   9,312   10%
+Logic Distribution:
+  Number of occupied Slices:          1,812 out of   4,656   38%
+    Number of Slices containing only related logic:   1,812 out of   1,812 100%
+    Number of Slices containing unrelated logic:          0 out of   1,812   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       1,019 out of   9,312   10%
+    Number used as logic:               749
+    Number used as a route-thru:         69
+    Number used as Shift registers:     201
+  Number of bonded IOBs:                  1 out of     232    1%
+  Number of RAMB16s:                      5 out of      20   25%
+  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of BSCANs:                       1 out of       1  100%
+  Number of MULT18X18SIOs:                4 out of      20   20%
+
+  Number of RPM macros:           12
+Peak Memory Usage:  171 MB
+Total REAL time to MAP completion:  3 secs 
+Total CPU time to MAP completion:   2 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Control Set Information
+Section 14 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:LIT:176 - Clock buffer is designated to drive clock loads. BUFGMUX
+   symbol
+   "physical_group_cntrl1<0>/st1/U0/U_ICON/I_YES_BSCAN.U_BS/I_BUFG.U_BUFG"
+   (output signal=cntrl1<0>) has a mix of clock and non-clock loads. The
+   non-clock loads are:
+   Pin I2 of st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<7>
+   Pin I2 of st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<7>
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<77> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<69> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<42> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<34> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<26> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<18> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<5> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<15> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<14> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<23> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<22> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<31> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<30> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<60> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<52> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<44> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<36> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<28> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<7> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<80> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<79> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<70> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<62> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<54> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<46> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<38> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<17> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<16> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<25> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<24> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<33> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<32> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<41> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<40> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<11> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<9> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<72> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<64> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<56> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<1> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<0> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<82> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<81> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<75> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<74> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<73> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<71> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<67> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<66> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<65> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<63> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<61> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<59> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<58> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<57> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<55> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<53> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<51> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<47> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<45> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<43> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<39> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<37> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<35> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<29> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<27> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<20> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<19> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<12> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<10> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<8> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<6> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<4> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<3> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<2> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<21> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<13> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<78> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<76> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net data<68> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal
+   <st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<7>> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<7>> is incomplete. The signal
+   does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:986 - The SAVE constraint for nets has been made more strict
+   starting in 10.1, such that the net driver and load blocks will be preserved
+   as well. To revert to the original behavior please set XIL_MAP_OLD_SAVE.
+INFO:MapLib:984 - SAVE has been detected on the following signal(s):
+   cntrl1<0>,
+   st1/U0/iSHIFT_OUT,
+   st1/U0/iUPDATE_OUT,
+   st1/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  95 block(s) removed
+ 196 block(s) optimized away
+  83 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "st1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[10].U_LUT" (ROM)
+removed.
+Loadless block "st1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[11].U_LUT" (ROM)
+removed.
+Loadless block "st1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+Loadless block "st1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+Loadless block "st1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+Loadless block "st1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[2].U_LUT" (ROM) removed.
+Loadless block "st1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[3].U_LUT" (ROM) removed.
+Loadless block "st1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[4].U_LUT" (ROM) removed.
+Loadless block "st1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[5].U_LUT" (ROM) removed.
+Loadless block "st1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[6].U_LUT" (ROM) removed.
+Loadless block "st1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[7].U_LUT" (ROM) removed.
+Loadless block "st1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[8].U_LUT" (ROM) removed.
+Loadless block "st1/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[9].U_LUT" (ROM) removed.
+Loadless block "st2/U0/I_YES_D.U_ILA/U_STAT/U_DSR" (ROM) removed.
+Loadless block "st2/U0/I_YES_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_CAP_B" (ROM)
+removed.
+The signal "cntrl1<10>" is sourceless and has been removed.
+ Sourceless block "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<0>" (ROM)
+removed.
+  The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<0>" is sourceless and
+has been removed.
+   Sourceless block "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<0>" (MUX) removed.
+    The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<0>" is sourceless and
+has been removed.
+     Sourceless block "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<1>" (MUX) removed.
+      The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<1>" is sourceless and
+has been removed.
+       Sourceless block "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<2>" (MUX) removed.
+        The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<2>" is sourceless and
+has been removed.
+         Sourceless block "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<3>" (MUX) removed.
+          The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<3>" is sourceless and
+has been removed.
+           Sourceless block "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<4>" (MUX) removed.
+            The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<4>" is sourceless and
+has been removed.
+             Sourceless block "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<5>" (MUX) removed.
+              The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<5>" is sourceless and
+has been removed.
+               Sourceless block "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<6>" (MUX) removed.
+                The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<6>" is sourceless and
+has been removed.
+                 Sourceless block "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<7>" (MUX) removed.
+                  The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<7>" is sourceless and
+has been removed.
+The signal "cntrl1<11>" is sourceless and has been removed.
+ Sourceless block "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<1>" (ROM)
+removed.
+  The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<1>" is sourceless and
+has been removed.
+The signal "cntrl1<15>" is sourceless and has been removed.
+ Sourceless block "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<2>" (ROM)
+removed.
+  The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<2>" is sourceless and
+has been removed.
+The signal "cntrl1<16>" is sourceless and has been removed.
+The signal "cntrl1<17>" is sourceless and has been removed.
+The signal "cntrl1<18>" is sourceless and has been removed.
+ Sourceless block "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<3>" (ROM)
+removed.
+  The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<3>" is sourceless and
+has been removed.
+The signal "cntrl1<19>" is sourceless and has been removed.
+The signal "cntrl1<21>" is sourceless and has been removed.
+The signal "cntrl1<22>" is sourceless and has been removed.
+ Sourceless block "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<4>" (ROM)
+removed.
+  The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<4>" is sourceless and
+has been removed.
+The signal "cntrl1<23>" is sourceless and has been removed.
+The signal "cntrl1<24>" is sourceless and has been removed.
+ Sourceless block "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<5>" (ROM)
+removed.
+  The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<5>" is sourceless and
+has been removed.
+The signal "cntrl1<25>" is sourceless and has been removed.
+The signal "cntrl1<26>" is sourceless and has been removed.
+The signal "cntrl1<27>" is sourceless and has been removed.
+ Sourceless block "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<6>" (ROM)
+removed.
+  The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<6>" is sourceless and
+has been removed.
+The signal "cntrl1<28>" is sourceless and has been removed.
+The signal "cntrl1<29>" is sourceless and has been removed.
+The signal "cntrl1<33>" is sourceless and has been removed.
+The signal "cntrl1<34>" is sourceless and has been removed.
+The signal "cntrl1<35>" is sourceless and has been removed.
+The signal "cntrl1<7>" is sourceless and has been removed.
+The signal "cntrl2<10>" is sourceless and has been removed.
+ Sourceless block "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<0>" (ROM) removed.
+  The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<0>" is sourceless and has
+been removed.
+   Sourceless block "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<0>" (MUX) removed.
+    The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<0>" is sourceless and has been
+removed.
+     Sourceless block "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<1>" (MUX) removed.
+      The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<1>" is sourceless and has been
+removed.
+       Sourceless block "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<2>" (MUX) removed.
+        The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<2>" is sourceless and has been
+removed.
+         Sourceless block "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<3>" (MUX) removed.
+          The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<3>" is sourceless and has been
+removed.
+           Sourceless block "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<4>" (MUX) removed.
+            The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<4>" is sourceless and has been
+removed.
+             Sourceless block "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<5>" (MUX) removed.
+              The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<5>" is sourceless and has been
+removed.
+               Sourceless block "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<6>" (MUX) removed.
+                The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<6>" is sourceless and has been
+removed.
+                 Sourceless block "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<7>" (MUX) removed.
+                  The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<7>" is sourceless and has been
+removed.
+The signal "cntrl2<11>" is sourceless and has been removed.
+ Sourceless block "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<1>" (ROM) removed.
+  The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<1>" is sourceless and has
+been removed.
+The signal "cntrl2<12>" is sourceless and has been removed.
+The signal "cntrl2<13>" is sourceless and has been removed.
+The signal "cntrl2<14>" is sourceless and has been removed.
+The signal "cntrl2<15>" is sourceless and has been removed.
+ Sourceless block "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<2>" (ROM) removed.
+  The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<2>" is sourceless and has
+been removed.
+The signal "cntrl2<16>" is sourceless and has been removed.
+The signal "cntrl2<17>" is sourceless and has been removed.
+The signal "cntrl2<18>" is sourceless and has been removed.
+ Sourceless block "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<3>" (ROM) removed.
+  The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<3>" is sourceless and has
+been removed.
+The signal "cntrl2<19>" is sourceless and has been removed.
+The signal "cntrl2<20>" is sourceless and has been removed.
+ Sourceless block "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<4>" (ROM) removed.
+  The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<4>" is sourceless and has
+been removed.
+The signal "cntrl2<21>" is sourceless and has been removed.
+The signal "cntrl2<22>" is sourceless and has been removed.
+The signal "cntrl2<23>" is sourceless and has been removed.
+The signal "cntrl2<24>" is sourceless and has been removed.
+ Sourceless block "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<5>" (ROM) removed.
+  The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<5>" is sourceless and has
+been removed.
+The signal "cntrl2<25>" is sourceless and has been removed.
+The signal "cntrl2<26>" is sourceless and has been removed.
+The signal "cntrl2<27>" is sourceless and has been removed.
+ Sourceless block "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<6>" (ROM) removed.
+  The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<6>" is sourceless and has
+been removed.
+The signal "cntrl2<28>" is sourceless and has been removed.
+The signal "cntrl2<29>" is sourceless and has been removed.
+The signal "cntrl2<33>" is sourceless and has been removed.
+The signal "cntrl2<34>" is sourceless and has been removed.
+The signal "cntrl2<35>" is sourceless and has been removed.
+The signal "cntrl2<8>" is sourceless and has been removed.
+The signal "cntrl2<9>" is sourceless and has been removed.
+The signal "st1/U0/U_ICON/iCOMMAND_SEL<15>" is sourceless and has been removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[15].U_LCE" (ROM)
+removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[15].U_HCE" (ROM)
+removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_LCE" (ROM)
+removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_HCE" (ROM)
+removed.
+The signal "st1/U0/U_ICON/iCOMMAND_SEL<14>" is sourceless and has been removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[14].U_LCE" (ROM)
+removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[14].U_HCE" (ROM)
+removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_LCE" (ROM)
+removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_HCE" (ROM)
+removed.
+The signal "st1/U0/U_ICON/iCOMMAND_SEL<13>" is sourceless and has been removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[13].U_LCE" (ROM)
+removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[13].U_HCE" (ROM)
+removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_LCE" (ROM)
+removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_HCE" (ROM)
+removed.
+The signal "st1/U0/U_ICON/iCOMMAND_SEL<7>" is sourceless and has been removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[7].U_LCE" (ROM)
+removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[7].U_HCE" (ROM)
+removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_LCE" (ROM)
+removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_HCE" (ROM)
+removed.
+The signal "st1/U0/U_ICON/iCOMMAND_SEL<6>" is sourceless and has been removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[6].U_LCE" (ROM)
+removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[6].U_HCE" (ROM)
+removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_LCE" (ROM)
+removed.
+ Sourceless block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_HCE" (ROM)
+removed.
+The signal "st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<8>" is sourceless and
+has been removed.
+The signal "st3/U0/I_VIO/GEN_SYNC_IN[50].SYNC_IN_CELL/user_in_n" is sourceless
+and has been removed.
+The signal "st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<8>" is sourceless and has
+been removed.
+Unused block "st1/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[13].U_LUT" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[14].U_LUT" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[15].U_LUT" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[6].U_LUT" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[7].U_LUT" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_LCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_LCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[1].U_HCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[2].U_HCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_HCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_LCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[4].U_HCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_HCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[8].U_HCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_HCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[10].U_LCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[11].U_LCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[12].U_LCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[1].U_HCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[2].U_HCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[3].U_HCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[4].U_HCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[4].U_LCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[5].U_HCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[5].U_LCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[8].U_HCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[8].U_LCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_HCE" (ROM) removed.
+Unused block "st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_LCE" (ROM) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+LUT3 		st1/U0/U_ICON/U_TDO_MUX/NO_LUT6.I4.FJ[2].U_LUT3
+LUT3 		st1/U0/U_ICON/U_TDO_MUX/NO_LUT6.I4.FJ[3].U_LUT3
+LUT3 		st1/U0/U_ICON/U_TDO_MUX/NO_LUT6.I4.FJ[4].U_LUT3
+LUT3 		st1/U0/U_ICON/U_TDO_MUX/NO_LUT6.I4.FJ[5].U_LUT3
+LUT3 		st1/U0/U_ICON/U_TDO_MUX/NO_LUT6.I4.FJ[6].U_LUT3
+GND 		st1/XST_GND
+VCC 		st1/XST_VCC
+FDP 		st2/U0/I_DQ.G_DW[50].U_DQ
+   optimized to 1
+LUT4 		st2/U0/I_YES_D.U_ILA/U_STAT/F_SSTAT[10].I_STAT.U_STAT
+LUT4 		st2/U0/I_YES_D.U_ILA/U_STAT/F_SSTAT[6].I_STAT.U_STAT
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_DMUX5/NO_LUT6.I3.FJ[1].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_DMUX5/NO_LUT6.I3.FJ[2].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_DMUX5/NO_LUT6.I3.FJ[3].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[11].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[12].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[13].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[14].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[15].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[16].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[17].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[18].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[19].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[20].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[21].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[22].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[23].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[24].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[25].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[26].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[27].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[28].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[29].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[30].U_LUT3
+LUT3 		st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX/NO_LUT6.I6.FJ[31].U_LUT3
+LUT4 		st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_lut<8>
+GND 		st2/XST_GND
+VCC 		st2/XST_VCC
+FDCE 		st3/U0/I_VIO/GEN_SYNC_IN[50].SYNC_IN_CELL/U_FALLING
+   optimized to 0
+FDCE 		st3/U0/I_VIO/GEN_SYNC_IN[50].SYNC_IN_CELL/U_RISING
+   optimized to 0
+INV 		st3/U0/I_VIO/GEN_SYNC_IN[50].SYNC_IN_CELL/U_STATCMD_n
+LUT4 		st3/U0/I_VIO/U_STATUS/F_STAT[7].I_STAT.U_STAT
+LUT4 		st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_lut<8>
+GND 		st3/XST_GND
+VCC 		st3/XST_VCC
+MUXCY 		st2/U0/I_YES_D.U_ILA/U_STAT/iSTAT<11>_wg_cy<8>
+MUXCY 		st3/U0/I_VIO/U_STATUS/iSTAT<10>_wg_cy<8>
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |             | Strength | Rate |              |          | Delay    |
++----------------------------------------------------------------------------------------------------------------------------------------+
+| clk                                | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0    |
++----------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+st2/U0_I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_CDONE_MSET
+st2/U0_I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_CMPRESET_MSET
+st2/U0_I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_NS0_MSET
+st2/U0_I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_NS1_MSET
+st2/U0_I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_SCMPCE_MSET
+st2/U0_I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_SCRST_MSET
+st2/U0_I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_WHCMPCE_MSET
+st2/U0_I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_WLCMPCE_MSET
+st2/U0_I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_U_CAP_ADDRGEN_U_SCNT_CMP_I_SRL16.U_GAND_S
+RL16_MSET
+st2/U0_I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_U_CAP_ADDRGEN_U_WCNT_HCMP_I_SRL16.U_GAND_
+SRL16_MSET
+st2/U0_I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL_U_CAP_ADDRGEN_U_WCNT_LCMP_I_SRL16.U_GAND_
+SRL16_MSET
+st2/U0_I_YES_D.U_ILA_U_TRIG_U_TM_G_NMU[0].U_M_U_MU_I_MUT_GAND.U_match_I_SRL16.U_
+GAND_SRL16_MSET
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 14 - Utilization by Hierarchy
+-------------------------------------
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                               | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Name                                                                                                  |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| top_mod/                             |           | 167/2223      | 0/2201        | 101/1019      | 0/201         | 0/5       | 0/0       | 1/2   | 0/0   | top_mod                                                                                                                 |
+| +st1                                 |           | 0/52          | 0/28          | 0/50          | 0/0           | 0/0       | 0/0       | 0/1   | 0/0   | top_mod/st1                                                                                                             |
+| ++U0                                 |           | 0/52          | 0/28          | 0/50          | 0/0           | 0/0       | 0/0       | 0/1   | 0/0   | top_mod/st1/U0                                                                                                          |
+| +++U_ICON                            |           | 3/52          | 3/28          | 0/50          | 0/0           | 0/0       | 0/0       | 0/1   | 0/0   | top_mod/st1/U0/U_ICON                                                                                                   |
+| ++++I_YES_BSCAN.U_BS                 |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | top_mod/st1/U0/U_ICON/I_YES_BSCAN.U_BS                                                                                  |
+| ++++U_CMD                            |           | 6/14          | 10/10         | 1/15          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st1/U0/U_ICON/U_CMD                                                                                             |
+| +++++U_COMMAND_SEL                   |           | 6/6           | 0/0           | 11/11         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st1/U0/U_ICON/U_CMD/U_COMMAND_SEL                                                                               |
+| +++++U_CORE_ID_SEL                   |           | 2/2           | 0/0           | 3/3           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st1/U0/U_ICON/U_CMD/U_CORE_ID_SEL                                                                               |
+| ++++U_CTRL_OUT                       |           | 17/17         | 0/0           | 22/22         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st1/U0/U_ICON/U_CTRL_OUT                                                                                        |
+| ++++U_STAT                           |           | 4/7           | 1/7           | 7/7           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st1/U0/U_ICON/U_STAT                                                                                            |
+| +++++U_STAT_CNT                      |           | 3/3           | 6/6           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st1/U0/U_ICON/U_STAT/U_STAT_CNT                                                                                 |
+| ++++U_SYNC                           |           | 7/7           | 8/8           | 3/3           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st1/U0/U_ICON/U_SYNC                                                                                            |
+| ++++U_TDO_MUX                        |           | 4/4           | 0/0           | 3/3           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st1/U0/U_ICON/U_TDO_MUX                                                                                         |
+| +st2                                 |           | 0/340         | 0/455         | 0/277         | 0/201         | 0/5       | 0/0       | 0/0   | 0/0   | top_mod/st2                                                                                                             |
+| ++U0                                 |           | 75/340        | 148/455       | 0/277         | 0/201         | 0/5       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0                                                                                                          |
+| +++I_YES_D.U_ILA                     |           | 0/265         | 0/307         | 0/277         | 0/201         | 0/5       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA                                                                                            |
+| ++++I_DQ.U_DQQ                       |           | 74/74         | 148/148       | 148/148       | 148/148       | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/I_DQ.U_DQQ                                                                                 |
+| ++++U_CAPSTOR                        |           | 0/15          | 0/20          | 0/6           | 0/0           | 0/5       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_CAPSTOR                                                                                  |
+| +++++I_CASE1.I_NO_TB.I_RT1.I_RDADDR  |           | 2/11          | 0/17          | 2/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR                                                   |
+| ++++++I_NI_GT_1.INE1.U_low_count     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/I_NI_GT_1.INE1.U_low_count                        |
+| ++++++U_HC                           |           | 7/7           | 14/14         | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.I_RDADDR/U_HC                                              |
+| +++++I_CASE1.I_NO_TB.I_RT1.U_RAM     |           | 2/4           | 3/3           | 0/4           | 0/0           | 0/5       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM                                                      |
+| ++++++G_BRAM[0].U_BRAM               |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM                                     |
+| ++++++G_BRAM[1].U_BRAM               |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[1].U_BRAM                                     |
+| ++++++G_BRAM[2].U_BRAM               |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[2].U_BRAM                                     |
+| ++++++G_BRAM[3].U_BRAM               |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[3].U_BRAM                                     |
+| ++++++G_BRAM[4].U_BRAM               |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[4].U_BRAM                                     |
+| ++++++I_MUX.U_RD_DATA                |           | 2/2           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA                                      |
+| ++++U_G2_SQ.U_CAPCTRL                |           | 7/76          | 7/62          | 1/74          | 0/49          | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL                                                                          |
+| +++++I_SRLT_NE_1.U_CDONE             |           | 4/4           | 1/1           | 6/6           | 4/4           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_CDONE                                                      |
+| +++++I_SRLT_NE_1.U_CMPRESET          |           | 3/3           | 0/0           | 5/5           | 4/4           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_CMPRESET                                                   |
+| +++++I_SRLT_NE_1.U_NS0               |           | 6/6           | 1/1           | 10/10         | 8/8           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_NS0                                                        |
+| +++++I_SRLT_NE_1.U_NS1               |           | 6/6           | 1/1           | 10/10         | 8/8           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_NS1                                                        |
+| +++++I_SRLT_NE_1.U_SCE               |           | 2/2           | 0/0           | 2/2           | 1/1           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCE                                                        |
+| +++++I_SRLT_NE_1.U_SCMPCE            |           | 2/2           | 0/0           | 3/3           | 2/2           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCMPCE                                                     |
+| +++++I_SRLT_NE_1.U_SCRST             |           | 3/3           | 0/0           | 5/5           | 4/4           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_SCRST                                                      |
+| +++++I_SRLT_NE_1.U_WCE               |           | 2/2           | 0/0           | 2/2           | 1/1           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_WCE                                                        |
+| +++++I_SRLT_NE_1.U_WHCMPCE           |           | 2/2           | 0/0           | 3/3           | 2/2           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_WHCMPCE                                                    |
+| +++++I_SRLT_NE_1.U_WLCMPCE           |           | 2/2           | 0/0           | 3/3           | 2/2           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_WLCMPCE                                                    |
+| +++++U_CAP_ADDRGEN                   |           | 21/37         | 34/52         | 12/24         | 1/13          | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN                                                            |
+| ++++++I_NO_TSEQ.I_SRLT_NE_1.U_SCNT   |           | 5/5           | 9/9           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT                               |
+| ++++++I_SRLT_NE_1.U_WCNT             |           | 5/5           | 9/9           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT                                         |
+| ++++++U_SCNT_CMP                     |           | 0/2           | 0/0           | 0/4           | 0/4           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP                                                 |
+| +++++++I_SRL16.U_GAND_SRL16          |           | 2/2           | 0/0           | 4/4           | 4/4           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_SRL16.U_GAND_SRL16                            |
+| ++++++U_WCNT_HCMP                    |           | 0/2           | 0/0           | 0/4           | 0/4           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP                                                |
+| +++++++I_SRL16.U_GAND_SRL16          |           | 2/2           | 0/0           | 4/4           | 4/4           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_SRL16.U_GAND_SRL16                           |
+| ++++++U_WCNT_LCMP                    |           | 0/2           | 0/0           | 0/4           | 0/4           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP                                                |
+| +++++++I_SRL16.U_GAND_SRL16          |           | 2/2           | 0/0           | 4/4           | 4/4           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_SRL16.U_GAND_SRL16                           |
+| ++++U_RST                            |           | 6/19          | 9/25          | 2/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_RST                                                                                      |
+| +++++U_ARM_XFER                      |           | 7/7           | 9/9           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER                                                                           |
+| +++++U_HALT_XFER                     |           | 6/6           | 7/7           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER                                                                          |
+| ++++U_STAT                           |           | 25/66         | 23/42         | 10/39         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_STAT                                                                                     |
+| +++++U_DMUX                          |           | 2/2           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_STAT/U_DMUX                                                                              |
+| +++++U_DMUX0                         |           | 2/2           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_STAT/U_DMUX0                                                                             |
+| +++++U_DMUX1                         |           | 2/2           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_STAT/U_DMUX1                                                                             |
+| +++++U_DMUX4                         |           | 2/2           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_STAT/U_DMUX4                                                                             |
+| +++++U_DMUX5                         |           | 2/2           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_STAT/U_DMUX5                                                                             |
+| +++++U_DSL1                          |           | 6/6           | 6/6           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_STAT/U_DSL1                                                                              |
+| +++++U_MUX                           |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_STAT/U_MUX                                                                               |
+| +++++U_RESET_EDGE                    |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_STAT/U_RESET_EDGE                                                                        |
+| +++++U_SMUX                          |           | 17/17         | 0/0           | 10/10         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_STAT/U_SMUX                                                                              |
+| +++++U_STAT_CNT                      |           | 5/5           | 10/10         | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_STAT/U_STAT_CNT                                                                          |
+| ++++U_TRIG                           |           | 1/15          | 1/10          | 0/6           | 0/4           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_TRIG                                                                                     |
+| +++++U_TC                            |           | 1/9           | 1/5           | 0/4           | 0/2           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_TRIG/U_TC                                                                                |
+| ++++++I_STORAGE_QUAL.U_STORAGE_QUAL  |           | 1/4           | 1/2           | 0/2           | 0/1           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_STORAGE_QUAL                                                  |
+| +++++++I_SRLT_NE_1.I_NMU_1_TO_4.U_TC |           | 1/3           | 1/1           | 0/2           | 0/1           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_STORAGE_QUAL/I_SRLT_NE_1.I_NMU_1_TO_4.U_TCL                   |
+| ++++++++I_NMU_EQ1.U_iDOUT            |           | 2/2           | 0/0           | 2/2           | 1/1           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_STORAGE_QUAL/I_SRLT_NE_1.I_NMU_1_TO_4.U_TCL/I_NMU_EQ1.U_iDOUT |
+| ++++++I_TSEQ_NEQ2.U_TC_EQUATION      |           | 1/4           | 1/2           | 0/2           | 0/1           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_TRIG/U_TC/I_TSEQ_NEQ2.U_TC_EQUATION                                                      |
+| +++++++I_SRLT_NE_1.I_NMU_1_TO_4.U_TC |           | 1/3           | 1/1           | 0/2           | 0/1           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_TRIG/U_TC/I_TSEQ_NEQ2.U_TC_EQUATION/I_SRLT_NE_1.I_NMU_1_TO_4.U_TCL                       |
+| ++++++++I_NMU_EQ1.U_iDOUT            |           | 2/2           | 0/0           | 2/2           | 1/1           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_TRIG/U_TC/I_TSEQ_NEQ2.U_TC_EQUATION/I_SRLT_NE_1.I_NMU_1_TO_4.U_TCL/I_NMU_EQ1.U_iDOUT     |
+| +++++U_TM                            |           | 0/5           | 0/4           | 0/2           | 0/2           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_TRIG/U_TM                                                                                |
+| ++++++G_NMU[0].U_M                   |           | 1/5           | 1/4           | 0/2           | 0/2           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M                                                                   |
+| +++++++U_MU                          |           | 1/4           | 1/3           | 0/2           | 0/2           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU                                                              |
+| ++++++++I_MUT_GAND.U_match           |           | 0/3           | 0/2           | 0/2           | 0/2           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match                                           |
+| +++++++++I_SRL16.U_GAND_SRL16        |           | 3/3           | 2/2           | 2/2           | 2/2           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st2/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_SRL16.U_GAND_SRL16                      |
+| +st3                                 |           | 0/1519        | 0/1682        | 0/428         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3                                                                                                             |
+| ++U0                                 |           | 0/1519        | 0/1682        | 0/428         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0                                                                                                          |
+| +++I_VIO                             |           | 1/1519        | 1/1682        | 0/428         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO                                                                                                    |
+| ++++GEN_ASYNC_OUT[0].ASYNC_OUT_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[0].ASYNC_OUT_CELL                                                                    |
+| ++++GEN_ASYNC_OUT[10].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[10].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[11].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[11].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[12].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[12].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[13].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[13].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[14].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[14].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[15].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[15].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[16].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[16].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[17].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[17].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[18].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[18].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[19].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[19].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[1].ASYNC_OUT_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[1].ASYNC_OUT_CELL                                                                    |
+| ++++GEN_ASYNC_OUT[20].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[20].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[21].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[21].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[22].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[22].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[23].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[23].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[24].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[24].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[25].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[25].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[26].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[26].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[27].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[27].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[28].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[28].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[29].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[29].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[2].ASYNC_OUT_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[2].ASYNC_OUT_CELL                                                                    |
+| ++++GEN_ASYNC_OUT[30].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[30].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[31].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[31].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[32].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[32].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[33].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[33].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[34].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[34].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[35].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[35].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[36].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[36].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[37].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[37].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[38].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[38].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[39].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[39].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[3].ASYNC_OUT_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[3].ASYNC_OUT_CELL                                                                    |
+| ++++GEN_ASYNC_OUT[40].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[40].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[41].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[41].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[42].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[42].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[43].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[43].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[44].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[44].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[45].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[45].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[46].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[46].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[47].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[47].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[48].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[48].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[49].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[49].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[4].ASYNC_OUT_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[4].ASYNC_OUT_CELL                                                                    |
+| ++++GEN_ASYNC_OUT[50].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[50].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[51].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[51].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[52].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[52].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[53].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[53].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[54].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[54].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[55].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[55].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[56].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[56].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[57].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[57].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[58].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[58].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[59].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[59].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[5].ASYNC_OUT_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[5].ASYNC_OUT_CELL                                                                    |
+| ++++GEN_ASYNC_OUT[60].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[60].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[61].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[61].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[62].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[62].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[63].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[63].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[64].ASYNC_OUT_CELL |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[64].ASYNC_OUT_CELL                                                                   |
+| ++++GEN_ASYNC_OUT[6].ASYNC_OUT_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[6].ASYNC_OUT_CELL                                                                    |
+| ++++GEN_ASYNC_OUT[7].ASYNC_OUT_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[7].ASYNC_OUT_CELL                                                                    |
+| ++++GEN_ASYNC_OUT[8].ASYNC_OUT_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[8].ASYNC_OUT_CELL                                                                    |
+| ++++GEN_ASYNC_OUT[9].ASYNC_OUT_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_ASYNC_OUT[9].ASYNC_OUT_CELL                                                                    |
+| ++++GEN_SYNC_IN[0].SYNC_IN_CELL      |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[0].SYNC_IN_CELL                                                                        |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[0].SYNC_IN_CELL/sync_f_edge                                                            |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[0].SYNC_IN_CELL/sync_r_edge                                                            |
+| ++++GEN_SYNC_IN[10].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[10].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[10].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[10].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[11].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[11].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[11].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[11].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[12].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[12].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[12].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[12].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[13].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[13].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[13].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[13].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[14].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[14].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[14].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[14].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[15].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[15].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[15].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[15].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[16].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[17].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[18].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[19].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[1].SYNC_IN_CELL      |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[1].SYNC_IN_CELL                                                                        |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[1].SYNC_IN_CELL/sync_f_edge                                                            |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[1].SYNC_IN_CELL/sync_r_edge                                                            |
+| ++++GEN_SYNC_IN[20].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[21].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[22].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[23].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[24].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[25].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[26].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[27].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[28].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[29].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[2].SYNC_IN_CELL      |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[2].SYNC_IN_CELL                                                                        |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[2].SYNC_IN_CELL/sync_f_edge                                                            |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[2].SYNC_IN_CELL/sync_r_edge                                                            |
+| ++++GEN_SYNC_IN[30].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[31].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[32].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[32].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[32].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[32].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[33].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[33].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[33].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[33].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[34].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[34].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[34].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[34].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[35].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[35].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[35].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[35].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[36].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[36].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[36].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[36].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[37].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[37].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[37].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[37].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[38].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[38].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[38].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[38].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[39].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[39].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[39].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[39].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[3].SYNC_IN_CELL      |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[3].SYNC_IN_CELL                                                                        |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[3].SYNC_IN_CELL/sync_f_edge                                                            |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[3].SYNC_IN_CELL/sync_r_edge                                                            |
+| ++++GEN_SYNC_IN[40].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[40].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[40].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[40].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[41].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[41].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[41].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[41].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[42].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[42].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[42].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[42].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[43].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[43].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[43].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[43].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[44].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[44].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[44].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[44].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[45].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[45].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[45].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[45].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[46].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[46].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[46].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[46].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[47].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[47].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[47].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[47].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[48].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[48].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[48].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[48].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[49].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[49].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[49].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[49].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[4].SYNC_IN_CELL      |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[4].SYNC_IN_CELL                                                                        |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[4].SYNC_IN_CELL/sync_f_edge                                                            |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[4].SYNC_IN_CELL/sync_r_edge                                                            |
+| ++++GEN_SYNC_IN[50].SYNC_IN_CELL     |           | 9/13          | 9/15          | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[50].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[50].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[50].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[51].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[51].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[51].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[51].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[52].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[52].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[52].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[52].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[53].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[53].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[53].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[53].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[54].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[54].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[54].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[54].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[55].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[55].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[55].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[55].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[56].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[56].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[56].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[56].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[57].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[57].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[57].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[57].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[58].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[58].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[58].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[58].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[59].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[59].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[59].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[59].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[5].SYNC_IN_CELL      |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[5].SYNC_IN_CELL                                                                        |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[5].SYNC_IN_CELL/sync_f_edge                                                            |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[5].SYNC_IN_CELL/sync_r_edge                                                            |
+| ++++GEN_SYNC_IN[60].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[60].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[60].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[60].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[61].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[61].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[61].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[61].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[62].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[62].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[62].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[62].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[63].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[63].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[63].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[63].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[64].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[64].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[64].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[64].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[65].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[65].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[65].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[65].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[66].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[66].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[66].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[66].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[67].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[67].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[67].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[67].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[68].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[68].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[68].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[68].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[69].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[69].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[69].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[69].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[6].SYNC_IN_CELL      |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[6].SYNC_IN_CELL                                                                        |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[6].SYNC_IN_CELL/sync_f_edge                                                            |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[6].SYNC_IN_CELL/sync_r_edge                                                            |
+| ++++GEN_SYNC_IN[70].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[70].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[70].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[70].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[71].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[71].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[71].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[71].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[72].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[72].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[72].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[72].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[73].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[73].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[73].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[73].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[74].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[74].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[74].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[74].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[75].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[75].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[75].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[75].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[76].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[76].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[76].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[76].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[77].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[77].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[77].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[77].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[78].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[78].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[78].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[78].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[79].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[79].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[79].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[79].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[7].SYNC_IN_CELL      |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[7].SYNC_IN_CELL                                                                        |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[7].SYNC_IN_CELL/sync_f_edge                                                            |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[7].SYNC_IN_CELL/sync_r_edge                                                            |
+| ++++GEN_SYNC_IN[80].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[80].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[80].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[80].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[81].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[81].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[81].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[81].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[82].SYNC_IN_CELL     |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[82].SYNC_IN_CELL                                                                       |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[82].SYNC_IN_CELL/sync_f_edge                                                           |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[82].SYNC_IN_CELL/sync_r_edge                                                           |
+| ++++GEN_SYNC_IN[8].SYNC_IN_CELL      |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[8].SYNC_IN_CELL                                                                        |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[8].SYNC_IN_CELL/sync_f_edge                                                            |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[8].SYNC_IN_CELL/sync_r_edge                                                            |
+| ++++GEN_SYNC_IN[9].SYNC_IN_CELL      |           | 11/15         | 11/17         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[9].SYNC_IN_CELL                                                                        |
+| +++++sync_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[9].SYNC_IN_CELL/sync_f_edge                                                            |
+| +++++sync_r_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_SYNC_IN[9].SYNC_IN_CELL/sync_r_edge                                                            |
+| ++++GEN_UPDATE_OUT[100].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[100].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[101].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[101].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[102].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[102].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[103].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[103].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[104].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[104].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[105].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[105].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[106].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[106].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[107].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[107].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[108].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[108].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[109].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[109].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[110].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[110].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[111].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[111].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[112].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[112].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[113].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[113].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[114].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[114].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[115].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[115].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[116].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[116].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[117].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[117].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[118].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[118].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[119].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[119].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[120].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[120].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[121].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[121].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[122].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[122].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[123].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[123].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[124].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[124].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[125].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[125].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[126].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[126].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[127].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[127].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[128].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[128].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[129].UPDATE_CELL  |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[129].UPDATE_CELL                                                                    |
+| ++++GEN_UPDATE_OUT[65].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[65].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[66].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[66].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[67].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[67].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[68].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[68].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[69].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[69].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[70].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[70].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[71].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[71].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[72].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[72].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[73].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[73].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[74].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[74].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[75].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[75].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[76].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[76].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[77].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[77].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[78].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[78].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[79].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[79].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[80].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[80].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[81].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[81].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[82].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[82].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[83].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[83].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[84].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[84].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[85].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[85].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[86].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[86].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[87].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[87].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[88].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[88].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[89].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[89].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[90].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[90].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[91].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[91].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[92].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[92].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[93].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[93].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[94].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[94].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[95].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[95].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[96].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[96].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[97].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[97].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[98].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[98].UPDATE_CELL                                                                     |
+| ++++GEN_UPDATE_OUT[99].UPDATE_CELL   |           | 2/2           | 2/2           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/GEN_UPDATE_OUT[99].UPDATE_CELL                                                                     |
+| ++++U_STATUS                         |           | 5/13          | 1/9           | 6/13          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/U_STATUS                                                                                           |
+| +++++U_SMUX                          |           | 4/4           | 0/0           | 7/7           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/U_STATUS/U_SMUX                                                                                    |
+| +++++U_STAT_CNT                      |           | 4/4           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/U_STATUS/U_STAT_CNT                                                                                |
+| ++++reset_f_edge                     |           | 2/2           | 3/3           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st3/U0/I_VIO/reset_f_edge                                                                                       |
+| +st4                                 |           | 32/145        | 0/36          | 32/163        | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4                                                                                                             |
+| ++stage1                             |           | 2/2           | 4/4           | 2/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage1                                                                                                      |
+| ++stage2                             |           | 0/111         | 0/32          | 0/129         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2                                                                                                      |
+| +++stage1                            |           | 76/76         | 0/0           | 110/110       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage1                                                                                               |
+| +++stage2                            |           | 0/7           | 0/0           | 0/7           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage2                                                                                               |
+| ++++f2                               |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage2/f2                                                                                            |
+| ++++f3                               |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage2/f3                                                                                            |
+| ++++f4                               |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage2/f4                                                                                            |
+| ++++f5                               |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage2/f5                                                                                            |
+| ++++f6                               |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage2/f6                                                                                            |
+| ++++f8                               |           | 2/2           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage2/f8                                                                                            |
+| +++stage25                           |           | 0/7           | 0/0           | 0/7           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage25                                                                                              |
+| ++++f2                               |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage25/f2                                                                                           |
+| ++++f3                               |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage25/f3                                                                                           |
+| ++++f4                               |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage25/f4                                                                                           |
+| ++++f5                               |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage25/f5                                                                                           |
+| ++++f6                               |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage25/f6                                                                                           |
+| ++++f7                               |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage25/f7                                                                                           |
+| ++++f8                               |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage25/f8                                                                                           |
+| +++stage3                            |           | 21/21         | 32/32         | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top_mod/st4/stage2/stage3                                                                                               |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

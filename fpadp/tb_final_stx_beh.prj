@@ -1,0 +1,6 @@
+vhdl isim_temp "CMP.vhd"
+vhdl isim_temp "sec.vhd"
+vhdl isim_temp "norm.vhd"
+vhdl isim_temp "CMP8.vhd"
+vhdl isim_temp "datapath.vhd"
+vhdl isim_temp "tb_final.vhd"

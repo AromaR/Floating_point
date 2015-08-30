@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/FPMDP/TOP.xst" -ofn "C:/Users/hp/Documents/eda/FPMDP/TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50-pq208-5 TOP.ngc TOP.ngd  
+netgen -intstyle ise -rpw 100 -tpw 0 -ar Structure -tm TOP -w -dir netgen/translate -ofmt vhdl -sim TOP.ngd TOP_translate.vhd 
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/FPMDP/TOP.xst" -ofn "C:/Users/hp/Documents/eda/FPMDP/TOP.syr" 

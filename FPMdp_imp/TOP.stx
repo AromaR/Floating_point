@@ -1,0 +1,48 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/hp/Documents/eda/FPMdp_imp/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/hp/Documents/eda/FPMdp_imp/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPMdp_imp/FA.vhd" in Library work.
+Architecture behavioral of Entity fulladder2 is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPMdp_imp/mult.vhd" in Library work.
+Architecture behavioral of Entity mult is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPMdp_imp/adder.vhd" in Library work.
+Architecture behavioral of Entity adder is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPMdp_imp/NORM.vhd" in Library work.
+Architecture behavioral of Entity norm is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPMdp_imp/cntrl.vhd" in Library work.
+Architecture behavioral of Entity topcontrol is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPMdp_imp/data.vhd" in Library work.
+Entity <topdatapath> compiled.
+Entity <TOPDATAPATH> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPMdp_imp/top.vhd" in Library work.
+Entity <TOP> compiled.
+Entity <TOP> (Architecture <Behavioral>) compiled.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.39 secs
+ 
+--> 
+
+Total memory usage is 214004 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

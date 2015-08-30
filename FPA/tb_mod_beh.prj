@@ -1,0 +1,2 @@
+vhdl work "mod.vhd"
+vhdl work "tb_mod.vhd"

@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/FPA/Final.xst" -ofn "C:/Users/hp/Documents/eda/FPA/Final.syr" 
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/FPA/Final.xst" -ofn "C:/Users/hp/Documents/eda/FPA/Final.syr" 
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/FPA/Final.xst" -ofn "C:/Users/hp/Documents/eda/FPA/Final.syr" 

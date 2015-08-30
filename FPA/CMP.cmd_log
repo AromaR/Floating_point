@@ -1,0 +1,1 @@
+vhdtdtfi -prj FPA -o C:/Users/hp/Documents/eda/FPA/CMP.vhi -module CMP -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work CMP1.vhd 

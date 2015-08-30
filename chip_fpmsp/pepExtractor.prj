@@ -1,0 +1,7 @@
+work	"FA.vhd"
+work	"adder.vhd"
+work	"fpmsp.vhd"
+work	"mult.vhd"
+work	"norm.vhd"
+work	"todatapath.vhd"
+work	"topcontrol.vhd"

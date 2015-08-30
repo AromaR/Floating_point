@@ -1,0 +1,175 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Fri Apr 03 12:35:24 2015
+# Process ID: 8940
+# Log file: C:/Users/hp/Documents/eda/chip_fpmsp/planAhead_run_5/planAhead.log
+# Journal file: C:/Users/hp/Documents/eda/chip_fpmsp/planAhead_run_5/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/hp/Documents/eda/chip_fpmsp/pa.fromHdl.tcl
+# create_project -name chip_fpmsp -dir "C:/Users/hp/Documents/eda/chip_fpmsp/planAhead_run_5" -part xc3s500efg320-5
+create_project: Time (s): elapsed = 00:00:05 . Memory (MB): peak = 450.902 ; gain = 61.086
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "top_mod.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/hp/Documents/eda/chip_fpmsp/top_mod.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {ipcore_dir/icon_fpmsp.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ipcore_dir/ila_chip.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ipcore_dir/chip_vio.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {FA.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {norm.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {mult.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {adder.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {topcontrol.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {todatapath.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# add_files [list {ipcore_dir/ila_chip.ngc}]
+# add_files [list {ipcore_dir/icon_fpmsp.ngc}]
+# add_files [list {ipcore_dir/chip_vio.ngc}]
+# set hdlfile [add_files [list {fpmsp.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {top_mod.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top top_mod $srcset
+# add_files [list {top_mod.ucf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/chip_vio.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/icon_fpmsp.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/ila_chip.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/ila_fpmsp.ncf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc3s500efg320-5
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "C:/Users/hp/Documents/eda/chip_fpmsp/FA.vhd" into library work
+Parsing VHDL file "C:/Users/hp/Documents/eda/chip_fpmsp/norm.vhd" into library work
+Parsing VHDL file "C:/Users/hp/Documents/eda/chip_fpmsp/mult.vhd" into library work
+Parsing VHDL file "C:/Users/hp/Documents/eda/chip_fpmsp/adder.vhd" into library work
+Parsing VHDL file "C:/Users/hp/Documents/eda/chip_fpmsp/topcontrol.vhd" into library work
+Parsing VHDL file "C:/Users/hp/Documents/eda/chip_fpmsp/todatapath.vhd" into library work
+Parsing VHDL file "C:/Users/hp/Documents/eda/chip_fpmsp/ipcore_dir/ila_chip.vhd" into library work
+Parsing VHDL file "C:/Users/hp/Documents/eda/chip_fpmsp/ipcore_dir/icon_fpmsp.vhd" into library work
+Parsing VHDL file "C:/Users/hp/Documents/eda/chip_fpmsp/ipcore_dir/chip_vio.vhd" into library work
+Parsing VHDL file "C:/Users/hp/Documents/eda/chip_fpmsp/fpmsp.vhd" into library work
+Parsing VHDL file "C:/Users/hp/Documents/eda/chip_fpmsp/top_mod.vhd" into library work
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design icon_fpmsp.ngc ...
+WARNING:NetListWriters:298 - No output is written to icon_fpmsp.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus U0/U_ICON/iCORE_ID_SEL<15 : 0> on block
+   icon_fpmsp is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file icon_fpmsp.edif ...
+ngc2edif: Total memory usage is 77516 kilobytes
+
+Reading core file 'C:/Users/hp/Documents/eda/chip_fpmsp/ipcore_dir/icon_fpmsp.ngc' for (cell view 'icon_fpmsp', library 'work', file 'icon_fpmsp.vhd')
+Parsing EDIF File [./.Xil/PlanAhead-8940-RodriguesAroma/ngc2edif/icon_fpmsp.edif]
+Finished Parsing EDIF File [./.Xil/PlanAhead-8940-RodriguesAroma/ngc2edif/icon_fpmsp.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design chip_vio.ngc ...
+WARNING:NetListWriters:298 - No output is written to chip_vio.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file chip_vio.edif ...
+ngc2edif: Total memory usage is 89804 kilobytes
+
+Reading core file 'C:/Users/hp/Documents/eda/chip_fpmsp/ipcore_dir/chip_vio.ngc' for (cell view 'chip_vio', library 'work', file 'chip_vio.vhd')
+Parsing EDIF File [./.Xil/PlanAhead-8940-RodriguesAroma/ngc2edif/chip_vio.edif]
+Finished Parsing EDIF File [./.Xil/PlanAhead-8940-RodriguesAroma/ngc2edif/chip_vio.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design ila_chip.ngc ...
+WARNING:NetListWriters:298 - No output is written to ila_chip.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_SRL16.U_GAND_SR
+   L16/sel<8 : 0> on block ila_chip is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_SRL16.U_GAND_S
+   RL16/sel<8 : 0> on block ila_chip is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_YES_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_SRL16.U_GAND_S
+   RL16/sel<8 : 0> on block ila_chip is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/iDOUT_dly<4 : 0> on block ila_chip is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/iDOUT_dly<2 : 0> on block ila_chip is not
+   reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file ila_chip.edif ...
+ngc2edif: Total memory usage is 81612 kilobytes
+
+Reading core file 'C:/Users/hp/Documents/eda/chip_fpmsp/ipcore_dir/ila_chip.ngc' for (cell view 'ila_chip', library 'work', file 'ila_chip.vhd')
+Parsing EDIF File [./.Xil/PlanAhead-8940-RodriguesAroma/ngc2edif/ila_chip.edif]
+Finished Parsing EDIF File [./.Xil/PlanAhead-8940-RodriguesAroma/ngc2edif/ila_chip.edif]
+INFO: [Designutils 20-910] Reading macro library C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s500e/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s500e/ClockBuffers.xml
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s500e/fg320/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s500e/fg320/SSORules.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-5.lib.
+INFO: [Timing 38-34] Done reading timing library C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-5.lib.
+Parsing UCF File [C:/Users/hp/Documents/eda/chip_fpmsp/top_mod.ucf]
+Finished Parsing UCF File [C:/Users/hp/Documents/eda/chip_fpmsp/top_mod.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 620367c6
+open_rtl_design: Time (s): elapsed = 00:00:27 . Memory (MB): peak = 569.965 ; gain = 113.824
+update_compile_order -fileset sim_1
+set_property iostandard LVCMOS25 [get_ports [list clk]]
+set_property package_pin "" [get_ports [list  clk]]
+startgroup
+set_property package_pin C9 [get_ports clk]
+endgroup
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+ (See C:/Users/hp/Documents/eda/chip_fpmsp\planAhead_pid8940.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Fri Apr 03 12:38:10 2015...
+INFO: [Common 17-83] Releasing license: PlanAhead

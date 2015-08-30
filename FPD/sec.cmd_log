@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/FPD/sec.xst" -ofn "C:/Users/hp/Documents/eda/FPD/sec.syr" 
+vhdtdtfi -prj FPD -o C:/Users/hp/Documents/eda/FPD/sec.vhi -module sec -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work sec.vhd 

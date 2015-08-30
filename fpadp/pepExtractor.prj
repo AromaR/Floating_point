@@ -1,0 +1,5 @@
+work	"CMP.vhd"
+work	"CMP8.vhd"
+work	"datapath.vhd"
+work	"norm.vhd"
+work	"sec.vhd"

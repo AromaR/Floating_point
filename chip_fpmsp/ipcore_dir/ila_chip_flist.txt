@@ -1,0 +1,19 @@
+# Output products list for <ila_chip>
+_xmsgs\pn_parser.xmsgs
+ila_chip.asy
+ila_chip.cdc
+ila_chip.constraints\ila_chip.ucf
+ila_chip.constraints\ila_chip.xdc
+ila_chip.gise
+ila_chip.ncf
+ila_chip.ngc
+ila_chip.sym
+ila_chip.ucf
+ila_chip.vhd
+ila_chip.vho
+ila_chip.xco
+ila_chip.xdc
+ila_chip.xise
+ila_chip_flist.txt
+ila_chip_readme.txt
+ila_chip_xmdf.tcl

@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/FPMsp_imp/TOP.xst" -ofn "C:/Users/hp/Documents/eda/FPMsp_imp/TOP.syr" 
+netgen -intstyle ise -ar Structure -tm TOP -w -dir netgen/synthesis -ofmt vhdl -sim TOP.ngc TOP_synthesis.vhd 
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/FPMsp_imp/TOP.xst" -ofn "C:/Users/hp/Documents/eda/FPMsp_imp/TOP.syr" 

@@ -1,0 +1,7 @@
+work	"FA.vhd"
+work	"NORM.vhd"
+work	"adder.vhd"
+work	"cntrl.vhd"
+work	"data.vhd"
+work	"mult.vhd"
+work	"top.vhd"

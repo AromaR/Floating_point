@@ -1,0 +1,667 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: div.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "div.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "div"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : div
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPD/div.vhd" in Library work.
+Architecture behavioral of Entity div is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <div> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <div> in library <work> (Architecture <behavioral>).
+Entity <div> analyzed. Unit <div> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <div>.
+    Related source file is "C:/Users/hp/Documents/eda/FPD/div.vhd".
+WARNING:Xst:646 - Signal <c_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 25-bit adder for signal <c_var$add0000> created at line 52.
+    Found 25-bit adder for signal <c_var$add0001> created at line 52.
+    Found 25-bit adder for signal <c_var$add0002> created at line 52.
+    Found 25-bit adder for signal <c_var$add0003> created at line 52.
+    Found 25-bit adder for signal <c_var$add0004> created at line 52.
+    Found 25-bit adder for signal <c_var$add0005> created at line 52.
+    Found 25-bit adder for signal <c_var$add0006> created at line 52.
+    Found 25-bit adder for signal <c_var$add0007> created at line 52.
+    Found 25-bit adder for signal <c_var$add0008> created at line 52.
+    Found 25-bit adder for signal <c_var$add0009> created at line 52.
+    Found 25-bit adder for signal <c_var$add0010> created at line 52.
+    Found 25-bit adder for signal <c_var$add0011> created at line 52.
+    Found 25-bit adder for signal <c_var$add0012> created at line 52.
+    Found 25-bit adder for signal <c_var$add0013> created at line 52.
+    Found 25-bit adder for signal <c_var$add0014> created at line 52.
+    Found 25-bit adder for signal <c_var$add0015> created at line 52.
+    Found 25-bit adder for signal <c_var$add0016> created at line 52.
+    Found 25-bit adder for signal <c_var$add0017> created at line 52.
+    Found 25-bit adder for signal <c_var$add0018> created at line 52.
+    Found 25-bit adder for signal <c_var$add0019> created at line 52.
+    Found 25-bit adder for signal <c_var$add0020> created at line 52.
+    Found 25-bit adder for signal <c_var$add0021> created at line 52.
+    Found 25-bit adder for signal <c_var$add0022> created at line 52.
+    Found 25-bit adder for signal <c_var$add0023> created at line 52.
+    Found 25-bit adder for signal <c_var$add0024> created at line 52.
+    Found 25-bit adder for signal <c_var$add0025> created at line 52.
+    Found 25-bit adder for signal <c_var$add0026> created at line 52.
+    Found 25-bit adder for signal <c_var$add0027> created at line 52.
+    Found 25-bit adder for signal <c_var$add0028> created at line 52.
+    Found 25-bit adder for signal <c_var$add0029> created at line 52.
+    Found 25-bit adder for signal <c_var$add0030> created at line 52.
+    Found 25-bit adder for signal <c_var$add0031> created at line 52.
+    Found 25-bit adder for signal <c_var$add0032> created at line 52.
+    Found 25-bit adder for signal <c_var$add0033> created at line 52.
+    Found 25-bit adder for signal <c_var$add0034> created at line 52.
+    Found 25-bit adder for signal <c_var$add0035> created at line 52.
+    Found 25-bit adder for signal <c_var$add0036> created at line 52.
+    Found 25-bit adder for signal <c_var$add0037> created at line 52.
+    Found 25-bit adder for signal <c_var$add0038> created at line 52.
+    Found 25-bit adder for signal <c_var$add0039> created at line 52.
+    Found 25-bit adder for signal <c_var$add0040> created at line 52.
+    Found 25-bit adder for signal <c_var$add0041> created at line 52.
+    Found 25-bit adder for signal <c_var$add0042> created at line 52.
+    Found 25-bit adder for signal <c_var$add0043> created at line 52.
+    Found 25-bit adder for signal <c_var$add0044> created at line 52.
+    Found 25-bit adder for signal <c_var$add0045> created at line 52.
+    Found 25-bit adder for signal <c_var$add0046> created at line 52.
+    Found 25-bit subtractor for signal <c_var$sub0000> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0001> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0002> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0003> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0004> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0005> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0006> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0007> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0008> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0009> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0010> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0011> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0012> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0013> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0014> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0015> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0016> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0017> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0018> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0019> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0020> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0021> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0022> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0023> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0024> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0025> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0026> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0027> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0028> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0029> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0030> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0031> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0032> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0033> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0034> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0035> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0036> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0037> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0038> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0039> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0040> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0041> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0042> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0043> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0044> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0045> created at line 50.
+    Found 25-bit subtractor for signal <c_var$sub0046> created at line 50.
+    Summary:
+	inferred  94 Adder/Subtractor(s).
+Unit <div> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 94
+ 25-bit adder                                          : 47
+ 25-bit subtractor                                     : 47
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 94
+ 23-bit adder                                          : 1
+ 24-bit adder                                          : 46
+ 25-bit subtractor                                     : 47
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <div> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block div, actual ratio is 39.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : div.ngr
+Top Level Output File Name         : div
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 117
+
+Cell Usage :
+# BELS                             : 7893
+#      GND                         : 1
+#      INV                         : 139
+#      LUT2                        : 1104
+#      LUT3                        : 1127
+#      LUT4                        : 1012
+#      MUXCY                       : 2208
+#      VCC                         : 1
+#      XORCY                       : 2301
+# IO Buffers                       : 117
+#      IBUF                        : 46
+#      OBUF                        : 71
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                     1770  out of   4656    38%  
+ Number of 4 input LUTs:               3382  out of   9312    36%  
+ Number of IOs:                         117
+ Number of bonded IOBs:                 117  out of    232    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 224.981ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1445669944823449000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 / 70
+-------------------------------------------------------------------------
+Delay:               224.981ns (Levels of Logic = 277)
+  Source:            b<0> (PAD)
+  Destination:       c<23> (PAD)
+
+  Data Path: b<0> to c<23>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            94   1.106   1.159  b_0_IBUF (b_0_IBUF)
+     LUT2:I1->O            1   0.612   0.000  Msub_c_var_sub0000_lut<0> (Msub_c_var_sub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Msub_c_var_sub0000_cy<0> (Msub_c_var_sub0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_c_var_sub0000_cy<1> (Msub_c_var_sub0000_cy<1>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0000_xor<2> (c_var_sub0000<2>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0000_Madd_lut<2> (Madd_c_var_add0000_Madd_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0000_Madd_cy<2> (Madd_c_var_add0000_Madd_cy<2>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0000_Madd_xor<3> (c_var_add0000<3>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0000<4>1 (c_var_mux0000<4>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0001_cy<4> (Msub_c_var_sub0001_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0001_xor<5> (c_var_sub0001<5>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0001_Madd_lut<5> (Madd_c_var_add0001_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0001_Madd_cy<5> (Madd_c_var_add0001_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0001_Madd_xor<6> (c_var_add0001<6>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0001<7>1 (c_var_mux0001<7>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0002_cy<7> (Msub_c_var_sub0002_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0002_xor<8> (c_var_sub0002<8>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0002_Madd_lut<8> (Madd_c_var_add0002_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0002_Madd_cy<8> (Madd_c_var_add0002_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0002_Madd_xor<9> (c_var_add0002<9>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0002<10>1 (c_var_mux0002<10>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0003_cy<10> (Msub_c_var_sub0003_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0003_xor<11> (c_var_sub0003<11>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0003_Madd_lut<11> (Madd_c_var_add0003_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0003_Madd_cy<11> (Madd_c_var_add0003_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0003_Madd_xor<12> (c_var_add0003<12>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0003<13>1 (c_var_mux0003<13>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0004_cy<13> (Msub_c_var_sub0004_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0004_xor<14> (c_var_sub0004<14>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0004_Madd_lut<14> (Madd_c_var_add0004_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0004_Madd_cy<14> (Madd_c_var_add0004_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0004_Madd_xor<15> (c_var_add0004<15>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0004<16>1 (c_var_mux0004<16>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0005_cy<16> (Msub_c_var_sub0005_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0005_xor<17> (c_var_sub0005<17>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0005_Madd_lut<17> (Madd_c_var_add0005_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0005_Madd_cy<17> (Madd_c_var_add0005_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0005_Madd_xor<18> (c_var_add0005<18>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0005<19>1 (c_var_mux0005<19>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0006_cy<19> (Msub_c_var_sub0006_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0006_xor<20> (c_var_sub0006<20>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0006_Madd_lut<20> (Madd_c_var_add0006_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0006_Madd_cy<20> (Madd_c_var_add0006_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0006_Madd_xor<21> (c_var_add0006<21>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0006<22>1 (c_var_mux0006<22>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0007_cy<22> (Msub_c_var_sub0007_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  Msub_c_var_sub0007_cy<23> (Msub_c_var_sub0007_cy<23>)
+     XORCY:CI->O          47   0.699   1.229  Msub_c_var_sub0007_xor<24> (c_var_sub0007<24>)
+     LUT3:I0->O            0   0.612   0.000  c_var_mux0007<1>1 (c_var_mux0007<1>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0008_cy<1> (Msub_c_var_sub0008_cy<1>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0008_xor<2> (c_var_sub0008<2>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0008_Madd_lut<2> (Madd_c_var_add0008_Madd_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0008_Madd_cy<2> (Madd_c_var_add0008_Madd_cy<2>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0008_Madd_xor<3> (c_var_add0008<3>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0008<4>1 (c_var_mux0008<4>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0009_cy<4> (Msub_c_var_sub0009_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0009_xor<5> (c_var_sub0009<5>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0009_Madd_lut<5> (Madd_c_var_add0009_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0009_Madd_cy<5> (Madd_c_var_add0009_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0009_Madd_xor<6> (c_var_add0009<6>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0009<7>1 (c_var_mux0009<7>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0010_cy<7> (Msub_c_var_sub0010_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0010_xor<8> (c_var_sub0010<8>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0010_Madd_lut<8> (Madd_c_var_add0010_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0010_Madd_cy<8> (Madd_c_var_add0010_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0010_Madd_xor<9> (c_var_add0010<9>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0010<10>1 (c_var_mux0010<10>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0011_cy<10> (Msub_c_var_sub0011_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0011_xor<11> (c_var_sub0011<11>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0011_Madd_lut<11> (Madd_c_var_add0011_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0011_Madd_cy<11> (Madd_c_var_add0011_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0011_Madd_xor<12> (c_var_add0011<12>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0011<13>1 (c_var_mux0011<13>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0012_cy<13> (Msub_c_var_sub0012_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0012_xor<14> (c_var_sub0012<14>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0012_Madd_lut<14> (Madd_c_var_add0012_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0012_Madd_cy<14> (Madd_c_var_add0012_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0012_Madd_xor<15> (c_var_add0012<15>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0012<16>1 (c_var_mux0012<16>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0013_cy<16> (Msub_c_var_sub0013_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0013_xor<17> (c_var_sub0013<17>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0013_Madd_lut<17> (Madd_c_var_add0013_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0013_Madd_cy<17> (Madd_c_var_add0013_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0013_Madd_xor<18> (c_var_add0013<18>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0013<19>1 (c_var_mux0013<19>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0014_cy<19> (Msub_c_var_sub0014_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0014_xor<20> (c_var_sub0014<20>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0014_Madd_lut<20> (Madd_c_var_add0014_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0014_Madd_cy<20> (Madd_c_var_add0014_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0014_Madd_xor<21> (c_var_add0014<21>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0014<22>1 (c_var_mux0014<22>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0015_cy<22> (Msub_c_var_sub0015_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  Msub_c_var_sub0015_cy<23> (Msub_c_var_sub0015_cy<23>)
+     XORCY:CI->O          47   0.699   1.229  Msub_c_var_sub0015_xor<24> (c_var_sub0015<24>)
+     LUT3:I0->O            0   0.612   0.000  c_var_mux0015<1>1 (c_var_mux0015<1>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0016_cy<1> (Msub_c_var_sub0016_cy<1>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0016_xor<2> (c_var_sub0016<2>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0016_Madd_lut<2> (Madd_c_var_add0016_Madd_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0016_Madd_cy<2> (Madd_c_var_add0016_Madd_cy<2>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0016_Madd_xor<3> (c_var_add0016<3>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0016<4>1 (c_var_mux0016<4>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0017_cy<4> (Msub_c_var_sub0017_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0017_xor<5> (c_var_sub0017<5>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0017_Madd_lut<5> (Madd_c_var_add0017_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0017_Madd_cy<5> (Madd_c_var_add0017_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0017_Madd_xor<6> (c_var_add0017<6>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0017<7>1 (c_var_mux0017<7>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0018_cy<7> (Msub_c_var_sub0018_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0018_xor<8> (c_var_sub0018<8>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0018_Madd_lut<8> (Madd_c_var_add0018_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0018_Madd_cy<8> (Madd_c_var_add0018_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0018_Madd_xor<9> (c_var_add0018<9>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0018<10>1 (c_var_mux0018<10>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0019_cy<10> (Msub_c_var_sub0019_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0019_xor<11> (c_var_sub0019<11>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0019_Madd_lut<11> (Madd_c_var_add0019_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0019_Madd_cy<11> (Madd_c_var_add0019_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0019_Madd_xor<12> (c_var_add0019<12>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0019<13>1 (c_var_mux0019<13>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0020_cy<13> (Msub_c_var_sub0020_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0020_xor<14> (c_var_sub0020<14>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0020_Madd_lut<14> (Madd_c_var_add0020_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0020_Madd_cy<14> (Madd_c_var_add0020_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0020_Madd_xor<15> (c_var_add0020<15>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0020<16>1 (c_var_mux0020<16>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0021_cy<16> (Msub_c_var_sub0021_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0021_xor<17> (c_var_sub0021<17>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0021_Madd_lut<17> (Madd_c_var_add0021_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0021_Madd_cy<17> (Madd_c_var_add0021_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0021_Madd_xor<18> (c_var_add0021<18>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0021<19>1 (c_var_mux0021<19>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0022_cy<19> (Msub_c_var_sub0022_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0022_xor<20> (c_var_sub0022<20>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0022_Madd_lut<20> (Madd_c_var_add0022_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0022_Madd_cy<20> (Madd_c_var_add0022_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0022_Madd_xor<21> (c_var_add0022<21>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0022<22>1 (c_var_mux0022<22>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0023_cy<22> (Msub_c_var_sub0023_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  Msub_c_var_sub0023_cy<23> (Msub_c_var_sub0023_cy<23>)
+     XORCY:CI->O          47   0.699   1.229  Msub_c_var_sub0023_xor<24> (c_var_sub0023<24>)
+     LUT3:I0->O            0   0.612   0.000  c_var_mux0023<1>1 (c_var_mux0023<1>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0024_cy<1> (Msub_c_var_sub0024_cy<1>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0024_xor<2> (c_var_sub0024<2>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0024_Madd_lut<2> (Madd_c_var_add0024_Madd_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0024_Madd_cy<2> (Madd_c_var_add0024_Madd_cy<2>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0024_Madd_xor<3> (c_var_add0024<3>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0024<4>1 (c_var_mux0024<4>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0025_cy<4> (Msub_c_var_sub0025_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0025_xor<5> (c_var_sub0025<5>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0025_Madd_lut<5> (Madd_c_var_add0025_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0025_Madd_cy<5> (Madd_c_var_add0025_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0025_Madd_xor<6> (c_var_add0025<6>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0025<7>1 (c_var_mux0025<7>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0026_cy<7> (Msub_c_var_sub0026_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0026_xor<8> (c_var_sub0026<8>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0026_Madd_lut<8> (Madd_c_var_add0026_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0026_Madd_cy<8> (Madd_c_var_add0026_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0026_Madd_xor<9> (c_var_add0026<9>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0026<10>1 (c_var_mux0026<10>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0027_cy<10> (Msub_c_var_sub0027_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0027_xor<11> (c_var_sub0027<11>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0027_Madd_lut<11> (Madd_c_var_add0027_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0027_Madd_cy<11> (Madd_c_var_add0027_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0027_Madd_xor<12> (c_var_add0027<12>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0027<13>1 (c_var_mux0027<13>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0028_cy<13> (Msub_c_var_sub0028_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0028_xor<14> (c_var_sub0028<14>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0028_Madd_lut<14> (Madd_c_var_add0028_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0028_Madd_cy<14> (Madd_c_var_add0028_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0028_Madd_xor<15> (c_var_add0028<15>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0028<16>1 (c_var_mux0028<16>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0029_cy<16> (Msub_c_var_sub0029_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0029_xor<17> (c_var_sub0029<17>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0029_Madd_lut<17> (Madd_c_var_add0029_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0029_Madd_cy<17> (Madd_c_var_add0029_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0029_Madd_xor<18> (c_var_add0029<18>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0029<19>1 (c_var_mux0029<19>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0030_cy<19> (Msub_c_var_sub0030_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0030_xor<20> (c_var_sub0030<20>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0030_Madd_lut<20> (Madd_c_var_add0030_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0030_Madd_cy<20> (Madd_c_var_add0030_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0030_Madd_xor<21> (c_var_add0030<21>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0030<22>1 (c_var_mux0030<22>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0031_cy<22> (Msub_c_var_sub0031_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  Msub_c_var_sub0031_cy<23> (Msub_c_var_sub0031_cy<23>)
+     XORCY:CI->O          47   0.699   1.229  Msub_c_var_sub0031_xor<24> (c_var_sub0031<24>)
+     LUT3:I0->O            0   0.612   0.000  c_var_mux0031<1>1 (c_var_mux0031<1>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0032_cy<1> (Msub_c_var_sub0032_cy<1>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0032_xor<2> (c_var_sub0032<2>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0032_Madd_lut<2> (Madd_c_var_add0032_Madd_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0032_Madd_cy<2> (Madd_c_var_add0032_Madd_cy<2>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0032_Madd_xor<3> (c_var_add0032<3>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0032<4>1 (c_var_mux0032<4>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0033_cy<4> (Msub_c_var_sub0033_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0033_xor<5> (c_var_sub0033<5>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0033_Madd_lut<5> (Madd_c_var_add0033_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0033_Madd_cy<5> (Madd_c_var_add0033_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0033_Madd_xor<6> (c_var_add0033<6>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0033<7>1 (c_var_mux0033<7>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0034_cy<7> (Msub_c_var_sub0034_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0034_xor<8> (c_var_sub0034<8>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0034_Madd_lut<8> (Madd_c_var_add0034_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0034_Madd_cy<8> (Madd_c_var_add0034_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0034_Madd_xor<9> (c_var_add0034<9>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0034<10>1 (c_var_mux0034<10>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0035_cy<10> (Msub_c_var_sub0035_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0035_xor<11> (c_var_sub0035<11>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0035_Madd_lut<11> (Madd_c_var_add0035_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0035_Madd_cy<11> (Madd_c_var_add0035_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0035_Madd_xor<12> (c_var_add0035<12>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0035<13>1 (c_var_mux0035<13>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0036_cy<13> (Msub_c_var_sub0036_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0036_xor<14> (c_var_sub0036<14>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0036_Madd_lut<14> (Madd_c_var_add0036_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0036_Madd_cy<14> (Madd_c_var_add0036_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0036_Madd_xor<15> (c_var_add0036<15>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0036<16>1 (c_var_mux0036<16>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0037_cy<16> (Msub_c_var_sub0037_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0037_xor<17> (c_var_sub0037<17>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0037_Madd_lut<17> (Madd_c_var_add0037_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0037_Madd_cy<17> (Madd_c_var_add0037_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0037_Madd_xor<18> (c_var_add0037<18>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0037<19>1 (c_var_mux0037<19>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0038_cy<19> (Msub_c_var_sub0038_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0038_xor<20> (c_var_sub0038<20>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0038_Madd_lut<20> (Madd_c_var_add0038_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0038_Madd_cy<20> (Madd_c_var_add0038_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0038_Madd_xor<21> (c_var_add0038<21>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0038<22>1 (c_var_mux0038<22>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0039_cy<22> (Msub_c_var_sub0039_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  Msub_c_var_sub0039_cy<23> (Msub_c_var_sub0039_cy<23>)
+     XORCY:CI->O          47   0.699   1.229  Msub_c_var_sub0039_xor<24> (c_var_sub0039<24>)
+     LUT3:I0->O            0   0.612   0.000  c_var_mux0039<1>1 (c_var_mux0039<1>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0040_cy<1> (Msub_c_var_sub0040_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_c_var_sub0040_cy<2> (Msub_c_var_sub0040_cy<2>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0040_xor<3> (c_var_sub0040<3>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0040_Madd_lut<3> (Madd_c_var_add0040_Madd_lut<3>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0040_Madd_cy<3> (Madd_c_var_add0040_Madd_cy<3>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0040_Madd_xor<4> (c_var_add0040<4>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0040<5>1 (c_var_mux0040<5>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0041_cy<5> (Msub_c_var_sub0041_cy<5>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0041_xor<6> (c_var_sub0041<6>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0041_Madd_lut<6> (Madd_c_var_add0041_Madd_lut<6>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0041_Madd_cy<6> (Madd_c_var_add0041_Madd_cy<6>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0041_Madd_xor<7> (c_var_add0041<7>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0041<8>1 (c_var_mux0041<8>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0042_cy<8> (Msub_c_var_sub0042_cy<8>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0042_xor<9> (c_var_sub0042<9>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0042_Madd_lut<9> (Madd_c_var_add0042_Madd_lut<9>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0042_Madd_cy<9> (Madd_c_var_add0042_Madd_cy<9>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0042_Madd_xor<10> (c_var_add0042<10>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0042<11>1 (c_var_mux0042<11>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0043_cy<11> (Msub_c_var_sub0043_cy<11>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0043_xor<12> (c_var_sub0043<12>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0043_Madd_lut<12> (Madd_c_var_add0043_Madd_lut<12>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0043_Madd_cy<12> (Madd_c_var_add0043_Madd_cy<12>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0043_Madd_xor<13> (c_var_add0043<13>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0043<14>1 (c_var_mux0043<14>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0044_cy<14> (Msub_c_var_sub0044_cy<14>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0044_xor<15> (c_var_sub0044<15>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0044_Madd_lut<15> (Madd_c_var_add0044_Madd_lut<15>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0044_Madd_cy<15> (Madd_c_var_add0044_Madd_cy<15>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0044_Madd_xor<16> (c_var_add0044<16>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0044<17>1 (c_var_mux0044<17>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0045_cy<17> (Msub_c_var_sub0045_cy<17>)
+     XORCY:CI->O           3   0.699   0.603  Msub_c_var_sub0045_xor<18> (c_var_sub0045<18>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0045_Madd_lut<18> (Madd_c_var_add0045_Madd_lut<18>)
+     MUXCY:S->O            1   0.404   0.000  Madd_c_var_add0045_Madd_cy<18> (Madd_c_var_add0045_Madd_cy<18>)
+     XORCY:CI->O           2   0.699   0.410  Madd_c_var_add0045_Madd_xor<19> (c_var_add0045<19>)
+     LUT3:I2->O            0   0.612   0.000  c_var_mux0045<20>1 (c_var_mux0045<20>)
+     MUXCY:DI->O           1   0.773   0.000  Msub_c_var_sub0046_cy<20> (Msub_c_var_sub0046_cy<20>)
+     XORCY:CI->O           2   0.699   0.532  Msub_c_var_sub0046_xor<21> (c_var_sub0046<21>)
+     LUT2:I0->O            1   0.612   0.000  Madd_c_var_add0046_Madd_lut<21> (Madd_c_var_add0046_Madd_lut<21>)
+     MUXCY:S->O            0   0.404   0.000  Madd_c_var_add0046_Madd_cy<21> (Madd_c_var_add0046_Madd_cy<21>)
+     XORCY:CI->O           1   0.699   0.387  Madd_c_var_add0046_Madd_xor<22> (c_var_add0046<22>)
+     LUT3:I2->O            1   0.612   0.357  c_var_mux0046<23>1 (c_23_OBUF)
+     OBUF:I->O                 3.169          c_23_OBUF (c<23>)
+    ----------------------------------------
+    Total                    224.981ns (174.857ns logic, 50.124ns route)
+                                       (77.7% logic, 22.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 19.90 secs
+ 
+--> 
+
+Total memory usage is 314960 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

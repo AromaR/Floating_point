@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/hp/Documents/eda/FPMDP/tb_isim_translate.exe" -prj "C:/Users/hp/Documents/eda/FPMDP/tb_translate.prj" "work.tb" 

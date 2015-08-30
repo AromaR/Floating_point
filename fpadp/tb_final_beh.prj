@@ -1,0 +1,6 @@
+vhdl work "CMP.vhd"
+vhdl work "sec.vhd"
+vhdl work "norm.vhd"
+vhdl work "CMP8.vhd"
+vhdl work "datapath.vhd"
+vhdl work "tb_final.vhd"

@@ -1,0 +1,8 @@
+vhdl isim_temp "FA.vhd"
+vhdl isim_temp "norm.vhd"
+vhdl isim_temp "mult.vhd"
+vhdl isim_temp "adder.vhd"
+vhdl isim_temp "data.vhd"
+vhdl isim_temp "cntl.vhd"
+vhdl isim_temp "TOP.vhd"
+vhdl isim_temp "tb_1.vhd"

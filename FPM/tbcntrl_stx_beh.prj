@@ -1,0 +1,2 @@
+vhdl isim_temp "TOPCONTROL.vhd"
+vhdl isim_temp "tbcntrl.vhd"

@@ -1,0 +1,8 @@
+vhdl work "FA.vhd"
+vhdl work "norm.vhd"
+vhdl work "mult.vhd"
+vhdl work "adder.vhd"
+vhdl work "data.vhd"
+vhdl work "cntl.vhd"
+vhdl work "TOP.vhd"
+vhdl work "tb_1.vhd"

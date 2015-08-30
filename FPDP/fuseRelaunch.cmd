@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/hp/Documents/eda/FPDP/tb_1_isim_beh.exe" -prj "C:/Users/hp/Documents/eda/FPDP/tb_1_beh.prj" "work.tb_1" 

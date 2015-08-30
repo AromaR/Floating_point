@@ -1,0 +1,28 @@
+Command line:
+   dat7_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  2459
+
+Tue Mar 31 14:21:23 2015
+
+
+ Elaboration Time: 0.203125 sec
+
+ Current Memory Usage: 365.81 Meg
+
+ Total Signals          : 46
+ Total Nets             : 351
+ Total Signal Drivers   : 20
+ Total Blocks           : 9
+ Total Primitive Blocks : 7
+ Total Processes        : 12
+ Total Traceable Variables  : 16
+ Total Scalar Nets and Variables : 853
+
+ Total Simulation Time: 0.25 sec
+
+ Current Memory Usage: 365.81 Meg
+
+Tue Mar 31 14:24:32 2015
+

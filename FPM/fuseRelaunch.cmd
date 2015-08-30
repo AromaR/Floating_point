@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/hp/Documents/eda/FPM/top_final_all_isim_beh.exe" -prj "C:/Users/hp/Documents/eda/FPM/top_final_all_beh.prj" "work.top_final_all" 

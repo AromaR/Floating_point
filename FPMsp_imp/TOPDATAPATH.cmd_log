@@ -1,0 +1,1 @@
+vhdtdtfi -prj FPMsp_imp -o C:/Users/hp/Documents/eda/FPMsp_imp/TOPDATAPATH.vhi -module TOPDATAPATH -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work FA.vhd -lib work norm.vhd -lib work adder.vhd -lib work data.vhd 

@@ -1,0 +1,1116 @@
+Release 10.1 - xst K.31 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: Datapath.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Datapath.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Datapath"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : Datapath
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : Datapath.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/div.vhd" in Library work.
+Architecture behavioral of Entity div is up to date.
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/anly.vhd" in Library work.
+Architecture behavioral of Entity anly is up to date.
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/sec.vhd" in Library work.
+Architecture behavioral of Entity sec is up to date.
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/datapath.vhd" in Library work.
+Architecture behavioral of Entity datapath is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Datapath> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <div> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <anly> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <sec> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Datapath> in library <work> (Architecture <behavioral>).
+Entity <Datapath> analyzed. Unit <Datapath> generated.
+
+Analyzing Entity <div> in library <work> (Architecture <behavioral>).
+Entity <div> analyzed. Unit <div> generated.
+
+Analyzing Entity <anly> in library <work> (Architecture <behavioral>).
+Entity <anly> analyzed. Unit <anly> generated.
+
+Analyzing Entity <sec> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/sec.vhd" line 58: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/sec.vhd" line 61: Index value(s) does not match array range, simulation mismatch.
+Entity <sec> analyzed. Unit <sec> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <div>.
+    Related source file is "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/div.vhd".
+WARNING:Xst:646 - Signal <c_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 25-bit adder for signal <c_var$add0000> created at line 53.
+    Found 25-bit adder for signal <c_var$add0001> created at line 53.
+    Found 25-bit adder for signal <c_var$add0002> created at line 53.
+    Found 25-bit adder for signal <c_var$add0003> created at line 53.
+    Found 25-bit adder for signal <c_var$add0004> created at line 53.
+    Found 25-bit adder for signal <c_var$add0005> created at line 53.
+    Found 25-bit adder for signal <c_var$add0006> created at line 53.
+    Found 25-bit adder for signal <c_var$add0007> created at line 53.
+    Found 25-bit adder for signal <c_var$add0008> created at line 53.
+    Found 25-bit adder for signal <c_var$add0009> created at line 53.
+    Found 25-bit adder for signal <c_var$add0010> created at line 53.
+    Found 25-bit adder for signal <c_var$add0011> created at line 53.
+    Found 25-bit adder for signal <c_var$add0012> created at line 53.
+    Found 25-bit adder for signal <c_var$add0013> created at line 53.
+    Found 25-bit adder for signal <c_var$add0014> created at line 53.
+    Found 25-bit adder for signal <c_var$add0015> created at line 53.
+    Found 25-bit adder for signal <c_var$add0016> created at line 53.
+    Found 25-bit adder for signal <c_var$add0017> created at line 53.
+    Found 25-bit adder for signal <c_var$add0018> created at line 53.
+    Found 25-bit adder for signal <c_var$add0019> created at line 53.
+    Found 25-bit adder for signal <c_var$add0020> created at line 53.
+    Found 25-bit adder for signal <c_var$add0021> created at line 53.
+    Found 25-bit adder for signal <c_var$add0022> created at line 53.
+    Found 25-bit adder for signal <c_var$add0023> created at line 53.
+    Found 25-bit adder for signal <c_var$add0024> created at line 53.
+    Found 25-bit adder for signal <c_var$add0025> created at line 53.
+    Found 25-bit adder for signal <c_var$add0026> created at line 53.
+    Found 25-bit adder for signal <c_var$add0027> created at line 53.
+    Found 25-bit adder for signal <c_var$add0028> created at line 53.
+    Found 25-bit adder for signal <c_var$add0029> created at line 53.
+    Found 25-bit adder for signal <c_var$add0030> created at line 53.
+    Found 25-bit adder for signal <c_var$add0031> created at line 53.
+    Found 25-bit adder for signal <c_var$add0032> created at line 53.
+    Found 25-bit adder for signal <c_var$add0033> created at line 53.
+    Found 25-bit adder for signal <c_var$add0034> created at line 53.
+    Found 25-bit adder for signal <c_var$add0035> created at line 53.
+    Found 25-bit adder for signal <c_var$add0036> created at line 53.
+    Found 25-bit adder for signal <c_var$add0037> created at line 53.
+    Found 25-bit adder for signal <c_var$add0038> created at line 53.
+    Found 25-bit adder for signal <c_var$add0039> created at line 53.
+    Found 25-bit adder for signal <c_var$add0040> created at line 53.
+    Found 25-bit adder for signal <c_var$add0041> created at line 53.
+    Found 25-bit adder for signal <c_var$add0042> created at line 53.
+    Found 25-bit adder for signal <c_var$add0043> created at line 53.
+    Found 25-bit adder for signal <c_var$add0044> created at line 53.
+    Found 25-bit adder for signal <c_var$add0045> created at line 53.
+    Found 25-bit adder for signal <c_var$add0046> created at line 53.
+    Found 25-bit subtractor for signal <c_var$sub0000> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0001> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0002> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0003> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0004> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0005> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0006> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0007> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0008> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0009> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0010> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0011> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0012> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0013> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0014> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0015> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0016> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0017> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0018> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0019> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0020> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0021> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0022> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0023> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0024> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0025> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0026> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0027> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0028> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0029> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0030> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0031> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0032> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0033> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0034> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0035> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0036> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0037> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0038> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0039> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0040> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0041> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0042> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0043> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0044> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0045> created at line 51.
+    Found 25-bit subtractor for signal <c_var$sub0046> created at line 51.
+    Summary:
+	inferred  94 Adder/Subtractor(s).
+Unit <div> synthesized.
+
+
+Synthesizing Unit <anly>.
+    Related source file is "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/anly.vhd".
+WARNING:Xst:647 - Input <a<31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <a<22:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <b<31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <b<22:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 9-bit adder for signal <exp_sig1$add0000> created at line 50.
+    Found 9-bit subtractor for signal <exp_sig1$addsub0000> created at line 49.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <anly> synthesized.
+
+
+Synthesizing Unit <sec>.
+    Related source file is "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/sec.vhd".
+    Found 17-bit comparator greater for signal <manout_0$cmp_gt0000> created at line 57.
+    Found 9-bit adder for signal <p_sig$addsub0000> created at line 64.
+    Found 9-bit subtractor for signal <p_sig$sub0000> created at line 67.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <sec> synthesized.
+
+
+Synthesizing Unit <Datapath>.
+    Related source file is "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/datapath.vhd".
+WARNING:Xst:1780 - Signal <p_sig<8>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <exp_sig<8>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <c_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit register for signal <o_sig>.
+    Found 1-bit xor2 for signal <sign>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <Datapath> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 98
+ 25-bit adder                                          : 47
+ 25-bit subtractor                                     : 47
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 2
+# Registers                                            : 1
+ 32-bit register                                       : 1
+# Comparators                                          : 1
+ 17-bit comparator greater                             : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:\Xilinx\10.1\ISE.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 98
+ 23-bit adder                                          : 1
+ 24-bit adder                                          : 46
+ 25-bit subtractor                                     : 47
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+# Comparators                                          : 1
+ 17-bit comparator greater                             : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Datapath> ...
+
+Optimizing unit <div> ...
+
+Optimizing unit <sec> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Datapath, actual ratio is 49.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Datapath.ngr
+Top Level Output File Name         : Datapath
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 176
+
+Cell Usage :
+# BELS                             : 8568
+#      GND                         : 1
+#      INV                         : 140
+#      LUT2                        : 1145
+#      LUT3                        : 1188
+#      LUT4                        : 1655
+#      MUXCY                       : 2201
+#      MUXF5                       : 11
+#      VCC                         : 1
+#      XORCY                       : 2226
+# FlipFlops/Latches                : 32
+#      FDR                         : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 175
+#      IBUF                        : 64
+#      OBUF                        : 111
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                     2197  out of   4656    47%  
+ Number of 4 input LUTs:               4128  out of   9312    44%  
+ Number of IOs:                         176
+ Number of bonded IOBs:                 176  out of    232    75%  
+    IOB Flip Flops:                      32
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 32    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 245.502ns
+   Maximum output required time after clock: 4.040ns
+   Maximum combinational path delay: 244.069ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 18009997386389194000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 / 64
+-------------------------------------------------------------------------
+Offset:              245.502ns (Levels of Logic = 297)
+  Source:            b<0> (PAD)
+  Destination:       o_sig_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: b<0> to o_sig_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           185   1.106   1.183  b_0_IBUF (b_0_IBUF)
+     LUT2:I1->O            1   0.612   0.000  st1/Msub_c_var_sub0000_lut<0> (st1/Msub_c_var_sub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  st1/Msub_c_var_sub0000_cy<0> (st1/Msub_c_var_sub0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  st1/Msub_c_var_sub0000_cy<1> (st1/Msub_c_var_sub0000_cy<1>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0000_xor<2> (st1/c_var_sub0000<2>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0000_Madd_lut<2> (st1/Madd_c_var_add0000_Madd_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0000_Madd_cy<2> (st1/Madd_c_var_add0000_Madd_cy<2>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0000_Madd_xor<3> (st1/c_var_add0000<3>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0000<4>1 (st1/c_var_mux0000<4>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0001_cy<4> (st1/Msub_c_var_sub0001_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0001_xor<5> (st1/c_var_sub0001<5>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0001_Madd_lut<5> (st1/Madd_c_var_add0001_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0001_Madd_cy<5> (st1/Madd_c_var_add0001_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0001_Madd_xor<6> (st1/c_var_add0001<6>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0001<7>1 (st1/c_var_mux0001<7>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0002_cy<7> (st1/Msub_c_var_sub0002_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0002_xor<8> (st1/c_var_sub0002<8>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0002_Madd_lut<8> (st1/Madd_c_var_add0002_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0002_Madd_cy<8> (st1/Madd_c_var_add0002_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0002_Madd_xor<9> (st1/c_var_add0002<9>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0002<10>1 (st1/c_var_mux0002<10>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0003_cy<10> (st1/Msub_c_var_sub0003_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0003_xor<11> (st1/c_var_sub0003<11>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0003_Madd_lut<11> (st1/Madd_c_var_add0003_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0003_Madd_cy<11> (st1/Madd_c_var_add0003_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0003_Madd_xor<12> (st1/c_var_add0003<12>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0003<13>1 (st1/c_var_mux0003<13>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0004_cy<13> (st1/Msub_c_var_sub0004_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0004_xor<14> (st1/c_var_sub0004<14>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0004_Madd_lut<14> (st1/Madd_c_var_add0004_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0004_Madd_cy<14> (st1/Madd_c_var_add0004_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0004_Madd_xor<15> (st1/c_var_add0004<15>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0004<16>1 (st1/c_var_mux0004<16>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0005_cy<16> (st1/Msub_c_var_sub0005_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0005_xor<17> (st1/c_var_sub0005<17>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0005_Madd_lut<17> (st1/Madd_c_var_add0005_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0005_Madd_cy<17> (st1/Madd_c_var_add0005_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0005_Madd_xor<18> (st1/c_var_add0005<18>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0005<19>1 (st1/c_var_mux0005<19>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0006_cy<19> (st1/Msub_c_var_sub0006_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0006_xor<20> (st1/c_var_sub0006<20>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0006_Madd_lut<20> (st1/Madd_c_var_add0006_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0006_Madd_cy<20> (st1/Madd_c_var_add0006_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0006_Madd_xor<21> (st1/c_var_add0006<21>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0006<22>1 (st1/c_var_mux0006<22>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0007_cy<22> (st1/Msub_c_var_sub0007_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  st1/Msub_c_var_sub0007_cy<23> (st1/Msub_c_var_sub0007_cy<23>)
+     XORCY:CI->O          60   0.699   1.232  st1/Msub_c_var_sub0007_xor<24> (st1/c_var_sub0007<24>)
+     LUT3:I0->O            0   0.612   0.000  st1/c_var_mux0007<2>1 (st1/c_var_mux0007<2>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0008_cy<2> (st1/Msub_c_var_sub0008_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  st1/Msub_c_var_sub0008_cy<3> (st1/Msub_c_var_sub0008_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  st1/Msub_c_var_sub0008_cy<4> (st1/Msub_c_var_sub0008_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0008_xor<5> (st1/c_var_sub0008<5>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0008_Madd_lut<5> (st1/Madd_c_var_add0008_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0008_Madd_cy<5> (st1/Madd_c_var_add0008_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0008_Madd_xor<6> (st1/c_var_add0008<6>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0008<7>1 (st1/c_var_mux0008<7>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0009_cy<7> (st1/Msub_c_var_sub0009_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0009_xor<8> (st1/c_var_sub0009<8>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0009_Madd_lut<8> (st1/Madd_c_var_add0009_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0009_Madd_cy<8> (st1/Madd_c_var_add0009_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0009_Madd_xor<9> (st1/c_var_add0009<9>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0009<10>1 (st1/c_var_mux0009<10>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0010_cy<10> (st1/Msub_c_var_sub0010_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0010_xor<11> (st1/c_var_sub0010<11>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0010_Madd_lut<11> (st1/Madd_c_var_add0010_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0010_Madd_cy<11> (st1/Madd_c_var_add0010_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0010_Madd_xor<12> (st1/c_var_add0010<12>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0010<13>1 (st1/c_var_mux0010<13>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0011_cy<13> (st1/Msub_c_var_sub0011_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0011_xor<14> (st1/c_var_sub0011<14>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0011_Madd_lut<14> (st1/Madd_c_var_add0011_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0011_Madd_cy<14> (st1/Madd_c_var_add0011_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0011_Madd_xor<15> (st1/c_var_add0011<15>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0011<16>1 (st1/c_var_mux0011<16>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0012_cy<16> (st1/Msub_c_var_sub0012_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0012_xor<17> (st1/c_var_sub0012<17>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0012_Madd_lut<17> (st1/Madd_c_var_add0012_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0012_Madd_cy<17> (st1/Madd_c_var_add0012_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0012_Madd_xor<18> (st1/c_var_add0012<18>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0012<19>1 (st1/c_var_mux0012<19>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0013_cy<19> (st1/Msub_c_var_sub0013_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0013_xor<20> (st1/c_var_sub0013<20>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0013_Madd_lut<20> (st1/Madd_c_var_add0013_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0013_Madd_cy<20> (st1/Madd_c_var_add0013_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0013_Madd_xor<21> (st1/c_var_add0013<21>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0013<22>1 (st1/c_var_mux0013<22>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0014_cy<22> (st1/Msub_c_var_sub0014_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  st1/Msub_c_var_sub0014_cy<23> (st1/Msub_c_var_sub0014_cy<23>)
+     XORCY:CI->O          66   0.699   1.234  st1/Msub_c_var_sub0014_xor<24> (st1/c_var_sub0014<24>)
+     LUT3:I0->O            0   0.612   0.000  st1/c_var_mux0014<2>1 (st1/c_var_mux0014<2>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0015_cy<2> (st1/Msub_c_var_sub0015_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  st1/Msub_c_var_sub0015_cy<3> (st1/Msub_c_var_sub0015_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  st1/Msub_c_var_sub0015_cy<4> (st1/Msub_c_var_sub0015_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0015_xor<5> (st1/c_var_sub0015<5>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0015_Madd_lut<5> (st1/Madd_c_var_add0015_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0015_Madd_cy<5> (st1/Madd_c_var_add0015_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0015_Madd_xor<6> (st1/c_var_add0015<6>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0015<7>1 (st1/c_var_mux0015<7>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0016_cy<7> (st1/Msub_c_var_sub0016_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0016_xor<8> (st1/c_var_sub0016<8>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0016_Madd_lut<8> (st1/Madd_c_var_add0016_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0016_Madd_cy<8> (st1/Madd_c_var_add0016_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0016_Madd_xor<9> (st1/c_var_add0016<9>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0016<10>1 (st1/c_var_mux0016<10>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0017_cy<10> (st1/Msub_c_var_sub0017_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0017_xor<11> (st1/c_var_sub0017<11>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0017_Madd_lut<11> (st1/Madd_c_var_add0017_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0017_Madd_cy<11> (st1/Madd_c_var_add0017_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0017_Madd_xor<12> (st1/c_var_add0017<12>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0017<13>1 (st1/c_var_mux0017<13>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0018_cy<13> (st1/Msub_c_var_sub0018_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0018_xor<14> (st1/c_var_sub0018<14>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0018_Madd_lut<14> (st1/Madd_c_var_add0018_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0018_Madd_cy<14> (st1/Madd_c_var_add0018_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0018_Madd_xor<15> (st1/c_var_add0018<15>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0018<16>1 (st1/c_var_mux0018<16>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0019_cy<16> (st1/Msub_c_var_sub0019_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0019_xor<17> (st1/c_var_sub0019<17>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0019_Madd_lut<17> (st1/Madd_c_var_add0019_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0019_Madd_cy<17> (st1/Madd_c_var_add0019_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0019_Madd_xor<18> (st1/c_var_add0019<18>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0019<19>1 (st1/c_var_mux0019<19>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0020_cy<19> (st1/Msub_c_var_sub0020_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0020_xor<20> (st1/c_var_sub0020<20>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0020_Madd_lut<20> (st1/Madd_c_var_add0020_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0020_Madd_cy<20> (st1/Madd_c_var_add0020_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0020_Madd_xor<21> (st1/c_var_add0020<21>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0020<22>1 (st1/c_var_mux0020<22>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0021_cy<22> (st1/Msub_c_var_sub0021_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  st1/Msub_c_var_sub0021_cy<23> (st1/Msub_c_var_sub0021_cy<23>)
+     XORCY:CI->O          74   0.699   1.153  st1/Msub_c_var_sub0021_xor<24> (st1/c_var_sub0021<24>)
+     LUT3:I1->O            0   0.612   0.000  st1/c_var_mux0021<1>1 (st1/c_var_mux0021<1>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0022_cy<1> (st1/Msub_c_var_sub0022_cy<1>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0022_xor<2> (st1/c_var_sub0022<2>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0022_Madd_lut<2> (st1/Madd_c_var_add0022_Madd_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0022_Madd_cy<2> (st1/Madd_c_var_add0022_Madd_cy<2>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0022_Madd_xor<3> (st1/c_var_add0022<3>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0022<4>1 (st1/c_var_mux0022<4>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0023_cy<4> (st1/Msub_c_var_sub0023_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0023_xor<5> (st1/c_var_sub0023<5>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0023_Madd_lut<5> (st1/Madd_c_var_add0023_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0023_Madd_cy<5> (st1/Madd_c_var_add0023_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0023_Madd_xor<6> (st1/c_var_add0023<6>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0023<7>1 (st1/c_var_mux0023<7>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0024_cy<7> (st1/Msub_c_var_sub0024_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0024_xor<8> (st1/c_var_sub0024<8>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0024_Madd_lut<8> (st1/Madd_c_var_add0024_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0024_Madd_cy<8> (st1/Madd_c_var_add0024_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0024_Madd_xor<9> (st1/c_var_add0024<9>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0024<10>1 (st1/c_var_mux0024<10>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0025_cy<10> (st1/Msub_c_var_sub0025_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0025_xor<11> (st1/c_var_sub0025<11>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0025_Madd_lut<11> (st1/Madd_c_var_add0025_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0025_Madd_cy<11> (st1/Madd_c_var_add0025_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0025_Madd_xor<12> (st1/c_var_add0025<12>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0025<13>1 (st1/c_var_mux0025<13>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0026_cy<13> (st1/Msub_c_var_sub0026_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0026_xor<14> (st1/c_var_sub0026<14>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0026_Madd_lut<14> (st1/Madd_c_var_add0026_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0026_Madd_cy<14> (st1/Madd_c_var_add0026_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0026_Madd_xor<15> (st1/c_var_add0026<15>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0026<16>1 (st1/c_var_mux0026<16>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0027_cy<16> (st1/Msub_c_var_sub0027_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0027_xor<17> (st1/c_var_sub0027<17>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0027_Madd_lut<17> (st1/Madd_c_var_add0027_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0027_Madd_cy<17> (st1/Madd_c_var_add0027_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0027_Madd_xor<18> (st1/c_var_add0027<18>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0027<19>1 (st1/c_var_mux0027<19>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0028_cy<19> (st1/Msub_c_var_sub0028_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0028_xor<20> (st1/c_var_sub0028<20>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0028_Madd_lut<20> (st1/Madd_c_var_add0028_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0028_Madd_cy<20> (st1/Madd_c_var_add0028_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0028_Madd_xor<21> (st1/c_var_add0028<21>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0028<22>1 (st1/c_var_mux0028<22>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0029_cy<22> (st1/Msub_c_var_sub0029_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  st1/Msub_c_var_sub0029_cy<23> (st1/Msub_c_var_sub0029_cy<23>)
+     XORCY:CI->O          75   0.699   1.153  st1/Msub_c_var_sub0029_xor<24> (st1/c_var_sub0029<24>)
+     LUT3:I1->O            0   0.612   0.000  st1/c_var_mux0029<1>1 (st1/c_var_mux0029<1>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0030_cy<1> (st1/Msub_c_var_sub0030_cy<1>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0030_xor<2> (st1/c_var_sub0030<2>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0030_Madd_lut<2> (st1/Madd_c_var_add0030_Madd_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0030_Madd_cy<2> (st1/Madd_c_var_add0030_Madd_cy<2>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0030_Madd_xor<3> (st1/c_var_add0030<3>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0030<4>1 (st1/c_var_mux0030<4>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0031_cy<4> (st1/Msub_c_var_sub0031_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0031_xor<5> (st1/c_var_sub0031<5>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0031_Madd_lut<5> (st1/Madd_c_var_add0031_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0031_Madd_cy<5> (st1/Madd_c_var_add0031_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0031_Madd_xor<6> (st1/c_var_add0031<6>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0031<7>1 (st1/c_var_mux0031<7>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0032_cy<7> (st1/Msub_c_var_sub0032_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0032_xor<8> (st1/c_var_sub0032<8>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0032_Madd_lut<8> (st1/Madd_c_var_add0032_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0032_Madd_cy<8> (st1/Madd_c_var_add0032_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0032_Madd_xor<9> (st1/c_var_add0032<9>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0032<10>1 (st1/c_var_mux0032<10>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0033_cy<10> (st1/Msub_c_var_sub0033_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0033_xor<11> (st1/c_var_sub0033<11>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0033_Madd_lut<11> (st1/Madd_c_var_add0033_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0033_Madd_cy<11> (st1/Madd_c_var_add0033_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0033_Madd_xor<12> (st1/c_var_add0033<12>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0033<13>1 (st1/c_var_mux0033<13>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0034_cy<13> (st1/Msub_c_var_sub0034_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0034_xor<14> (st1/c_var_sub0034<14>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0034_Madd_lut<14> (st1/Madd_c_var_add0034_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0034_Madd_cy<14> (st1/Madd_c_var_add0034_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0034_Madd_xor<15> (st1/c_var_add0034<15>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0034<16>1 (st1/c_var_mux0034<16>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0035_cy<16> (st1/Msub_c_var_sub0035_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0035_xor<17> (st1/c_var_sub0035<17>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0035_Madd_lut<17> (st1/Madd_c_var_add0035_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0035_Madd_cy<17> (st1/Madd_c_var_add0035_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0035_Madd_xor<18> (st1/c_var_add0035<18>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0035<19>1 (st1/c_var_mux0035<19>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0036_cy<19> (st1/Msub_c_var_sub0036_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0036_xor<20> (st1/c_var_sub0036<20>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0036_Madd_lut<20> (st1/Madd_c_var_add0036_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0036_Madd_cy<20> (st1/Madd_c_var_add0036_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0036_Madd_xor<21> (st1/c_var_add0036<21>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0036<22>1 (st1/c_var_mux0036<22>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0037_cy<22> (st1/Msub_c_var_sub0037_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  st1/Msub_c_var_sub0037_cy<23> (st1/Msub_c_var_sub0037_cy<23>)
+     XORCY:CI->O          75   0.699   1.153  st1/Msub_c_var_sub0037_xor<24> (st1/c_var_sub0037<24>)
+     LUT3:I1->O            0   0.612   0.000  st1/c_var_mux0037<1>1 (st1/c_var_mux0037<1>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0038_cy<1> (st1/Msub_c_var_sub0038_cy<1>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0038_xor<2> (st1/c_var_sub0038<2>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0038_Madd_lut<2> (st1/Madd_c_var_add0038_Madd_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0038_Madd_cy<2> (st1/Madd_c_var_add0038_Madd_cy<2>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0038_Madd_xor<3> (st1/c_var_add0038<3>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0038<4>1 (st1/c_var_mux0038<4>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0039_cy<4> (st1/Msub_c_var_sub0039_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0039_xor<5> (st1/c_var_sub0039<5>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0039_Madd_lut<5> (st1/Madd_c_var_add0039_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0039_Madd_cy<5> (st1/Madd_c_var_add0039_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0039_Madd_xor<6> (st1/c_var_add0039<6>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0039<7>1 (st1/c_var_mux0039<7>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0040_cy<7> (st1/Msub_c_var_sub0040_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0040_xor<8> (st1/c_var_sub0040<8>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0040_Madd_lut<8> (st1/Madd_c_var_add0040_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0040_Madd_cy<8> (st1/Madd_c_var_add0040_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0040_Madd_xor<9> (st1/c_var_add0040<9>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0040<10>1 (st1/c_var_mux0040<10>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0041_cy<10> (st1/Msub_c_var_sub0041_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0041_xor<11> (st1/c_var_sub0041<11>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0041_Madd_lut<11> (st1/Madd_c_var_add0041_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0041_Madd_cy<11> (st1/Madd_c_var_add0041_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0041_Madd_xor<12> (st1/c_var_add0041<12>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0041<13>1 (st1/c_var_mux0041<13>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0042_cy<13> (st1/Msub_c_var_sub0042_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0042_xor<14> (st1/c_var_sub0042<14>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0042_Madd_lut<14> (st1/Madd_c_var_add0042_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0042_Madd_cy<14> (st1/Madd_c_var_add0042_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0042_Madd_xor<15> (st1/c_var_add0042<15>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0042<16>1 (st1/c_var_mux0042<16>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0043_cy<16> (st1/Msub_c_var_sub0043_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0043_xor<17> (st1/c_var_sub0043<17>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0043_Madd_lut<17> (st1/Madd_c_var_add0043_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0043_Madd_cy<17> (st1/Madd_c_var_add0043_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0043_Madd_xor<18> (st1/c_var_add0043<18>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0043<19>1 (st1/c_var_mux0043<19>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0044_cy<19> (st1/Msub_c_var_sub0044_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0044_xor<20> (st1/c_var_sub0044<20>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0044_Madd_lut<20> (st1/Madd_c_var_add0044_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0044_Madd_cy<20> (st1/Madd_c_var_add0044_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0044_Madd_xor<21> (st1/c_var_add0044<21>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0044<22>1 (st1/c_var_mux0044<22>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0045_cy<22> (st1/Msub_c_var_sub0045_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  st1/Msub_c_var_sub0045_cy<23> (st1/Msub_c_var_sub0045_cy<23>)
+     XORCY:CI->O          70   0.699   1.152  st1/Msub_c_var_sub0045_xor<24> (st1/c_var_sub0045<24>)
+     LUT4:I1->O            1   0.612   0.387  st2/shift_mux0046<0>33 (st2/shift_mux0046<0>33)
+     LUT4:I2->O            1   0.612   0.426  st2/shift_mux0046<0>53 (st2/shift_mux0046<0>53)
+     LUT4:I1->O            1   0.612   0.387  st2/shift_mux0046<0>86 (st2/shift_mux0046<0>86)
+     LUT4:I2->O            1   0.612   0.426  st2/shift_mux0046<0>134 (st2/shift_mux0046<0>134)
+     LUT4:I1->O            1   0.612   0.387  st2/shift_mux0046<0>183 (st2/shift_mux0046<0>183)
+     LUT4:I2->O            1   0.612   0.426  st2/shift_mux0046<0>233 (st2/shift_mux0046<0>233)
+     LUT4:I1->O            1   0.612   0.387  st2/shift_mux0046<0>282 (st2/shift_mux0046<0>282)
+     LUT4:I2->O            1   0.612   0.426  st2/shift_mux0046<0>332 (st2/shift_mux0046<0>332)
+     LUT4:I1->O            1   0.612   0.387  st2/shift_mux0046<0>381 (st2/shift_mux0046<0>381)
+     LUT4:I2->O            1   0.612   0.426  st2/shift_mux0046<0>431 (st2/shift_mux0046<0>431)
+     LUT4:I1->O            1   0.612   0.387  st2/shift_mux0046<0>480 (st2/shift_mux0046<0>480)
+     LUT4:I2->O            1   0.612   0.426  st2/shift_mux0046<0>530 (st2/shift_mux0046<0>530)
+     LUT4:I1->O            1   0.612   0.387  st2/shift_mux0046<0>579 (st2/shift_mux0046<0>579)
+     LUT4:I2->O            1   0.612   0.426  st2/shift_mux0046<0>629 (st2/shift_mux0046<0>629)
+     LUT4:I1->O           35   0.612   1.104  st2/shift_mux0046<0>678 (st2/Madd_p_sig_addsub0000)
+     LUT3:I2->O            6   0.612   0.638  st2/Madd_p_sig_addsub0000_xor<2>111 (st2/N161)
+     LUT3:I1->O            6   0.612   0.721  st2/Madd_p_sig_addsub0000_cy<3>11 (st2/Madd_p_sig_addsub0000_cy<3>)
+     LUT3:I0->O           16   0.612   0.882  st2/manout_10_cmp_eq00081 (st2/manout_10_cmp_eq0008)
+     LUT4:I3->O            1   0.612   0.426  st2/manout_18_mux0002448 (st2/manout_18_mux0002448)
+     LUT2:I1->O            1   0.612   0.360  st2/manout_18_mux0002449 (st2/manout_18_mux0002449)
+     LUT4:I3->O            1   0.612   0.360  st2/manout_18_mux0002462 (st2/manout_18_mux0002462)
+     LUT4:I3->O            1   0.612   0.509  st2/manout_18_mux0002478 (st2/manout_18_mux0002478)
+     LUT4:I0->O            1   0.612   0.509  st2/manout_18_mux0002507 (st2/manout_18_mux0002507)
+     LUT3:I0->O            3   0.612   0.603  st2/manout_18_mux0002523 (manout_sig<18>)
+     LUT4:I0->O            1   0.612   0.387  o_sig_cmp_eq0000101 (o_sig_cmp_eq0000101)
+     LUT4:I2->O            1   0.612   0.360  o_sig_cmp_eq0000726 (o_sig_cmp_eq0000726)
+     LUT4:I3->O           32   0.612   1.073  o_sig_cmp_eq0000743 (o_sig_cmp_eq0000743)
+     FDR:R                     0.795          o_sig_0
+    ----------------------------------------
+    Total                    245.502ns (183.087ns logic, 62.415ns route)
+                                       (74.6% logic, 25.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            o_sig_31 (FF)
+  Destination:       o<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: o_sig_31 to o<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.514   0.357  o_sig_31 (o_sig_31)
+     OBUF:I->O                 3.169          o_31_OBUF (o<31>)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 546174348546634000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 / 79
+-------------------------------------------------------------------------
+Delay:               244.069ns (Levels of Logic = 295)
+  Source:            b<0> (PAD)
+  Destination:       oi<18> (PAD)
+
+  Data Path: b<0> to oi<18>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           185   1.106   1.183  b_0_IBUF (b_0_IBUF)
+     LUT2:I1->O            1   0.612   0.000  st1/Msub_c_var_sub0000_lut<0> (st1/Msub_c_var_sub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  st1/Msub_c_var_sub0000_cy<0> (st1/Msub_c_var_sub0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  st1/Msub_c_var_sub0000_cy<1> (st1/Msub_c_var_sub0000_cy<1>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0000_xor<2> (st1/c_var_sub0000<2>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0000_Madd_lut<2> (st1/Madd_c_var_add0000_Madd_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0000_Madd_cy<2> (st1/Madd_c_var_add0000_Madd_cy<2>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0000_Madd_xor<3> (st1/c_var_add0000<3>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0000<4>1 (st1/c_var_mux0000<4>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0001_cy<4> (st1/Msub_c_var_sub0001_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0001_xor<5> (st1/c_var_sub0001<5>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0001_Madd_lut<5> (st1/Madd_c_var_add0001_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0001_Madd_cy<5> (st1/Madd_c_var_add0001_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0001_Madd_xor<6> (st1/c_var_add0001<6>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0001<7>1 (st1/c_var_mux0001<7>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0002_cy<7> (st1/Msub_c_var_sub0002_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0002_xor<8> (st1/c_var_sub0002<8>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0002_Madd_lut<8> (st1/Madd_c_var_add0002_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0002_Madd_cy<8> (st1/Madd_c_var_add0002_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0002_Madd_xor<9> (st1/c_var_add0002<9>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0002<10>1 (st1/c_var_mux0002<10>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0003_cy<10> (st1/Msub_c_var_sub0003_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0003_xor<11> (st1/c_var_sub0003<11>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0003_Madd_lut<11> (st1/Madd_c_var_add0003_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0003_Madd_cy<11> (st1/Madd_c_var_add0003_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0003_Madd_xor<12> (st1/c_var_add0003<12>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0003<13>1 (st1/c_var_mux0003<13>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0004_cy<13> (st1/Msub_c_var_sub0004_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0004_xor<14> (st1/c_var_sub0004<14>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0004_Madd_lut<14> (st1/Madd_c_var_add0004_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0004_Madd_cy<14> (st1/Madd_c_var_add0004_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0004_Madd_xor<15> (st1/c_var_add0004<15>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0004<16>1 (st1/c_var_mux0004<16>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0005_cy<16> (st1/Msub_c_var_sub0005_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0005_xor<17> (st1/c_var_sub0005<17>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0005_Madd_lut<17> (st1/Madd_c_var_add0005_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0005_Madd_cy<17> (st1/Madd_c_var_add0005_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0005_Madd_xor<18> (st1/c_var_add0005<18>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0005<19>1 (st1/c_var_mux0005<19>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0006_cy<19> (st1/Msub_c_var_sub0006_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0006_xor<20> (st1/c_var_sub0006<20>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0006_Madd_lut<20> (st1/Madd_c_var_add0006_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0006_Madd_cy<20> (st1/Madd_c_var_add0006_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0006_Madd_xor<21> (st1/c_var_add0006<21>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0006<22>1 (st1/c_var_mux0006<22>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0007_cy<22> (st1/Msub_c_var_sub0007_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  st1/Msub_c_var_sub0007_cy<23> (st1/Msub_c_var_sub0007_cy<23>)
+     XORCY:CI->O          60   0.699   1.232  st1/Msub_c_var_sub0007_xor<24> (st1/c_var_sub0007<24>)
+     LUT3:I0->O            0   0.612   0.000  st1/c_var_mux0007<2>1 (st1/c_var_mux0007<2>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0008_cy<2> (st1/Msub_c_var_sub0008_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  st1/Msub_c_var_sub0008_cy<3> (st1/Msub_c_var_sub0008_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  st1/Msub_c_var_sub0008_cy<4> (st1/Msub_c_var_sub0008_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0008_xor<5> (st1/c_var_sub0008<5>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0008_Madd_lut<5> (st1/Madd_c_var_add0008_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0008_Madd_cy<5> (st1/Madd_c_var_add0008_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0008_Madd_xor<6> (st1/c_var_add0008<6>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0008<7>1 (st1/c_var_mux0008<7>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0009_cy<7> (st1/Msub_c_var_sub0009_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0009_xor<8> (st1/c_var_sub0009<8>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0009_Madd_lut<8> (st1/Madd_c_var_add0009_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0009_Madd_cy<8> (st1/Madd_c_var_add0009_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0009_Madd_xor<9> (st1/c_var_add0009<9>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0009<10>1 (st1/c_var_mux0009<10>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0010_cy<10> (st1/Msub_c_var_sub0010_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0010_xor<11> (st1/c_var_sub0010<11>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0010_Madd_lut<11> (st1/Madd_c_var_add0010_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0010_Madd_cy<11> (st1/Madd_c_var_add0010_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0010_Madd_xor<12> (st1/c_var_add0010<12>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0010<13>1 (st1/c_var_mux0010<13>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0011_cy<13> (st1/Msub_c_var_sub0011_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0011_xor<14> (st1/c_var_sub0011<14>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0011_Madd_lut<14> (st1/Madd_c_var_add0011_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0011_Madd_cy<14> (st1/Madd_c_var_add0011_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0011_Madd_xor<15> (st1/c_var_add0011<15>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0011<16>1 (st1/c_var_mux0011<16>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0012_cy<16> (st1/Msub_c_var_sub0012_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0012_xor<17> (st1/c_var_sub0012<17>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0012_Madd_lut<17> (st1/Madd_c_var_add0012_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0012_Madd_cy<17> (st1/Madd_c_var_add0012_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0012_Madd_xor<18> (st1/c_var_add0012<18>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0012<19>1 (st1/c_var_mux0012<19>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0013_cy<19> (st1/Msub_c_var_sub0013_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0013_xor<20> (st1/c_var_sub0013<20>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0013_Madd_lut<20> (st1/Madd_c_var_add0013_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0013_Madd_cy<20> (st1/Madd_c_var_add0013_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0013_Madd_xor<21> (st1/c_var_add0013<21>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0013<22>1 (st1/c_var_mux0013<22>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0014_cy<22> (st1/Msub_c_var_sub0014_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  st1/Msub_c_var_sub0014_cy<23> (st1/Msub_c_var_sub0014_cy<23>)
+     XORCY:CI->O          66   0.699   1.234  st1/Msub_c_var_sub0014_xor<24> (st1/c_var_sub0014<24>)
+     LUT3:I0->O            0   0.612   0.000  st1/c_var_mux0014<2>1 (st1/c_var_mux0014<2>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0015_cy<2> (st1/Msub_c_var_sub0015_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  st1/Msub_c_var_sub0015_cy<3> (st1/Msub_c_var_sub0015_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  st1/Msub_c_var_sub0015_cy<4> (st1/Msub_c_var_sub0015_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0015_xor<5> (st1/c_var_sub0015<5>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0015_Madd_lut<5> (st1/Madd_c_var_add0015_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0015_Madd_cy<5> (st1/Madd_c_var_add0015_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0015_Madd_xor<6> (st1/c_var_add0015<6>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0015<7>1 (st1/c_var_mux0015<7>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0016_cy<7> (st1/Msub_c_var_sub0016_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0016_xor<8> (st1/c_var_sub0016<8>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0016_Madd_lut<8> (st1/Madd_c_var_add0016_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0016_Madd_cy<8> (st1/Madd_c_var_add0016_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0016_Madd_xor<9> (st1/c_var_add0016<9>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0016<10>1 (st1/c_var_mux0016<10>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0017_cy<10> (st1/Msub_c_var_sub0017_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0017_xor<11> (st1/c_var_sub0017<11>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0017_Madd_lut<11> (st1/Madd_c_var_add0017_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0017_Madd_cy<11> (st1/Madd_c_var_add0017_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0017_Madd_xor<12> (st1/c_var_add0017<12>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0017<13>1 (st1/c_var_mux0017<13>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0018_cy<13> (st1/Msub_c_var_sub0018_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0018_xor<14> (st1/c_var_sub0018<14>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0018_Madd_lut<14> (st1/Madd_c_var_add0018_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0018_Madd_cy<14> (st1/Madd_c_var_add0018_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0018_Madd_xor<15> (st1/c_var_add0018<15>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0018<16>1 (st1/c_var_mux0018<16>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0019_cy<16> (st1/Msub_c_var_sub0019_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0019_xor<17> (st1/c_var_sub0019<17>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0019_Madd_lut<17> (st1/Madd_c_var_add0019_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0019_Madd_cy<17> (st1/Madd_c_var_add0019_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0019_Madd_xor<18> (st1/c_var_add0019<18>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0019<19>1 (st1/c_var_mux0019<19>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0020_cy<19> (st1/Msub_c_var_sub0020_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0020_xor<20> (st1/c_var_sub0020<20>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0020_Madd_lut<20> (st1/Madd_c_var_add0020_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0020_Madd_cy<20> (st1/Madd_c_var_add0020_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0020_Madd_xor<21> (st1/c_var_add0020<21>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0020<22>1 (st1/c_var_mux0020<22>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0021_cy<22> (st1/Msub_c_var_sub0021_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  st1/Msub_c_var_sub0021_cy<23> (st1/Msub_c_var_sub0021_cy<23>)
+     XORCY:CI->O          74   0.699   1.153  st1/Msub_c_var_sub0021_xor<24> (st1/c_var_sub0021<24>)
+     LUT3:I1->O            0   0.612   0.000  st1/c_var_mux0021<1>1 (st1/c_var_mux0021<1>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0022_cy<1> (st1/Msub_c_var_sub0022_cy<1>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0022_xor<2> (st1/c_var_sub0022<2>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0022_Madd_lut<2> (st1/Madd_c_var_add0022_Madd_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0022_Madd_cy<2> (st1/Madd_c_var_add0022_Madd_cy<2>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0022_Madd_xor<3> (st1/c_var_add0022<3>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0022<4>1 (st1/c_var_mux0022<4>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0023_cy<4> (st1/Msub_c_var_sub0023_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0023_xor<5> (st1/c_var_sub0023<5>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0023_Madd_lut<5> (st1/Madd_c_var_add0023_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0023_Madd_cy<5> (st1/Madd_c_var_add0023_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0023_Madd_xor<6> (st1/c_var_add0023<6>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0023<7>1 (st1/c_var_mux0023<7>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0024_cy<7> (st1/Msub_c_var_sub0024_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0024_xor<8> (st1/c_var_sub0024<8>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0024_Madd_lut<8> (st1/Madd_c_var_add0024_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0024_Madd_cy<8> (st1/Madd_c_var_add0024_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0024_Madd_xor<9> (st1/c_var_add0024<9>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0024<10>1 (st1/c_var_mux0024<10>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0025_cy<10> (st1/Msub_c_var_sub0025_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0025_xor<11> (st1/c_var_sub0025<11>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0025_Madd_lut<11> (st1/Madd_c_var_add0025_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0025_Madd_cy<11> (st1/Madd_c_var_add0025_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0025_Madd_xor<12> (st1/c_var_add0025<12>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0025<13>1 (st1/c_var_mux0025<13>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0026_cy<13> (st1/Msub_c_var_sub0026_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0026_xor<14> (st1/c_var_sub0026<14>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0026_Madd_lut<14> (st1/Madd_c_var_add0026_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0026_Madd_cy<14> (st1/Madd_c_var_add0026_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0026_Madd_xor<15> (st1/c_var_add0026<15>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0026<16>1 (st1/c_var_mux0026<16>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0027_cy<16> (st1/Msub_c_var_sub0027_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0027_xor<17> (st1/c_var_sub0027<17>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0027_Madd_lut<17> (st1/Madd_c_var_add0027_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0027_Madd_cy<17> (st1/Madd_c_var_add0027_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0027_Madd_xor<18> (st1/c_var_add0027<18>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0027<19>1 (st1/c_var_mux0027<19>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0028_cy<19> (st1/Msub_c_var_sub0028_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0028_xor<20> (st1/c_var_sub0028<20>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0028_Madd_lut<20> (st1/Madd_c_var_add0028_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0028_Madd_cy<20> (st1/Madd_c_var_add0028_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0028_Madd_xor<21> (st1/c_var_add0028<21>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0028<22>1 (st1/c_var_mux0028<22>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0029_cy<22> (st1/Msub_c_var_sub0029_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  st1/Msub_c_var_sub0029_cy<23> (st1/Msub_c_var_sub0029_cy<23>)
+     XORCY:CI->O          75   0.699   1.153  st1/Msub_c_var_sub0029_xor<24> (st1/c_var_sub0029<24>)
+     LUT3:I1->O            0   0.612   0.000  st1/c_var_mux0029<1>1 (st1/c_var_mux0029<1>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0030_cy<1> (st1/Msub_c_var_sub0030_cy<1>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0030_xor<2> (st1/c_var_sub0030<2>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0030_Madd_lut<2> (st1/Madd_c_var_add0030_Madd_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0030_Madd_cy<2> (st1/Madd_c_var_add0030_Madd_cy<2>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0030_Madd_xor<3> (st1/c_var_add0030<3>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0030<4>1 (st1/c_var_mux0030<4>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0031_cy<4> (st1/Msub_c_var_sub0031_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0031_xor<5> (st1/c_var_sub0031<5>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0031_Madd_lut<5> (st1/Madd_c_var_add0031_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0031_Madd_cy<5> (st1/Madd_c_var_add0031_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0031_Madd_xor<6> (st1/c_var_add0031<6>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0031<7>1 (st1/c_var_mux0031<7>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0032_cy<7> (st1/Msub_c_var_sub0032_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0032_xor<8> (st1/c_var_sub0032<8>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0032_Madd_lut<8> (st1/Madd_c_var_add0032_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0032_Madd_cy<8> (st1/Madd_c_var_add0032_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0032_Madd_xor<9> (st1/c_var_add0032<9>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0032<10>1 (st1/c_var_mux0032<10>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0033_cy<10> (st1/Msub_c_var_sub0033_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0033_xor<11> (st1/c_var_sub0033<11>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0033_Madd_lut<11> (st1/Madd_c_var_add0033_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0033_Madd_cy<11> (st1/Madd_c_var_add0033_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0033_Madd_xor<12> (st1/c_var_add0033<12>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0033<13>1 (st1/c_var_mux0033<13>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0034_cy<13> (st1/Msub_c_var_sub0034_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0034_xor<14> (st1/c_var_sub0034<14>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0034_Madd_lut<14> (st1/Madd_c_var_add0034_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0034_Madd_cy<14> (st1/Madd_c_var_add0034_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0034_Madd_xor<15> (st1/c_var_add0034<15>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0034<16>1 (st1/c_var_mux0034<16>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0035_cy<16> (st1/Msub_c_var_sub0035_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0035_xor<17> (st1/c_var_sub0035<17>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0035_Madd_lut<17> (st1/Madd_c_var_add0035_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0035_Madd_cy<17> (st1/Madd_c_var_add0035_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0035_Madd_xor<18> (st1/c_var_add0035<18>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0035<19>1 (st1/c_var_mux0035<19>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0036_cy<19> (st1/Msub_c_var_sub0036_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0036_xor<20> (st1/c_var_sub0036<20>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0036_Madd_lut<20> (st1/Madd_c_var_add0036_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0036_Madd_cy<20> (st1/Madd_c_var_add0036_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0036_Madd_xor<21> (st1/c_var_add0036<21>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0036<22>1 (st1/c_var_mux0036<22>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0037_cy<22> (st1/Msub_c_var_sub0037_cy<22>)
+     MUXCY:CI->O           0   0.051   0.000  st1/Msub_c_var_sub0037_cy<23> (st1/Msub_c_var_sub0037_cy<23>)
+     XORCY:CI->O          75   0.699   1.153  st1/Msub_c_var_sub0037_xor<24> (st1/c_var_sub0037<24>)
+     LUT3:I1->O            0   0.612   0.000  st1/c_var_mux0037<1>1 (st1/c_var_mux0037<1>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0038_cy<1> (st1/Msub_c_var_sub0038_cy<1>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0038_xor<2> (st1/c_var_sub0038<2>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0038_Madd_lut<2> (st1/Madd_c_var_add0038_Madd_lut<2>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0038_Madd_cy<2> (st1/Madd_c_var_add0038_Madd_cy<2>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0038_Madd_xor<3> (st1/c_var_add0038<3>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0038<4>1 (st1/c_var_mux0038<4>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0039_cy<4> (st1/Msub_c_var_sub0039_cy<4>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0039_xor<5> (st1/c_var_sub0039<5>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0039_Madd_lut<5> (st1/Madd_c_var_add0039_Madd_lut<5>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0039_Madd_cy<5> (st1/Madd_c_var_add0039_Madd_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0039_Madd_xor<6> (st1/c_var_add0039<6>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0039<7>1 (st1/c_var_mux0039<7>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0040_cy<7> (st1/Msub_c_var_sub0040_cy<7>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0040_xor<8> (st1/c_var_sub0040<8>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0040_Madd_lut<8> (st1/Madd_c_var_add0040_Madd_lut<8>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0040_Madd_cy<8> (st1/Madd_c_var_add0040_Madd_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0040_Madd_xor<9> (st1/c_var_add0040<9>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0040<10>1 (st1/c_var_mux0040<10>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0041_cy<10> (st1/Msub_c_var_sub0041_cy<10>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0041_xor<11> (st1/c_var_sub0041<11>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0041_Madd_lut<11> (st1/Madd_c_var_add0041_Madd_lut<11>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0041_Madd_cy<11> (st1/Madd_c_var_add0041_Madd_cy<11>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0041_Madd_xor<12> (st1/c_var_add0041<12>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0041<13>1 (st1/c_var_mux0041<13>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0042_cy<13> (st1/Msub_c_var_sub0042_cy<13>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0042_xor<14> (st1/c_var_sub0042<14>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0042_Madd_lut<14> (st1/Madd_c_var_add0042_Madd_lut<14>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0042_Madd_cy<14> (st1/Madd_c_var_add0042_Madd_cy<14>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0042_Madd_xor<15> (st1/c_var_add0042<15>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0042<16>1 (st1/c_var_mux0042<16>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0043_cy<16> (st1/Msub_c_var_sub0043_cy<16>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0043_xor<17> (st1/c_var_sub0043<17>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0043_Madd_lut<17> (st1/Madd_c_var_add0043_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0043_Madd_cy<17> (st1/Madd_c_var_add0043_Madd_cy<17>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0043_Madd_xor<18> (st1/c_var_add0043<18>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0043<19>1 (st1/c_var_mux0043<19>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0044_cy<19> (st1/Msub_c_var_sub0044_cy<19>)
+     XORCY:CI->O           3   0.699   0.603  st1/Msub_c_var_sub0044_xor<20> (st1/c_var_sub0044<20>)
+     LUT2:I0->O            1   0.612   0.000  st1/Madd_c_var_add0044_Madd_lut<20> (st1/Madd_c_var_add0044_Madd_lut<20>)
+     MUXCY:S->O            1   0.404   0.000  st1/Madd_c_var_add0044_Madd_cy<20> (st1/Madd_c_var_add0044_Madd_cy<20>)
+     XORCY:CI->O           2   0.699   0.410  st1/Madd_c_var_add0044_Madd_xor<21> (st1/c_var_add0044<21>)
+     LUT3:I2->O            0   0.612   0.000  st1/c_var_mux0044<22>1 (st1/c_var_mux0044<22>)
+     MUXCY:DI->O           1   0.773   0.000  st1/Msub_c_var_sub0045_cy<22> (st1/Msub_c_var_sub0045_cy<22>)
+     MUXCY:CI->O           0   0.052   0.000  st1/Msub_c_var_sub0045_cy<23> (st1/Msub_c_var_sub0045_cy<23>)
+     XORCY:CI->O          70   0.699   1.152  st1/Msub_c_var_sub0045_xor<24> (st1/c_var_sub0045<24>)
+     LUT4:I1->O            1   0.612   0.387  st2/shift_mux0046<0>33 (st2/shift_mux0046<0>33)
+     LUT4:I2->O            1   0.612   0.426  st2/shift_mux0046<0>53 (st2/shift_mux0046<0>53)
+     LUT4:I1->O            1   0.612   0.387  st2/shift_mux0046<0>86 (st2/shift_mux0046<0>86)
+     LUT4:I2->O            1   0.612   0.426  st2/shift_mux0046<0>134 (st2/shift_mux0046<0>134)
+     LUT4:I1->O            1   0.612   0.387  st2/shift_mux0046<0>183 (st2/shift_mux0046<0>183)
+     LUT4:I2->O            1   0.612   0.426  st2/shift_mux0046<0>233 (st2/shift_mux0046<0>233)
+     LUT4:I1->O            1   0.612   0.387  st2/shift_mux0046<0>282 (st2/shift_mux0046<0>282)
+     LUT4:I2->O            1   0.612   0.426  st2/shift_mux0046<0>332 (st2/shift_mux0046<0>332)
+     LUT4:I1->O            1   0.612   0.387  st2/shift_mux0046<0>381 (st2/shift_mux0046<0>381)
+     LUT4:I2->O            1   0.612   0.426  st2/shift_mux0046<0>431 (st2/shift_mux0046<0>431)
+     LUT4:I1->O            1   0.612   0.387  st2/shift_mux0046<0>480 (st2/shift_mux0046<0>480)
+     LUT4:I2->O            1   0.612   0.426  st2/shift_mux0046<0>530 (st2/shift_mux0046<0>530)
+     LUT4:I1->O            1   0.612   0.387  st2/shift_mux0046<0>579 (st2/shift_mux0046<0>579)
+     LUT4:I2->O            1   0.612   0.426  st2/shift_mux0046<0>629 (st2/shift_mux0046<0>629)
+     LUT4:I1->O           35   0.612   1.104  st2/shift_mux0046<0>678 (st2/Madd_p_sig_addsub0000)
+     LUT3:I2->O            6   0.612   0.638  st2/Madd_p_sig_addsub0000_xor<2>111 (st2/N161)
+     LUT3:I1->O            6   0.612   0.721  st2/Madd_p_sig_addsub0000_cy<3>11 (st2/Madd_p_sig_addsub0000_cy<3>)
+     LUT3:I0->O           16   0.612   0.882  st2/manout_10_cmp_eq00081 (st2/manout_10_cmp_eq0008)
+     LUT4:I3->O            1   0.612   0.426  st2/manout_18_mux0002448 (st2/manout_18_mux0002448)
+     LUT2:I1->O            1   0.612   0.360  st2/manout_18_mux0002449 (st2/manout_18_mux0002449)
+     LUT4:I3->O            1   0.612   0.360  st2/manout_18_mux0002462 (st2/manout_18_mux0002462)
+     LUT4:I3->O            1   0.612   0.509  st2/manout_18_mux0002478 (st2/manout_18_mux0002478)
+     LUT4:I0->O            1   0.612   0.509  st2/manout_18_mux0002507 (st2/manout_18_mux0002507)
+     LUT3:I0->O            3   0.612   0.451  st2/manout_18_mux0002523 (manout_sig<18>)
+     OBUF:I->O                 3.169          oi_18_OBUF (oi<18>)
+    ----------------------------------------
+    Total                    244.069ns (183.625ns logic, 60.443ns route)
+                                       (75.2% logic, 24.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 26.00 secs
+Total CPU time to Xst completion: 25.95 secs
+ 
+--> 
+
+Total memory usage is 202684 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

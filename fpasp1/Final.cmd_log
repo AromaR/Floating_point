@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/fpasp1/Final.xst" -ofn "C:/Users/hp/Documents/eda/fpasp1/Final.syr" 

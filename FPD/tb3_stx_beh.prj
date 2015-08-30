@@ -1,0 +1,5 @@
+vhdl isim_temp "sec.vhd"
+vhdl isim_temp "div.vhd"
+vhdl isim_temp "anly.vhd"
+vhdl isim_temp "datapath.vhd"
+vhdl isim_temp "tb3.vhd"

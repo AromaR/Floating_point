@@ -1,0 +1,5 @@
+vhdtdtfi -prj FPM -o C:/Users/hp/Documents/eda/FPM/TOP.vhi -module TOP -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work TOP.vhd 
+vhdtdtfi -prj FPM -o C:/Users/hp/Documents/eda/FPM/TOP.vhi -module TOP -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work TOP.vhd 
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/FPM/TOP.xst" -ofn "C:/Users/hp/Documents/eda/FPM/TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/FPM/TOP.xst" -ofn "C:/Users/hp/Documents/eda/FPM/TOP.syr" 
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/FPM/TOP.xst" -ofn "C:/Users/hp/Documents/eda/FPM/TOP.syr" 

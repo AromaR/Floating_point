@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/FPA/CMP8.xst" -ofn "C:/Users/hp/Documents/eda/FPA/CMP8.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50-pq208-5 CMP8.ngc CMP8.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o CMP8_map.ncd CMP8.ngd CMP8.pcf 
+par -w -intstyle ise -ol high -t 1 CMP8_map.ncd CMP8.ncd CMP8.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml CMP8.twx CMP8.ncd -o CMP8.twr CMP8.pcf 
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/FPA/CMP8.xst" -ofn "C:/Users/hp/Documents/eda/FPA/CMP8.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50-pq208-5 CMP8.ngc CMP8.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o CMP8_map.ncd CMP8.ngd CMP8.pcf 
+par -w -intstyle ise -ol high -t 1 CMP8_map.ncd CMP8.ncd CMP8.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml CMP8.twx CMP8.ncd -o CMP8.twr CMP8.pcf 
+vhdtdtfi -prj FPA -o C:/Users/hp/Documents/eda/FPA/CMP8.vhi -module CMP8 -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work CMP.vhd -lib work CMP8.vhd 

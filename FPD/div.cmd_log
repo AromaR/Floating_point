@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/FPD/div.xst" -ofn "C:/Users/hp/Documents/eda/FPD/div.syr" 

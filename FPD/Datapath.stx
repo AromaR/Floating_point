@@ -1,0 +1,41 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/hp/Documents/eda/FPD/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/hp/Documents/eda/FPD/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPD/div.vhd" in Library work.
+Architecture behavioral of Entity div is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPD/anly.vhd" in Library work.
+Architecture behavioral of Entity anly is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPD/sec.vhd" in Library work.
+Architecture behavioral of Entity sec is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPD/datapath.vhd" in Library work.
+Entity <datapath> compiled.
+Entity <datapath> (Architecture <behavioral>) compiled.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.53 secs
+ 
+--> 
+
+Total memory usage is 214008 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

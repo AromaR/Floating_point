@@ -1,0 +1,2 @@
+xst -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/fpdsp1chip.ise" -intstyle ise -ifn "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/Datapath.xst" -ofn "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/Datapath.syr"
+ngdbuild -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/fpdsp1chip/fpdsp1chip.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-5 "Datapath.ngc" Datapath.ngd

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Fri Apr 03 12:30:04 2015
+# Process ID: 17920
+# Log file: C:/Users/hp/Documents/eda/chip_fpmsp/planAhead_run_3/planAhead.log
+# Journal file: C:/Users/hp/Documents/eda/chip_fpmsp/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/hp/Documents/eda/chip_fpmsp/pa.fromNetlist.tcl

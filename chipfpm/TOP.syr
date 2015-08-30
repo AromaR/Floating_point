@@ -1,0 +1,705 @@
+Release 10.1 - xst K.31 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: TOP.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : TOP
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : TOP.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/i57e.vhd" in Library work.
+Architecture behavioral of Entity fulladder2 is up to date.
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/ye5.vhd" in Library work.
+Architecture behavioral of Entity mult is up to date.
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/rty.vhd" in Library work.
+Architecture behavioral of Entity adder is up to date.
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/tyty.vhd" in Library work.
+Architecture behavioral of Entity norm is up to date.
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/gdtr.vhd" in Library work.
+Architecture behavioral of Entity topcontrol is up to date.
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/tfsdkgtm.vhd" in Library work.
+Architecture behavioral of Entity topdatapath is up to date.
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/top.vhd" in Library work.
+Architecture behavioral of Entity top is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TOP> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TOPCONTROL> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TOPDATAPATH> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mult> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <adder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Norm> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TOP> in library <work> (Architecture <behavioral>).
+Entity <TOP> analyzed. Unit <TOP> generated.
+
+Analyzing Entity <TOPCONTROL> in library <work> (Architecture <behavioral>).
+Entity <TOPCONTROL> analyzed. Unit <TOPCONTROL> generated.
+
+Analyzing Entity <TOPDATAPATH> in library <work> (Architecture <behavioral>).
+Entity <TOPDATAPATH> analyzed. Unit <TOPDATAPATH> generated.
+
+Analyzing Entity <mult> in library <work> (Architecture <behavioral>).
+WARNING:Xst:1610 - "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/ye5.vhd" line 48: Width mismatch. <c_var> has a width of 49 bits but assigned expression is 50-bit wide.
+WARNING:Xst:819 - "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/ye5.vhd" line 41: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <a>, <b>
+Entity <mult> analyzed. Unit <mult> generated.
+
+Analyzing Entity <adder> in library <work> (Architecture <behavioral>).
+Entity <adder> analyzed. Unit <adder> generated.
+
+Analyzing Entity <fulladder2> in library <work> (Architecture <behavioral>).
+Entity <fulladder2> analyzed. Unit <fulladder2> generated.
+
+Analyzing Entity <Norm> in library <work> (Architecture <behavioral>).
+Entity <Norm> analyzed. Unit <Norm> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <TOPCONTROL>.
+    Related source file is "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/gdtr.vhd".
+    Using one-hot encoding for signal <pos>.
+WARNING:Xst:737 - Found 1-bit latch for signal <doneall>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 6-bit latch for signal <nos>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <multiply>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit xor2 for signal <sign>.
+    Found 6-bit register for signal <pos>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <TOPCONTROL> synthesized.
+
+
+Synthesizing Unit <mult>.
+    Related source file is "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/ye5.vhd".
+    Found 25x25-bit multiplier for signal <c_var$mult0000> created at line 48.
+    Summary:
+	inferred   1 Multiplier(s).
+Unit <mult> synthesized.
+
+
+Synthesizing Unit <Norm>.
+    Related source file is "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/tyty.vhd".
+WARNING:Xst:647 - Input <man<47>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <man<23:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <exp_sig1<8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <over>.
+    Found 23-bit register for signal <manout>.
+    Found 9-bit register for signal <exp_sig>.
+    Found 9-bit adder for signal <exp_sig$add0001> created at line 50.
+    Summary:
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <Norm> synthesized.
+
+
+Synthesizing Unit <fulladder2>.
+    Related source file is "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/i57e.vhd".
+    Found 1-bit xor3 for signal <sum>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <fulladder2> synthesized.
+
+
+Synthesizing Unit <adder>.
+    Related source file is "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/rty.vhd".
+Unit <adder> synthesized.
+
+
+Synthesizing Unit <TOPDATAPATH>.
+    Related source file is "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/tfsdkgtm.vhd".
+WARNING:Xst:647 - Input <num1<31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <num2<31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <z> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <x> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <eout1<8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <TOPDATAPATH> synthesized.
+
+
+Synthesizing Unit <TOP>.
+    Related source file is "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/top.vhd".
+WARNING:Xst:646 - Signal <ox_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <doneit_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <TOP> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 25x25-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 4
+ 1-bit register                                        : 1
+ 23-bit register                                       : 1
+ 6-bit register                                        : 1
+ 9-bit register                                        : 1
+# Latches                                              : 3
+ 1-bit latch                                           : 2
+ 6-bit latch                                           : 1
+# Xors                                                 : 17
+ 1-bit xor2                                            : 1
+ 1-bit xor3                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:\Xilinx\10.1\ISE.
+
+Synthesizing (advanced) Unit <mult>.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_c_var_mult0000 by adding 3 register level(s).
+Unit <mult> synthesized (advanced).
+WARNING:Xst:2677 - Node <exp_sig_8> of sequential type is unconnected in block <Norm>.
+WARNING:Xst:1293 - FF/Latch <pos_2> has a constant value of 0 in block <stage1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pos_3> has a constant value of 0 in block <stage1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pos_4> has a constant value of 0 in block <stage1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pos_5> has a constant value of 0 in block <stage1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <5>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 25x25-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 38
+ Flip-Flops                                            : 38
+# Latches                                              : 3
+ 1-bit latch                                           : 2
+ 6-bit latch                                           : 1
+# Xors                                                 : 17
+ 1-bit xor2                                            : 1
+ 1-bit xor3                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <stage1/doneall> of sequential type is unconnected in block <TOP>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<8>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<20>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<32>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<44>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<7>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<19>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<31>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<43>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<6>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<18>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<30>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<42>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<5>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<17>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<29>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<41>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<4>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<16>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<28>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<40>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<3>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<15>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<27>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<39>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<2>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<14>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<26>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<38>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<1>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<13>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<25>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<37>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<0>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<12>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<24>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<36>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<11>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<23>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<35>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<47>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<10>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<22>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<34>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<46>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<9>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<21>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<33>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<45>.
+
+Optimizing unit <TOP> ...
+
+Optimizing unit <mult> ...
+
+Optimizing unit <Norm> ...
+WARNING:Xst:1293 - FF/Latch <stage1/nos_2> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stage1/pos_2> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stage1/nos_3> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stage1/pos_3> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stage1/nos_4> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stage1/pos_4> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stage1/nos_5> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <stage1/pos_5> has a constant value of 0 in block <TOP>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <stage1/nos_1> in Unit <TOP> is equivalent to the following FF/Latch, which will be removed : <stage1/multiply> 
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 2.
+FlipFlop stage2/stage3/over has been replicated 1 time(s) to handle iob=true attribute.
+Latch stage1/nos_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/exp_sig_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/exp_sig_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/exp_sig_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/exp_sig_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/exp_sig_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/exp_sig_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/exp_sig_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/exp_sig_0 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_22 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_21 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_20 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_19 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_18 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_17 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_16 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_15 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_14 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_13 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_12 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_11 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_10 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_9 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_8 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_7 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_6 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_5 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_4 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_3 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_2 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_1 has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop stage2/stage3/manout_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 66
+ Flip-Flops                                            : 66
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TOP.ngr
+Top Level Output File Name         : TOP
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 181
+
+Cell Usage :
+# BELS                             : 321
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 6
+#      LUT2                        : 98
+#      LUT3                        : 60
+#      LUT4                        : 6
+#      MUXCY                       : 74
+#      VCC                         : 1
+#      XORCY                       : 74
+# FlipFlops/Latches                : 69
+#      FD                          : 64
+#      FDR                         : 2
+#      LD                          : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 180
+#      IBUF                        : 65
+#      OBUF                        : 115
+# MULTs                            : 4
+#      MULT18X18SIO                : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                       94  out of   4656     2%  
+ Number of Slice Flip Flops:             36  out of   9312     0%  
+ Number of 4 input LUTs:                171  out of   9312     1%  
+ Number of IOs:                         181
+ Number of bonded IOBs:                 181  out of    232    78%  
+    IOB Flip Flops:                      33
+ Number of MULT18X18SIOs:                 4  out of     20    20%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+stage1/pos_1                       | NONE(stage1/nos_1)     | 3     |
+clk                                | BUFGP                  | 66    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 12.840ns
+   Maximum output required time after clock: 6.097ns
+   Maximum combinational path delay: 16.240ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'stage1/pos_1'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              2.518ns (Levels of Logic = 2)
+  Source:            start (PAD)
+  Destination:       stage1/nos_0 (LATCH)
+  Destination Clock: stage1/pos_1 rising
+
+  Data Path: start to stage1/nos_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.532  start_IBUF (start_IBUF)
+     LUT2:I0->O            1   0.612   0.000  stage1/nos_mux0001<0>1 (stage1/nos_mux0001<0>)
+     LD:D                      0.268          stage1/nos_0
+    ----------------------------------------
+    Total                      2.518ns (1.986ns logic, 0.532ns route)
+                                       (78.9% logic, 21.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 990484 / 64
+-------------------------------------------------------------------------
+Offset:              12.840ns (Levels of Logic = 36)
+  Source:            a<16> (PAD)
+  Destination:       stage2/stage3/manout_22 (FF)
+  Destination Clock: clk rising
+
+  Data Path: a<16> to stage2/stage3/manout_22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.380  a_16_IBUF (a_16_IBUF)
+     MULT18X18SIO:A16->P17    1   4.331   0.426  stage2/stage1/Mmult_c_var_mult0000_submult_0 (stage2/stage1/Mmult_c_var_mult0000_submult_0_P_to_Adder_A_17)
+     LUT2:I1->O            2   0.612   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_lut<17> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<17> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<18> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<19> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<20> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<21> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<22> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<23> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<24> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<25> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<26> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<27> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<28> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<28>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<29> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<29>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<30> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<30>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<31> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<31>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<32> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<32>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<33> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<33>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<34> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<34>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<35> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<35>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<36> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<36>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<37> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<37>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<38> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<38>)
+     MUXCY:CI->O           0   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<39> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<39>)
+     XORCY:CI->O           1   0.699   0.509  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_xor<40> (stage2/stage1/Mmult_c_var_mult0000_submult_0_40)
+     LUT2:I0->O            1   0.612   0.000  stage2/stage1/Mmult_c_var_mult0000_Madd_lut<40> (stage2/stage1/Mmult_c_var_mult0000_Madd_lut<40>)
+     MUXCY:S->O            1   0.404   0.000  stage2/stage1/Mmult_c_var_mult0000_Madd_cy<40> (stage2/stage1/Mmult_c_var_mult0000_Madd_cy<40>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_Madd_cy<41> (stage2/stage1/Mmult_c_var_mult0000_Madd_cy<41>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_Madd_cy<42> (stage2/stage1/Mmult_c_var_mult0000_Madd_cy<42>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_Madd_cy<43> (stage2/stage1/Mmult_c_var_mult0000_Madd_cy<43>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_Madd_cy<44> (stage2/stage1/Mmult_c_var_mult0000_Madd_cy<44>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_Madd_cy<45> (stage2/stage1/Mmult_c_var_mult0000_Madd_cy<45>)
+     XORCY:CI->O           1   0.699   0.387  stage2/stage1/Mmult_c_var_mult0000_Madd_xor<46> (stage2/stage1/c_var_mult0000<46>)
+     LUT3:I2->O            4   0.612   0.000  stage2/stage1/c_var_mux0000<46>1 (test1_46_OBUF)
+     FD:D                      0.268          stage2/stage3/manout_22
+    ----------------------------------------
+    Total                     12.840ns (11.138ns logic, 1.702ns route)
+                                       (86.7% logic, 13.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 95 / 64
+-------------------------------------------------------------------------
+Offset:              5.877ns (Levels of Logic = 2)
+  Source:            stage2/stage3/over (FF)
+  Destination:       o<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: stage2/stage3/over to o<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             32   0.514   1.225  stage2/stage3/over (stage2/stage3/over)
+     LUT2:I0->O            1   0.612   0.357  o<9>1 (o_9_OBUF)
+     OBUF:I->O                 3.169          o_9_OBUF (o<9>)
+    ----------------------------------------
+    Total                      5.877ns (4.295ns logic, 1.582ns route)
+                                       (73.1% logic, 26.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'stage1/pos_1'
+  Total number of paths / destination ports: 49 / 49
+-------------------------------------------------------------------------
+Offset:              6.097ns (Levels of Logic = 2)
+  Source:            stage1/nos_1 (LATCH)
+  Destination:       test1<46> (PAD)
+  Source Clock:      stage1/pos_1 rising
+
+  Data Path: stage1/nos_1 to test1<46>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              49   0.588   1.229  stage1/nos_1 (stage1/nos_1)
+     LUT3:I0->O            4   0.612   0.499  stage2/stage1/c_var_mux0000<46>1 (test1_46_OBUF)
+     OBUF:I->O                 3.169          test1_46_OBUF (test1<46>)
+    ----------------------------------------
+    Total                      6.097ns (4.369ns logic, 1.728ns route)
+                                       (71.7% logic, 28.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 540753 / 50
+-------------------------------------------------------------------------
+Delay:               16.240ns (Levels of Logic = 37)
+  Source:            a<16> (PAD)
+  Destination:       test1<46> (PAD)
+
+  Data Path: a<16> to test1<46>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.380  a_16_IBUF (a_16_IBUF)
+     MULT18X18SIO:A16->P17    1   4.331   0.426  stage2/stage1/Mmult_c_var_mult0000_submult_0 (stage2/stage1/Mmult_c_var_mult0000_submult_0_P_to_Adder_A_17)
+     LUT2:I1->O            2   0.612   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_lut<17> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<17> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<18> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<19> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<20> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<21> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<22> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<23> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<23>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<24> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<24>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<25> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<25>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<26> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<26>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<27> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<27>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<28> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<28>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<29> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<29>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<30> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<30>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<31> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<31>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<32> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<32>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<33> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<33>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<34> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<34>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<35> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<35>)
+     MUXCY:CI->O           1   0.052   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<36> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<36>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<37> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<37>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<38> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<38>)
+     MUXCY:CI->O           0   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<39> (stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_cy<39>)
+     XORCY:CI->O           1   0.699   0.509  stage2/stage1/Mmult_c_var_mult0000_submult_00_Madd_xor<40> (stage2/stage1/Mmult_c_var_mult0000_submult_0_40)
+     LUT2:I0->O            1   0.612   0.000  stage2/stage1/Mmult_c_var_mult0000_Madd_lut<40> (stage2/stage1/Mmult_c_var_mult0000_Madd_lut<40>)
+     MUXCY:S->O            1   0.404   0.000  stage2/stage1/Mmult_c_var_mult0000_Madd_cy<40> (stage2/stage1/Mmult_c_var_mult0000_Madd_cy<40>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_Madd_cy<41> (stage2/stage1/Mmult_c_var_mult0000_Madd_cy<41>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_Madd_cy<42> (stage2/stage1/Mmult_c_var_mult0000_Madd_cy<42>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_Madd_cy<43> (stage2/stage1/Mmult_c_var_mult0000_Madd_cy<43>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_Madd_cy<44> (stage2/stage1/Mmult_c_var_mult0000_Madd_cy<44>)
+     MUXCY:CI->O           1   0.051   0.000  stage2/stage1/Mmult_c_var_mult0000_Madd_cy<45> (stage2/stage1/Mmult_c_var_mult0000_Madd_cy<45>)
+     XORCY:CI->O           1   0.699   0.387  stage2/stage1/Mmult_c_var_mult0000_Madd_xor<46> (stage2/stage1/c_var_mult0000<46>)
+     LUT3:I2->O            4   0.612   0.499  stage2/stage1/c_var_mux0000<46>1 (test1_46_OBUF)
+     OBUF:I->O                 3.169          test1_46_OBUF (test1<46>)
+    ----------------------------------------
+    Total                     16.240ns (14.039ns logic, 2.201ns route)
+                                       (86.4% logic, 13.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.13 secs
+ 
+--> 
+
+Total memory usage is 161084 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   81 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

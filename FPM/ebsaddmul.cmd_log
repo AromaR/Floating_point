@@ -1,0 +1,1 @@
+vhdtdtfi -prj FPM -o C:/Users/hp/Documents/eda/FPM/ebsaddmul.vhi -module ebsaddmul -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work fulladder.vhd -lib work product.vhd -lib work Multiplier.vhd -lib work multiplicand.vhd -lib work counter.vhd -lib work add8.vhd -lib work Datapath.vhd -lib work controllerbeh.vhd -lib work Controller.vhd 

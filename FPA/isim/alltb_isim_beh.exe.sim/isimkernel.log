@@ -1,0 +1,28 @@
+Command line:
+   alltb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  2795
+
+Tue Mar 31 14:50:10 2015
+
+
+ Elaboration Time: 0.15625 sec
+
+ Current Memory Usage: 365.867 Meg
+
+ Total Signals          : 115
+ Total Nets             : 345
+ Total Signal Drivers   : 42
+ Total Blocks           : 21
+ Total Primitive Blocks : 18
+ Total Processes        : 32
+ Total Traceable Variables  : 51
+ Total Scalar Nets and Variables : 1537
+
+ Total Simulation Time: 0.171875 sec
+
+ Current Memory Usage: 365.867 Meg
+
+Tue Mar 31 15:03:39 2015
+

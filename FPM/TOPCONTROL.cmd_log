@@ -1,0 +1,2 @@
+vhdtdtfi -prj FPM -o C:/Users/hp/Documents/eda/FPM/TOPCONTROL.vhi -module TOPCONTROL -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work TOPCONTROL.vhd 
+xst -intstyle ise -ifn "C:/Users/hp/Documents/eda/FPM/TOPCONTROL.xst" -ofn "C:/Users/hp/Documents/eda/FPM/TOPCONTROL.syr" 

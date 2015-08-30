@@ -1,0 +1,4 @@
+work	"anly.vhd"
+work	"datapath.vhd"
+work	"div.vhd"
+work	"sec.vhd"

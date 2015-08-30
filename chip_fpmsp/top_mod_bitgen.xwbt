@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\hp\Documents\eda\chip_fpmsp\top_mod.ncd
+OUTFILE=C:\Users\hp\Documents\eda\chip_fpmsp\top_mod.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=C:\Users\hp\Documents\eda\chip_fpmsp
+LICENSE=WebPack
+USER_INFO=__0_0_0

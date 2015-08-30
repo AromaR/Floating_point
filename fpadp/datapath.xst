@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/hp/Documents/eda/fpadp/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/hp/Documents/eda/fpadp/xst"
+elaborate
+-ifn datapath.prj
+-ifmt mixed

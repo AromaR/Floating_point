@@ -1,0 +1,17 @@
+xst -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -intstyle ise -ifn "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/top_mod.xst" -ofn "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/top_mod.syr"
+xst -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -intstyle ise -ifn "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/top_mod.xst" -ofn "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/top_mod.syr"
+ngdbuild -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-5 "top_mod.ngc" top_mod.ngd
+ngdbuild -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-5 "top_mod.ngc" top_mod.ngd
+ngdbuild -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-5 "top_mod.ngc" top_mod.ngd
+map -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -intstyle ise -p xc3s500e-fg320-5 -cm area -pr off -k 4 -c 100 -o top_mod_map.ncd top_mod.ngd top_mod.pcf
+par -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -w -intstyle ise -ol std -t 1 top_mod_map.ncd top_mod.ncd top_mod.pcf
+ngdbuild -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-5 "top_mod.ngc" top_mod.ngd
+map -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -intstyle ise -p xc3s500e-fg320-5 -cm area -pr off -k 4 -c 100 -o top_mod_map.ncd top_mod.ngd top_mod.pcf
+par -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -w -intstyle ise -ol std -t 1 top_mod_map.ncd top_mod.ncd top_mod.pcf
+trce -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -intstyle ise -e 3 -s 5 -xml top_mod top_mod.ncd -o top_mod.twr top_mod.pcf -ucf top_mod.ucf
+bitgen -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -intstyle ise -f top_mod.ut top_mod.ncd
+ngdbuild -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-5 "top_mod.ngc" top_mod.ngd
+map -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -intstyle ise -p xc3s500e-fg320-5 -cm area -pr off -k 4 -c 100 -o top_mod_map.ncd top_mod.ngd top_mod.pcf
+par -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -w -intstyle ise -ol std -t 1 top_mod_map.ncd top_mod.ncd top_mod.pcf
+trce -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -intstyle ise -e 3 -s 5 -xml top_mod top_mod.ncd -o top_mod.twr top_mod.pcf -ucf top_mod.ucf
+bitgen -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -intstyle ise -f top_mod.ut top_mod.ncd

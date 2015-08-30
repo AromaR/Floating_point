@@ -1,0 +1,71 @@
+Release 10.1 Map K.31 (nt)
+Xilinx Map Application Log File for Design 'top_mod'
+
+Design Information
+------------------
+Command Line   : map -ise "C:/Documents and
+Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise"
+-intstyle ise -p xc3s500e-fg320-5 -cm area -pr off -k 4 -c 100 -o
+top_mod_map.ncd top_mod.ngd top_mod.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.46 $
+Mapped Date    : Sat Apr 04 15:25:51 2015
+
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   83
+Logic Utilization:
+  Total Number Slice Registers:       2,201 out of   9,312   23%
+    Number used as Flip Flops:        2,199
+    Number used as Latches:               2
+  Number of 4 input LUTs:               950 out of   9,312   10%
+Logic Distribution:
+  Number of occupied Slices:          1,812 out of   4,656   38%
+    Number of Slices containing only related logic:   1,812 out of   1,812 100%
+    Number of Slices containing unrelated logic:          0 out of   1,812   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       1,019 out of   9,312   10%
+    Number used as logic:               749
+    Number used as a route-thru:         69
+    Number used as Shift registers:     201
+  Number of bonded IOBs:                  1 out of     232    1%
+  Number of RAMB16s:                      5 out of      20   25%
+  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of BSCANs:                       1 out of       1  100%
+  Number of MULT18X18SIOs:                4 out of      20   20%
+
+  Number of RPM macros:           12
+Peak Memory Usage:  171 MB
+Total REAL time to MAP completion:  3 secs 
+Total CPU time to MAP completion:   2 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "top_mod_map.mrp" for details.

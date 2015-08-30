@@ -1,0 +1,744 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: TOP.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP"
+Output Format                      : NGC
+Target Device                      : xc3s50-5-pq208
+
+---- Source Options
+Top Module Name                    : TOP
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPM/fulladder.vhd" in Library work.
+Architecture behavioral of Entity fulladder2 is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPM/product.vhd" in Library work.
+Architecture behavioral of Entity product is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPM/Multiplier.vhd" in Library work.
+Architecture behavioral of Entity multiplier is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPM/multiplicand.vhd" in Library work.
+Architecture behavioral of Entity multiplicand is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPM/counter.vhd" in Library work.
+Architecture behavioral of Entity counter is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPM/add8.vhd" in Library work.
+Architecture behavioral of Entity add8 is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPM/controllerbeh.vhd" in Library work.
+Architecture behavioral of Entity controllerbeh is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPM/Datapath.vhd" in Library work.
+Architecture structural of Entity datapath is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPM/Controller.vhd" in Library work.
+Architecture behavioral of Entity ebsaddmul is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPM/Adder.vhd" in Library work.
+Architecture behavioral of Entity adder is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPM/Normalizer.vhd" in Library work.
+Architecture behavioral of Entity norm is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPM/MUX.vhd" in Library work.
+Architecture behavioral of Entity mux is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPM/TOPCONTROL.vhd" in Library work.
+Architecture behavioral of Entity topcontrol is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPM/TOPDATAPATH.vhd" in Library work.
+Architecture behavioral of Entity topdatapath is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPM/TOP.vhd" in Library work.
+Architecture behavioral of Entity top is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TOP> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TOPCONTROL> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TOPDATAPATH> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ebsaddmul> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <adder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Norm> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MUX> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <controllerbeh> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <datapath> in library <work> (architecture <structural>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <product> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <multiplier> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <multiplicand> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <counter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <add8> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TOP> in library <work> (Architecture <behavioral>).
+Entity <TOP> analyzed. Unit <TOP> generated.
+
+Analyzing Entity <TOPCONTROL> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/hp/Documents/eda/FPM/TOPCONTROL.vhd" line 44: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <start>, <done>
+Entity <TOPCONTROL> analyzed. Unit <TOPCONTROL> generated.
+
+Analyzing Entity <TOPDATAPATH> in library <work> (Architecture <behavioral>).
+Entity <TOPDATAPATH> analyzed. Unit <TOPDATAPATH> generated.
+
+Analyzing Entity <ebsaddmul> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "C:/Users/hp/Documents/eda/FPM/Controller.vhd" line 44: Unconnected output port 'count' of component 'datapath'.
+Entity <ebsaddmul> analyzed. Unit <ebsaddmul> generated.
+
+Analyzing Entity <controllerbeh> in library <work> (Architecture <behavioral>).
+Entity <controllerbeh> analyzed. Unit <controllerbeh> generated.
+
+Analyzing Entity <datapath> in library <work> (Architecture <structural>).
+Entity <datapath> analyzed. Unit <datapath> generated.
+
+Analyzing Entity <product> in library <work> (Architecture <behavioral>).
+Entity <product> analyzed. Unit <product> generated.
+
+Analyzing Entity <multiplier> in library <work> (Architecture <behavioral>).
+Entity <multiplier> analyzed. Unit <multiplier> generated.
+
+Analyzing Entity <multiplicand> in library <work> (Architecture <behavioral>).
+Entity <multiplicand> analyzed. Unit <multiplicand> generated.
+
+Analyzing Entity <counter> in library <work> (Architecture <behavioral>).
+Entity <counter> analyzed. Unit <counter> generated.
+
+Analyzing Entity <add8> in library <work> (Architecture <behavioral>).
+Entity <add8> analyzed. Unit <add8> generated.
+
+Analyzing Entity <fulladder2> in library <work> (Architecture <behavioral>).
+Entity <fulladder2> analyzed. Unit <fulladder2> generated.
+
+Analyzing Entity <adder> in library <work> (Architecture <behavioral>).
+Entity <adder> analyzed. Unit <adder> generated.
+
+Analyzing Entity <Norm> in library <work> (Architecture <behavioral>).
+Entity <Norm> analyzed. Unit <Norm> generated.
+
+Analyzing Entity <MUX> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/hp/Documents/eda/FPM/MUX.vhd" line 39: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <a>, <b>
+Entity <MUX> analyzed. Unit <MUX> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <TOPCONTROL>.
+    Related source file is "C:/Users/hp/Documents/eda/FPM/TOPCONTROL.vhd".
+    Found finite state machine <FSM_0> for signal <pos>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 1-bit latch for signal <multiply>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit xor2 for signal <sign>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <TOPCONTROL> synthesized.
+
+
+Synthesizing Unit <Norm>.
+    Related source file is "C:/Users/hp/Documents/eda/FPM/Normalizer.vhd".
+WARNING:Xst:647 - Input <man<47>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <man<23:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <exp> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <over>.
+    Found 23-bit register for signal <manout>.
+    Found 9-bit up counter for signal <exp_sig>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  24 D-type flip-flop(s).
+Unit <Norm> synthesized.
+
+
+Synthesizing Unit <MUX>.
+    Related source file is "C:/Users/hp/Documents/eda/FPM/MUX.vhd".
+Unit <MUX> synthesized.
+
+
+Synthesizing Unit <controllerbeh>.
+    Related source file is "C:/Users/hp/Documents/eda/FPM/controllerbeh.vhd".
+    Found finite state machine <FSM_1> for signal <ps1>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clkc                      (rising_edge)        |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <controllerbeh> synthesized.
+
+
+Synthesizing Unit <product>.
+    Related source file is "C:/Users/hp/Documents/eda/FPM/product.vhd".
+    Found 25-bit register for signal <sp>.
+    Summary:
+	inferred  25 D-type flip-flop(s).
+Unit <product> synthesized.
+
+
+Synthesizing Unit <multiplier>.
+    Related source file is "C:/Users/hp/Documents/eda/FPM/Multiplier.vhd".
+    Found 24-bit register for signal <mul>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+Unit <multiplier> synthesized.
+
+
+Synthesizing Unit <multiplicand>.
+    Related source file is "C:/Users/hp/Documents/eda/FPM/multiplicand.vhd".
+    Found 24-bit register for signal <smmout>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+Unit <multiplicand> synthesized.
+
+
+Synthesizing Unit <counter>.
+    Related source file is "C:/Users/hp/Documents/eda/FPM/counter.vhd".
+    Found 5-bit up counter for signal <s>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <counter> synthesized.
+
+
+Synthesizing Unit <fulladder2>.
+    Related source file is "C:/Users/hp/Documents/eda/FPM/fulladder.vhd".
+    Found 1-bit xor3 for signal <sum>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <fulladder2> synthesized.
+
+
+Synthesizing Unit <adder>.
+    Related source file is "C:/Users/hp/Documents/eda/FPM/Adder.vhd".
+Unit <adder> synthesized.
+
+
+Synthesizing Unit <add8>.
+    Related source file is "C:/Users/hp/Documents/eda/FPM/add8.vhd".
+Unit <add8> synthesized.
+
+
+Synthesizing Unit <datapath>.
+    Related source file is "C:/Users/hp/Documents/eda/FPM/Datapath.vhd".
+Unit <datapath> synthesized.
+
+
+Synthesizing Unit <ebsaddmul>.
+    Related source file is "C:/Users/hp/Documents/eda/FPM/Controller.vhd".
+Unit <ebsaddmul> synthesized.
+
+
+Synthesizing Unit <TOPDATAPATH>.
+    Related source file is "C:/Users/hp/Documents/eda/FPM/TOPDATAPATH.vhd".
+WARNING:Xst:647 - Input <num1<31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <num2<31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <TOPDATAPATH> synthesized.
+
+
+Synthesizing Unit <TOP>.
+    Related source file is "C:/Users/hp/Documents/eda/FPM/TOP.vhd".
+Unit <TOP> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 5-bit up counter                                      : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 5
+ 1-bit register                                        : 1
+ 23-bit register                                       : 1
+ 24-bit register                                       : 2
+ 25-bit register                                       : 1
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Xors                                                 : 33
+ 1-bit xor2                                            : 1
+ 1-bit xor3                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <stage2/stage1/p1/ps1/FSM> on signal <ps1[1:6]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ init  | 000001
+ load  | 000010
+ ideal | 000100
+ pload | 001000
+ shift | 010000
+ dn    | 100000
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <stage1/pos/FSM> on signal <pos[1:6]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ init  | 000001
+ mult  | 000010
+ add   | 000100
+ norm  | 001000
+ mux   | 010000
+ done1 | 100000
+-------------------
+WARNING:Xst:1290 - Hierarchical block <stage2> is unconnected in block <stage2>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# Counters                                             : 2
+ 5-bit up counter                                      : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 97
+ Flip-Flops                                            : 97
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Xors                                                 : 33
+ 1-bit xor2                                            : 1
+ 1-bit xor3                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <TOP> ...
+
+Optimizing unit <Norm> ...
+
+Optimizing unit <product> ...
+
+Optimizing unit <multiplier> ...
+
+Optimizing unit <multiplicand> ...
+
+Optimizing unit <adder> ...
+
+Optimizing unit <add8> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 13.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 123
+ Flip-Flops                                            : 123
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TOP.ngr
+Top Level Output File Name         : TOP
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 99
+
+Cell Usage :
+# BELS                             : 261
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 8
+#      LUT2                        : 49
+#      LUT2_D                      : 8
+#      LUT3                        : 67
+#      LUT3_D                      : 2
+#      LUT3_L                      : 11
+#      LUT4                        : 62
+#      LUT4_D                      : 10
+#      LUT4_L                      : 8
+#      MUXCY                       : 8
+#      MUXF5                       : 15
+#      VCC                         : 1
+#      XORCY                       : 9
+# FlipFlops/Latches                : 124
+#      FD                          : 40
+#      FDR                         : 1
+#      FDRE                        : 78
+#      FDRS                        : 1
+#      FDS                         : 2
+#      FDSE                        : 1
+#      LD_1                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 82
+#      IBUF                        : 49
+#      OBUF                        : 33
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50pq208-5 
+
+ Number of Slices:                      122  out of    768    15%  
+ Number of Slice Flip Flops:            124  out of   1536     8%  
+ Number of 4 input LUTs:                227  out of   1536    14%  
+ Number of IOs:                          99
+ Number of bonded IOBs:                  83  out of    124    66%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------+-------------------------+-------+
+Clock Signal                                     | Clock buffer(FF name)   | Load  |
+-------------------------------------------------+-------------------------+-------+
+stage1/multiply_or0000(stage1/multiply_or00001:O)| NONE(*)(stage1/multiply)| 1     |
+clk                                              | BUFGP                   | 123   |
+-------------------------------------------------+-------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 7.951ns (Maximum Frequency: 125.768MHz)
+   Minimum input arrival time before clock: 2.221ns
+   Maximum output required time after clock: 8.565ns
+   Maximum combinational path delay: 7.635ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.951ns (frequency: 125.768MHz)
+  Total number of paths / destination ports: 2357 / 258
+-------------------------------------------------------------------------
+Delay:               7.951ns (Levels of Logic = 5)
+  Source:            stage2/stage1/p2/p3/smmout_1 (FF)
+  Destination:       stage2/stage1/p2/p1/sp_17 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: stage2/stage1/p2/p3/smmout_1 to stage2/stage1/p2/p1/sp_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.626   1.040  stage2/stage1/p2/p3/smmout_1 (stage2/stage1/p2/p3/smmout_1)
+     LUT4:I0->O            4   0.479   0.779  stage2/stage1/p2/p5/f2/carry1 (stage2/stage1/p2/p5/s<1>)
+     MUXF5:S->O            4   0.540   0.779  stage2/stage1/p2/p5/f4/carry1 (stage2/stage1/p2/p5/s<3>)
+     MUXF5:S->O            9   0.540   0.955  stage2/stage1/p2/p5/f8/carry1 (stage2/stage1/p2/p5/s<7>)
+     MUXF5:S->O            9   0.540   0.955  stage2/stage1/p2/p5/f16/carry1 (stage2/stage1/p2/p5/s<15>)
+     MUXF5:S->O            1   0.540   0.000  stage2/stage1/p2/p1/sp_mux0000<17> (stage2/stage1/p2/p1/sp_mux0000<17>)
+     FDRE:D                    0.176          stage2/stage1/p2/p1/sp_17
+    ----------------------------------------
+    Total                      7.951ns (3.441ns logic, 4.510ns route)
+                                       (43.3% logic, 56.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'stage1/multiply_or0000'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.174ns (Levels of Logic = 2)
+  Source:            start (PAD)
+  Destination:       stage1/multiply (LATCH)
+  Destination Clock: stage1/multiply_or0000 rising
+
+  Data Path: start to stage1/multiply
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.715   0.804  start_IBUF (start_IBUF)
+     LUT4:I2->O            2   0.479   0.000  stage1/multiply_mux00011 (stage1/multiply_mux0001)
+     LD_1:D                    0.176          stage1/multiply
+    ----------------------------------------
+    Total                      2.174ns (1.370ns logic, 0.804ns route)
+                                       (63.0% logic, 37.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 48 / 48
+-------------------------------------------------------------------------
+Offset:              2.221ns (Levels of Logic = 2)
+  Source:            b<22> (PAD)
+  Destination:       stage2/stage1/p2/p2/mul_22 (FF)
+  Destination Clock: clk rising
+
+  Data Path: b<22> to stage2/stage1/p2/p2/mul_22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.715   0.851  b_22_IBUF (b_22_IBUF)
+     LUT3:I1->O            1   0.479   0.000  stage2/stage1/p2/p2/mul_mux0000<22>1 (stage2/stage1/p2/p2/mul_mux0000<22>)
+     FDRE:D                    0.176          stage2/stage1/p2/p2/mul_22
+    ----------------------------------------
+    Total                      2.221ns (1.370ns logic, 0.851ns route)
+                                       (61.7% logic, 38.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 65 / 33
+-------------------------------------------------------------------------
+Offset:              8.565ns (Levels of Logic = 2)
+  Source:            stage2/stage3/over (FF)
+  Destination:       o<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: stage2/stage3/over to o<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             32   0.626   1.870  stage2/stage3/over (stage2/stage3/over)
+     LUT2:I0->O            1   0.479   0.681  stage2/stage4/c<9>1 (o_9_OBUF)
+     OBUF:I->O                 4.909          o_9_OBUF (o<9>)
+    ----------------------------------------
+    Total                      8.565ns (6.014ns logic, 2.551ns route)
+                                       (70.2% logic, 29.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Delay:               7.635ns (Levels of Logic = 3)
+  Source:            a<31> (PAD)
+  Destination:       o<31> (PAD)
+
+  Data Path: a<31> to o<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.715   0.851  a_31_IBUF (a_31_IBUF)
+     LUT3:I1->O            1   0.479   0.681  stage2/stage4/c<31>1 (o_31_OBUF)
+     OBUF:I->O                 4.909          o_31_OBUF (o<31>)
+    ----------------------------------------
+    Total                      7.635ns (6.103ns logic, 1.532ns route)
+                                       (79.9% logic, 20.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.30 secs
+ 
+--> 
+
+Total memory usage is 242116 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

@@ -1,0 +1,464 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Reading design: Final.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Final.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Final"
+Output Format                      : NGC
+Target Device                      : xc3s50-5-pq208
+
+---- Source Options
+Top Module Name                    : Final
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/hp/Documents/eda/FPA/mod.vhd" in Library work.
+Architecture behavioral of Entity final is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Final> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Final> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "C:/Users/hp/Documents/eda/FPA/mod.vhd" line 42: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <man1>, <exp>
+Entity <Final> analyzed. Unit <Final> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Final>.
+    Related source file is "C:/Users/hp/Documents/eda/FPA/mod.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <overflow>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 8-bit latch for signal <eout>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 14-bit latch for signal <t>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_20>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_21>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_16>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_22>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_17>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_18>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <mout_19>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 14-bit subtractor for signal <$sub0000> created at line 54.
+    Found 9-bit adder for signal <ex$add0000> created at line 67.
+    Found 9-bit adder for signal <ex$addsub0000> created at line 66.
+    Found 14-bit comparator less for signal <mout_0$cmp_lt0000> created at line 55.
+    Found 15-bit comparator greater for signal <mout_0$cmp_lt0001> created at line 58.
+    Found 15-bit adder for signal <mout_0$sub0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_1$cmp_lt0000> created at line 58.
+    Found 14-bit comparator less for signal <mout_10$cmp_lt0000> created at line 55.
+    Found 15-bit comparator greater for signal <mout_10$cmp_lt0001> created at line 58.
+    Found 15-bit comparator greater for signal <mout_11$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_12$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_13$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_14$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_15$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_16$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_17$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_18$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_19$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_2$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_20$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_21$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_3$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_4$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_5$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_6$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_7$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_8$cmp_lt0000> created at line 58.
+    Found 15-bit comparator greater for signal <mout_9$cmp_lt0000> created at line 58.
+    Found 14-bit subtractor for signal <t$sub0001> created at line 54.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  24 Comparator(s).
+Unit <Final> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 14-bit subtractor                                     : 2
+ 15-bit adder                                          : 1
+ 9-bit adder                                           : 2
+# Latches                                              : 26
+ 1-bit latch                                           : 24
+ 14-bit latch                                          : 1
+ 8-bit latch                                           : 1
+# Comparators                                          : 24
+ 14-bit comparator less                                : 2
+ 15-bit comparator greater                             : 22
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 14-bit subtractor                                     : 2
+ 15-bit adder                                          : 1
+ 9-bit adder                                           : 2
+# Latches                                              : 26
+ 1-bit latch                                           : 24
+ 14-bit latch                                          : 1
+ 8-bit latch                                           : 1
+# Comparators                                          : 24
+ 14-bit comparator less                                : 2
+ 15-bit comparator greater                             : 22
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Final> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Final, actual ratio is 55.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Final.ngr
+Top Level Output File Name         : Final
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 88
+
+Cell Usage :
+# BELS                             : 1126
+#      GND                         : 1
+#      INV                         : 53
+#      LUT1                        : 22
+#      LUT2                        : 82
+#      LUT2_D                      : 1
+#      LUT2_L                      : 5
+#      LUT3                        : 82
+#      LUT3_D                      : 18
+#      LUT3_L                      : 12
+#      LUT4                        : 432
+#      LUT4_D                      : 31
+#      LUT4_L                      : 105
+#      MULT_AND                    : 2
+#      MUXCY                       : 186
+#      MUXF5                       : 41
+#      VCC                         : 1
+#      XORCY                       : 52
+# FlipFlops/Latches                : 46
+#      LD                          : 46
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 87
+#      IBUF                        : 55
+#      OBUF                        : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50pq208-5 
+
+ Number of Slices:                      446  out of    768    58%  
+ Number of Slice Flip Flops:             46  out of   1536     2%  
+ Number of 4 input LUTs:                843  out of   1536    54%  
+ Number of IOs:                          88
+ Number of bonded IOBs:                  88  out of    124    70%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+beg                                | BUFGP                  | 46    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 11.455ns (Maximum Frequency: 87.297MHz)
+   Minimum input arrival time before clock: 20.250ns
+   Maximum output required time after clock: 6.205ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'beg'
+  Clock period: 11.455ns (frequency: 87.297MHz)
+  Total number of paths / destination ports: 24939 / 46
+-------------------------------------------------------------------------
+Delay:               11.455ns (Levels of Logic = 8)
+  Source:            t_2 (LATCH)
+  Destination:       mout_21 (LATCH)
+  Source Clock:      beg falling
+  Destination Clock: beg falling
+
+  Data Path: t_2 to mout_21
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               4   0.551   0.802  t_2 (t_2)
+     LUT4:I3->O            1   0.479   0.740  t_mux0047<2>133_1 (t_mux0047<2>133)
+     LUT4:I2->O           25   0.479   1.711  mout_12_mux00041211 (N163)
+     LUT3_D:I1->O         20   0.479   1.372  mout_0_cmp_eq00061 (mout_0_cmp_eq0006)
+     LUT4:I2->O            1   0.479   0.740  mout_21_mux0004154 (mout_21_mux0004154)
+     LUT4:I2->O            1   0.479   0.704  mout_21_mux0004125_SW0 (N422)
+     LUT4:I3->O            1   0.479   0.704  mout_21_mux0004164_SW0 (N133)
+     LUT4_L:I3->LO         1   0.479   0.123  mout_21_mux0004185 (mout_21_mux0004185)
+     LUT4:I3->O            1   0.479   0.000  mout_21_mux0004211 (mout_21_mux0004)
+     LD:D                      0.176          mout_21
+    ----------------------------------------
+    Total                     11.455ns (4.559ns logic, 6.896ns route)
+                                       (39.8% logic, 60.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'beg'
+  Total number of paths / destination ports: 5105368 / 46
+-------------------------------------------------------------------------
+Offset:              20.250ns (Levels of Logic = 27)
+  Source:            man1<10> (PAD)
+  Destination:       mout_3 (LATCH)
+  Destination Clock: beg falling
+
+  Data Path: man1<10> to mout_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   0.715   1.856  man1_10_IBUF (man1_10_IBUF)
+     LUT4:I0->O            1   0.479   0.000  t_mux0047<0>59_SW0_F (N482)
+     MUXF5:I0->O           1   0.314   0.976  t_mux0047<0>59_SW0 (N26)
+     LUT4:I0->O            1   0.479   0.976  t_mux0047<0>106_SW0 (N95)
+     LUT4:I0->O            2   0.479   1.040  t_mux0047<0>208_SW0 (N1631)
+     LUT4:I0->O            8   0.479   1.091  t_mux0047<0>412_SW0 (N222)
+     LUT3:I1->O            1   0.479   0.000  t_mux0047<0>28_SW1_G (N519)
+     MUXF5:I1->O           1   0.314   0.976  t_mux0047<0>28_SW1 (N319)
+     LUT3:I0->O            1   0.479   0.000  t_mux0047<0>6991 (t_mux0047<0>699)
+     MUXCY:S->O            1   0.435   0.000  Msub__sub0000_cy<0> (Msub__sub0000_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  Msub__sub0000_cy<1> (Msub__sub0000_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Msub__sub0000_cy<2> (Msub__sub0000_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Msub__sub0000_cy<3> (Msub__sub0000_cy<3>)
+     XORCY:CI->O           1   0.786   0.976  Msub__sub0000_xor<4> (_sub0000<4>)
+     LUT1:I0->O            1   0.479   0.000  Madd_mout_0_sub0000_cy<4>_rt (Madd_mout_0_sub0000_cy<4>_rt)
+     MUXCY:S->O            1   0.435   0.000  Madd_mout_0_sub0000_cy<4> (Madd_mout_0_sub0000_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_mout_0_sub0000_cy<5> (Madd_mout_0_sub0000_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_mout_0_sub0000_cy<6> (Madd_mout_0_sub0000_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_mout_0_sub0000_cy<7> (Madd_mout_0_sub0000_cy<7>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_mout_0_sub0000_cy<8> (Madd_mout_0_sub0000_cy<8>)
+     MUXCY:CI->O           1   0.056   0.000  Madd_mout_0_sub0000_cy<9> (Madd_mout_0_sub0000_cy<9>)
+     XORCY:CI->O          22   0.786   1.655  Madd_mout_0_sub0000_xor<10> (mout_0_sub0000<10>)
+     LUT4:I0->O            1   0.479   0.000  Mcompar_mout_0_cmp_lt0001_lut<2>3 (Mcompar_mout_0_cmp_lt0001_lut<2>3)
+     MUXCY:S->O            1   0.435   0.000  Mcompar_mout_0_cmp_lt0001_cy<2>_2 (Mcompar_mout_0_cmp_lt0001_cy<2>3)
+     MUXCY:CI->O           1   0.265   0.976  Mcompar_mout_0_cmp_lt0001_cy<3>_2 (Mcompar_mout_0_cmp_lt0001_cy<3>3)
+     LUT4:I0->O            1   0.479   0.000  mout_3_mux0004214_F (N620)
+     MUXF5:I0->O           1   0.314   0.000  mout_3_mux0004214 (mout_3_mux0004)
+     LD:D                      0.176          mout_3
+    ----------------------------------------
+    Total                     20.250ns (9.730ns logic, 10.521ns route)
+                                       (48.0% logic, 52.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'beg'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              6.205ns (Levels of Logic = 1)
+  Source:            mout_22 (LATCH)
+  Destination:       mout<22> (PAD)
+  Source Clock:      beg falling
+
+  Data Path: mout_22 to mout<22>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.551   0.745  mout_22 (mout_22)
+     OBUF:I->O                 4.909          mout_22_OBUF (mout<22>)
+    ----------------------------------------
+    Total                      6.205ns (5.460ns logic, 0.745ns route)
+                                       (88.0% logic, 12.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 15.32 secs
+ 
+--> 
+
+Total memory usage is 254492 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   27 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

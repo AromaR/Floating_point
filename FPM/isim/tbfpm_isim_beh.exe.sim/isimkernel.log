@@ -1,0 +1,28 @@
+Command line:
+   tbfpm_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  30929
+
+Fri Mar 27 22:23:11 2015
+
+
+ Elaboration Time: 0.1875 sec
+
+ Current Memory Usage: 361.673 Meg
+
+ Total Signals          : 350
+ Total Nets             : 794
+ Total Signal Drivers   : 128
+ Total Blocks           : 58
+ Total Primitive Blocks : 50
+ Total Processes        : 117
+ Total Traceable Variables  : 11
+ Total Scalar Nets and Variables : 1173
+
+ Total Simulation Time: 0.234375 sec
+
+ Current Memory Usage: 361.673 Meg
+
+Fri Mar 27 22:23:23 2015
+

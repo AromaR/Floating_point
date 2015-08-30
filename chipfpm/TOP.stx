@@ -1,0 +1,46 @@
+Release 10.1 - xst K.31 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.34 secs
+ 
+--> 
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/i57e.vhd" in Library work.
+Entity <fulladder2> compiled.
+Entity <fulladder2> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/ye5.vhd" in Library work.
+Entity <mult> compiled.
+Entity <mult> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/rty.vhd" in Library work.
+Entity <adder> compiled.
+Entity <adder> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/tyty.vhd" in Library work.
+Entity <Norm> compiled.
+Entity <Norm> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/gdtr.vhd" in Library work.
+Entity <TOPCONTROL> compiled.
+Entity <TOPCONTROL> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/tfsdkgtm.vhd" in Library work.
+Entity <TOPDATAPATH> compiled.
+Entity <TOPDATAPATH> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/top.vhd" in Library work.
+Entity <TOP> compiled.
+Entity <TOP> (Architecture <Behavioral>) compiled.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.80 secs
+ 
+--> 
+
+Total memory usage is 119964 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

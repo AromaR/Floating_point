@@ -1,0 +1,42 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+Failed to create the layout directory: 'C:\Users\hp\AppData\Roaming/Xilinx/PlanAhead\14.7\layouts\application'
+source C:/Users/hp/Documents/eda/chip_fpmsp/pa.fromNetlist.tcl
+# create_project -name chip_fpmsp -dir "C:/Users/hp/Documents/eda/chip_fpmsp/planAhead_run_3" -part xc3s500efg320-5
+create_project: Time (s): elapsed = 00:01:04 . Memory (MB): peak = 373.977 ; gain = 60.852
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "C:/Users/hp/Documents/eda/chip_fpmsp/top_mod.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {C:/Users/hp/Documents/eda/chip_fpmsp} {ipcore_dir} }
+# add_files [list {ipcore_dir/chip_vio.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/icon_fpmsp.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/ila_chip.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/ila_fpmsp.ncf}] -fileset [get_property constrset [current_run]]
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "top_mod.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/hp/Documents/eda/chip_fpmsp/top_mod.ucf' to fileset 'constrs_1'
+# add_files [list {top_mod.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s500efg320-5
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design top_mod.ngc ...
+WARNING:NetListWriters:298 - No output is written to top_mod.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file top_mod.edif ...
+ngc2edif: Total memory usage is 81612 kilobytes
+
+Parsing EDIF File [./planAhead_run_3/chip_fpmsp.data/cache/top_mod_ngc_zx.edif]

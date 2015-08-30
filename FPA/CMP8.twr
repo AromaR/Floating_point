@@ -1,0 +1,107 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml CMP8.twx CMP8.ncd -o CMP8.twr CMP8.pcf
+
+Design file:              CMP8.ncd
+Physical constraint file: CMP8.pcf
+Device,package,speed:     xc3s50,pq208,-5 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+a<0>           |eout           |    7.605|
+a<0>           |gout           |    9.422|
+a<0>           |lout           |   10.200|
+a<1>           |eout           |    8.806|
+a<1>           |gout           |    9.351|
+a<1>           |lout           |   10.019|
+a<2>           |eout           |    8.950|
+a<2>           |gout           |    8.860|
+a<2>           |lout           |    9.038|
+a<3>           |eout           |    8.311|
+a<3>           |gout           |    8.633|
+a<3>           |lout           |    8.847|
+a<4>           |eout           |    8.673|
+a<4>           |gout           |    9.631|
+a<4>           |lout           |    9.098|
+a<5>           |eout           |    8.620|
+a<5>           |gout           |    9.578|
+a<5>           |lout           |    9.045|
+a<6>           |eout           |    8.108|
+a<6>           |gout           |    9.066|
+a<6>           |lout           |    8.533|
+a<7>           |eout           |    8.960|
+a<7>           |gout           |    9.918|
+a<7>           |lout           |    9.385|
+b<0>           |eout           |    7.239|
+b<0>           |gout           |    9.459|
+b<0>           |lout           |    9.834|
+b<1>           |eout           |    8.539|
+b<1>           |gout           |    9.847|
+b<1>           |lout           |   10.242|
+b<2>           |eout           |    8.497|
+b<2>           |gout           |    8.420|
+b<2>           |lout           |    8.899|
+b<3>           |eout           |    7.869|
+b<3>           |gout           |    8.107|
+b<3>           |lout           |    7.745|
+b<4>           |eout           |    8.720|
+b<4>           |gout           |    9.678|
+b<4>           |lout           |    9.145|
+b<5>           |eout           |    8.854|
+b<5>           |gout           |    9.812|
+b<5>           |lout           |    9.279|
+b<6>           |eout           |    8.173|
+b<6>           |gout           |    9.131|
+b<6>           |lout           |    8.598|
+b<7>           |eout           |    9.075|
+b<7>           |gout           |   10.033|
+b<7>           |lout           |    9.500|
+---------------+---------------+---------+
+
+
+Analysis completed Fri Mar 27 00:01:15 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 131 MB
+
+
+

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<document OS="nt" product="ISE" version="10.1">
+
+  <!--The data in this file is primarily intended for consumption by Xilinx tools.
+    The structure and the elements are likely to change over the next few releases.
+    This means code written to parse this file will need to be revisited each subsequent release.-->
+
+  <application stringID="par" timeStamp="Sat Apr 04 15:25:57 2015">
+    <task stringID="PAR_DEVICE_UTILIZATION">
+      <section stringID="PAR_DESIGN_SUMMARY"></section>
+    </task>
+    <task stringID="PAR_PAR">
+      <section stringID="PAR_DESIGN_SUMMARY">
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="13 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="12 secs "/>
+        <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
+        <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="15 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="13 secs "/>
+      </section>
+    </task>
+    <task stringID="PAR_par">
+      <section stringID="PAR_DLY_CLK_REPORT"/>
+      <section stringID="PAR_CLOCK_REPORT">
+        <table stringID="PAR_CLOCK_TABLE">
+          <row stringID="row" value="1"></row>
+          <row stringID="row" value="2"></row>
+          <row stringID="row" value="3"></row>
+          <row stringID="row" value="4"></row>
+          <row stringID="row" value="5"></row>
+          <row stringID="row" value="6"></row>
+          <row stringID="row" value="7"></row>
+          <row stringID="row" value="8"></row>
+          <row stringID="row" value="9"></row>
+          <row stringID="row" value="10"></row>
+          <row stringID="row" value="11"></row>
+          <row stringID="row" value="12"></row>
+          <row stringID="row" value="13"></row>
+          <row stringID="row" value="14"></row>
+          <row stringID="row" value="15"></row>
+          <row stringID="row" value="16"></row>
+          <row stringID="row" value="17"></row>
+          <row stringID="row" value="18"></row>
+          <row stringID="row" value="19"></row>
+          <row stringID="row" value="20"></row>
+          <row stringID="row" value="21"></row>
+          <row stringID="row" value="22"></row>
+          <row stringID="row" value="23"></row>
+          <row stringID="row" value="24"></row>
+          <row stringID="row" value="25"></row>
+          <row stringID="row" value="26"></row>
+          <row stringID="row" value="27"></row>
+          <row stringID="row" value="28"></row>
+          <row stringID="row" value="29"></row>
+          <row stringID="row" value="30"></row>
+          <row stringID="row" value="31"></row>
+          <row stringID="row" value="32"></row>
+          <row stringID="row" value="33"></row>
+          <row stringID="row" value="34"></row>
+          <row stringID="row" value="35"></row>
+          <row stringID="row" value="36"></row>
+          <row stringID="row" value="37"></row>
+          <row stringID="row" value="38"></row>
+          <row stringID="row" value="39"></row>
+          <row stringID="row" value="40"></row>
+          <row stringID="row" value="41"></row>
+          <row stringID="row" value="42"></row>
+          <row stringID="row" value="43"></row>
+          <row stringID="row" value="44"></row>
+          <row stringID="row" value="45"></row>
+          <row stringID="row" value="46"></row>
+          <row stringID="row" value="47"></row>
+          <row stringID="row" value="48"></row>
+          <row stringID="row" value="49"></row>
+          <row stringID="row" value="50"></row>
+          <row stringID="row" value="51"></row>
+          <row stringID="row" value="52"></row>
+          <row stringID="row" value="53"></row>
+          <row stringID="row" value="54"></row>
+          <row stringID="row" value="55"></row>
+          <row stringID="row" value="56"></row>
+          <row stringID="row" value="57"></row>
+          <row stringID="row" value="58"></row>
+          <row stringID="row" value="59"></row>
+          <row stringID="row" value="60"></row>
+          <row stringID="row" value="61"></row>
+          <row stringID="row" value="62"></row>
+          <row stringID="row" value="63"></row>
+          <row stringID="row" value="64"></row>
+          <row stringID="row" value="65"></row>
+          <row stringID="row" value="66"></row>
+          <row stringID="row" value="67"></row>
+          <row stringID="row" value="68"></row>
+          <row stringID="row" value="69"></row>
+          <row stringID="row" value="70"></row>
+          <row stringID="row" value="71"></row>
+          <row stringID="row" value="72"></row>
+          <row stringID="row" value="73"></row>
+          <row stringID="row" value="74"></row>
+          <row stringID="row" value="75"></row>
+          <row stringID="row" value="76"></row>
+          <row stringID="row" value="77"></row>
+          <row stringID="row" value="78"></row>
+          <row stringID="row" value="79"></row>
+          <row stringID="row" value="80"></row>
+          <row stringID="row" value="81"></row>
+          <row stringID="row" value="82"></row>
+          <row stringID="row" value="83"></row>
+          <row stringID="row" value="84"></row>
+          <row stringID="row" value="85"></row>
+          <row stringID="row" value="86"></row>
+        </table>
+      </section>
+      <section stringID="PAR_PAD_PIN_REPORT"></section>
+      <section stringID="PAR_UNROUTES_REPORT">
+        <item dataType="int" stringID="PAR_UNROUTED_NETS" value="0"/>
+        <item dataType="int" stringID="PAR_TOTAL_SOURCELESS_NETS" value="0"/>
+        <item dataType="int" stringID="PAR_TOTAL_LOADLESS_NETS" value="2"/>
+      </section>
+    </task>
+  </application>
+
+</document>

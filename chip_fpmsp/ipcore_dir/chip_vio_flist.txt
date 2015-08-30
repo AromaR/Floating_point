@@ -1,0 +1,18 @@
+# Output products list for <chip_vio>
+_xmsgs\pn_parser.xmsgs
+chip_vio.asy
+chip_vio.cdc
+chip_vio.constraints\chip_vio.ucf
+chip_vio.constraints\chip_vio.xdc
+chip_vio.gise
+chip_vio.ngc
+chip_vio.sym
+chip_vio.ucf
+chip_vio.vhd
+chip_vio.vho
+chip_vio.xco
+chip_vio.xdc
+chip_vio.xise
+chip_vio_flist.txt
+chip_vio_readme.txt
+chip_vio_xmdf.tcl

@@ -1,0 +1,4 @@
+vhdl work "sec.vhd"
+vhdl work "div.vhd"
+vhdl work "anly.vhd"
+vhdl work "Main.vhd"

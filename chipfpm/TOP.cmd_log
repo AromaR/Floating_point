@@ -1,0 +1,1 @@
+xst -ise "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/chipfpm.ise" -intstyle ise -ifn "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/TOP.xst" -ofn "C:/Documents and Settings/Administrator/Desktop/134143 projectfiles/chipfpm/TOP.syr"

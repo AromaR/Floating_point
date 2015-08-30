@@ -1,0 +1,952 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: top_mod.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_mod.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_mod"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : top_mod
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/hp/Documents/eda/chip_fpmsp/FA.vhd" in Library work.
+Architecture behavioral of Entity fulladder2 is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/chip_fpmsp/mult.vhd" in Library work.
+Architecture behavioral of Entity mult is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/chip_fpmsp/adder.vhd" in Library work.
+Architecture behavioral of Entity adder is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/chip_fpmsp/norm.vhd" in Library work.
+Architecture behavioral of Entity norm is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/chip_fpmsp/topcontrol.vhd" in Library work.
+Architecture behavioral of Entity topcontrol is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/chip_fpmsp/todatapath.vhd" in Library work.
+Architecture behavioral of Entity topdatapath is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/chip_fpmsp/ipcore_dir/icon_fpmsp.vhd" in Library work.
+Architecture icon_fpmsp_a of Entity icon_fpmsp is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/chip_fpmsp/ipcore_dir/chip_vio.vhd" in Library work.
+Architecture chip_vio_a of Entity chip_vio is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/chip_fpmsp/ipcore_dir/ila_chip.vhd" in Library work.
+Architecture ila_chip_a of Entity ila_chip is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/chip_fpmsp/fpmsp.vhd" in Library work.
+Architecture behavioral of Entity top is up to date.
+Compiling vhdl file "C:/Users/hp/Documents/eda/chip_fpmsp/top_mod.vhd" in Library work.
+Architecture behavioral of Entity top_mod is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top_mod> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TOP> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TOPCONTROL> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TOPDATAPATH> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mult> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <adder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Norm> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <fulladder2> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top_mod> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/hp/Documents/eda/chip_fpmsp/top_mod.vhd" line 81: Instantiating black box module <icon_fpmsp>.
+WARNING:Xst:2211 - "C:/Users/hp/Documents/eda/chip_fpmsp/top_mod.vhd" line 82: Instantiating black box module <chip_vio>.
+WARNING:Xst:2211 - "C:/Users/hp/Documents/eda/chip_fpmsp/top_mod.vhd" line 83: Instantiating black box module <ila_chip>.
+Entity <top_mod> analyzed. Unit <top_mod> generated.
+
+Analyzing Entity <TOP> in library <work> (Architecture <behavioral>).
+Entity <TOP> analyzed. Unit <TOP> generated.
+
+Analyzing Entity <TOPCONTROL> in library <work> (Architecture <behavioral>).
+Entity <TOPCONTROL> analyzed. Unit <TOPCONTROL> generated.
+
+Analyzing Entity <TOPDATAPATH> in library <work> (Architecture <behavioral>).
+Entity <TOPDATAPATH> analyzed. Unit <TOPDATAPATH> generated.
+
+Analyzing Entity <mult> in library <work> (Architecture <behavioral>).
+WARNING:Xst:1610 - "C:/Users/hp/Documents/eda/chip_fpmsp/mult.vhd" line 48: Width mismatch. <c_var> has a width of 49 bits but assigned expression is 50-bit wide.
+WARNING:Xst:819 - "C:/Users/hp/Documents/eda/chip_fpmsp/mult.vhd" line 41: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <a>, <b>
+Entity <mult> analyzed. Unit <mult> generated.
+
+Analyzing Entity <adder> in library <work> (Architecture <behavioral>).
+Entity <adder> analyzed. Unit <adder> generated.
+
+Analyzing Entity <fulladder2> in library <work> (Architecture <behavioral>).
+Entity <fulladder2> analyzed. Unit <fulladder2> generated.
+
+Analyzing Entity <Norm> in library <work> (Architecture <behavioral>).
+Entity <Norm> analyzed. Unit <Norm> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <TOPCONTROL>.
+    Related source file is "C:/Users/hp/Documents/eda/chip_fpmsp/topcontrol.vhd".
+    Using one-hot encoding for signal <pos>.
+WARNING:Xst:737 - Found 1-bit latch for signal <doneall>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 6-bit latch for signal <nos>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <multiply>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit xor2 for signal <sign>.
+    Found 6-bit register for signal <pos>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <TOPCONTROL> synthesized.
+
+
+Synthesizing Unit <mult>.
+    Related source file is "C:/Users/hp/Documents/eda/chip_fpmsp/mult.vhd".
+    Found 25x25-bit multiplier for signal <c_var$mult0000> created at line 48.
+    Summary:
+	inferred   1 Multiplier(s).
+Unit <mult> synthesized.
+
+
+Synthesizing Unit <Norm>.
+    Related source file is "C:/Users/hp/Documents/eda/chip_fpmsp/norm.vhd".
+WARNING:Xst:647 - Input <man<47>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <man<23:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <exp_sig1<8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <over>.
+    Found 23-bit register for signal <manout>.
+    Found 9-bit register for signal <exp_sig>.
+    Found 9-bit adder for signal <exp_sig$add0001> created at line 50.
+    Summary:
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <Norm> synthesized.
+
+
+Synthesizing Unit <fulladder2>.
+    Related source file is "C:/Users/hp/Documents/eda/chip_fpmsp/FA.vhd".
+    Found 1-bit xor3 for signal <sum>.
+    Summary:
+	inferred   1 Xor(s).
+Unit <fulladder2> synthesized.
+
+
+Synthesizing Unit <adder>.
+    Related source file is "C:/Users/hp/Documents/eda/chip_fpmsp/adder.vhd".
+Unit <adder> synthesized.
+
+
+Synthesizing Unit <TOPDATAPATH>.
+    Related source file is "C:/Users/hp/Documents/eda/chip_fpmsp/todatapath.vhd".
+WARNING:Xst:647 - Input <num1<31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <num2<31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <z> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <x> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <eout1<8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <TOPDATAPATH> synthesized.
+
+
+Synthesizing Unit <TOP>.
+    Related source file is "C:/Users/hp/Documents/eda/chip_fpmsp/fpmsp.vhd".
+WARNING:Xst:646 - Signal <ox_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <doneit_sig> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <TOP> synthesized.
+
+
+Synthesizing Unit <top_mod>.
+    Related source file is "C:/Users/hp/Documents/eda/chip_fpmsp/top_mod.vhd".
+WARNING:Xst:646 - Signal <opt> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <clk_sig<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <top_mod> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 25x25-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 4
+ 1-bit register                                        : 1
+ 23-bit register                                       : 1
+ 6-bit register                                        : 1
+ 9-bit register                                        : 1
+# Latches                                              : 3
+ 1-bit latch                                           : 2
+ 6-bit latch                                           : 1
+# Xors                                                 : 17
+ 1-bit xor2                                            : 1
+ 1-bit xor3                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/icon_fpmsp.ngc>.
+Reading core <ipcore_dir/chip_vio.ngc>.
+Reading core <ipcore_dir/ila_chip.ngc>.
+Loading core <icon_fpmsp> for timing and area information for instance <st1>.
+Loading core <chip_vio> for timing and area information for instance <st2>.
+Loading core <ila_chip> for timing and area information for instance <st3>.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pos_2> has a constant value of 0 in block <stage1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pos_3> has a constant value of 0 in block <stage1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pos_4> has a constant value of 0 in block <stage1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pos_5> has a constant value of 0 in block <stage1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <exp_sig_8> of sequential type is unconnected in block <stage3>.
+WARNING:Xst:2677 - Node <exp_sig_8> of sequential type is unconnected in block <Norm>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 25x25-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 38
+ Flip-Flops                                            : 38
+# Latches                                              : 3
+ 1-bit latch                                           : 2
+ 6-bit latch                                           : 1
+# Xors                                                 : 17
+ 1-bit xor2                                            : 1
+ 1-bit xor3                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<7>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<8>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<42>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<14>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<44>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<21>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<22>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<36>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<28>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<32>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<39>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<0>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<25>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<13>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<46>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<5>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<31>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<20>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<27>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<34>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<29>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<4>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<40>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<15>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<18>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<23>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<10>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<35>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<19>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<33>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<41>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<26>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<3>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<47>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<6>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<1>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<12>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<17>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<43>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<30>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<11>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<16>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<37>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<9>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<38>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<24>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<2>.
+WARNING:Xst:2170 - Unit mult : the following signal(s) form a combinatorial loop: c<45>.
+
+Optimizing unit <top_mod> ...
+
+Optimizing unit <mult> ...
+
+Optimizing unit <Norm> ...
+
+Optimizing unit <TOPCONTROL> ...
+
+Optimizing unit <adder> ...
+
+Optimizing unit <TOP> ...
+WARNING:Xst:1293 - FF/Latch <st4/stage1/nos_2> has a constant value of 0 in block <top_mod>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <st4/stage1/pos_2> has a constant value of 0 in block <top_mod>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <st4/stage1/nos_3> has a constant value of 0 in block <top_mod>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <st4/stage1/pos_3> has a constant value of 0 in block <top_mod>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <st4/stage1/nos_4> has a constant value of 0 in block <top_mod>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <st4/stage1/pos_4> has a constant value of 0 in block <top_mod>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <st4/stage1/nos_5> has a constant value of 0 in block <top_mod>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <st4/stage1/pos_5> has a constant value of 0 in block <top_mod>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <st4/stage1/doneall> of sequential type is unconnected in block <top_mod>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <st4/stage1/nos_1> in Unit <top_mod> is equivalent to the following FF/Latch, which will be removed : <st4/stage1/multiply> 
+Found area constraint ratio of 100 (+ 5) on block top_mod, actual ratio is 32.
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[10].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[10].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[10].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[11].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[11].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[11].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[12].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[12].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[12].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[13].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[13].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[13].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[14].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[14].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[14].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[15].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[15].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[15].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[32].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[32].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[32].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[33].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[33].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[33].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[34].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[34].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[34].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[40].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[40].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[40].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[35].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[35].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[35].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[36].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[36].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[36].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[41].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[41].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[41].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[42].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[42].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[42].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[37].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[37].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[37].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[43].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[43].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[43].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[38].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[38].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[38].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[44].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[44].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[44].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[39].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[39].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[39].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[50].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[50].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[50].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[45].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[45].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[45].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[51].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[51].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[51].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[46].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[46].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[46].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[52].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[52].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[52].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[47].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[47].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[47].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[48].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[48].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[48].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[53].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[53].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[53].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[54].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[54].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[54].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[49].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[49].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[49].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[55].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[55].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[55].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[60].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[60].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[60].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[56].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[56].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[56].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[61].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[61].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[61].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[57].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[57].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[57].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[62].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[62].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[62].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[58].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[58].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[58].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[63].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[63].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[63].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[59].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[59].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[59].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[64].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[64].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[64].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[65].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[65].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[65].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[70].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[70].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[70].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[66].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[66].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[66].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[71].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[71].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[71].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[67].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[67].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[67].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[72].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[72].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[72].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[68].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[68].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[68].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[73].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[73].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[73].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[69].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[69].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[69].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[74].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[74].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[74].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[75].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[75].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[75].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[80].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[80].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[80].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[76].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[76].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[76].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[81].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[81].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[81].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[77].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[77].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[77].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[82].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[82].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[82].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[78].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[78].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[78].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[79].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[79].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[79].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[0].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[0].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[0].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[1].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[1].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[1].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[2].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[2].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[2].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[3].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[3].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[3].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[4].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[4].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[4].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[5].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[5].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[5].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[6].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[6].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[6].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[7].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[7].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[7].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[8].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[8].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[8].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[9].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[9].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[9].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[10].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[10].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[10].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[11].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[11].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[11].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[12].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[12].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[12].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[13].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[13].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[13].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[14].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[14].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[14].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[15].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[15].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[15].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[32].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[32].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[32].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[33].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[33].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[33].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[34].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[34].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[34].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[40].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[40].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[40].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[35].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[35].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[35].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[36].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[36].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[36].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[41].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[41].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[41].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[42].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[42].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[42].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[37].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[37].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[37].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[43].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[43].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[43].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[38].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[38].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[38].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[44].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[44].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[44].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[39].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[39].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[39].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[50].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[50].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[50].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[45].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[45].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[45].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[51].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[51].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[51].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[46].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[46].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[46].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[52].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[52].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[52].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[47].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[47].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[47].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[48].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[48].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[48].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[53].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[53].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[53].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[54].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[54].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[54].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[49].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[49].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[49].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[55].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[55].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[55].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[60].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[60].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[60].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[56].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[56].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[56].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[61].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[61].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[61].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[57].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[57].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[57].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[62].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[62].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[62].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[58].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[58].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[58].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[63].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[63].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[63].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[59].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[59].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[59].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[64].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[64].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[64].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[65].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[65].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[65].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[70].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[70].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[70].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[66].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[66].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[66].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[71].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[71].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[71].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[67].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[67].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[67].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[72].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[72].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[72].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[68].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[68].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[68].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[73].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[73].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[73].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[69].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[69].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[69].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[74].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[74].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[74].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[75].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[75].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[75].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[80].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[80].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[80].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[76].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[76].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[76].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[81].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[81].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[81].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[77].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[77].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[77].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[82].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[82].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[82].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[78].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[78].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[78].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[79].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[79].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[79].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[0].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[0].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[0].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[1].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[1].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[1].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[2].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[2].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[2].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[3].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[3].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[3].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[4].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[4].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[4].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[5].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[5].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[5].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[6].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[6].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[6].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[7].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[7].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[7].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[8].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[8].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[8].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+INFO:Xst:2260 - The FF/Latch <U0/I_VIO/GEN_SYNC_IN[9].SYNC_IN_CELL/USER_CLK_REG> in Unit <st2> is equivalent to the following 2 FFs/Latches : <U0/I_VIO/GEN_SYNC_IN[9].SYNC_IN_CELL/sync_f_edge/U_DOUT0> <U0/I_VIO/GEN_SYNC_IN[9].SYNC_IN_CELL/sync_r_edge/U_DOUT0> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 34
+ Flip-Flops                                            : 34
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top_mod.ngr
+Top Level Output File Name         : top_mod
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 1
+
+Cell Usage :
+# BELS                             : 1275
+#      GND                         : 4
+#      INV                         : 92
+#      LUT1                        : 66
+#      LUT2                        : 127
+#      LUT3                        : 512
+#      LUT3_L                      : 1
+#      LUT4                        : 149
+#      LUT4_L                      : 2
+#      MUXCY                       : 74
+#      MUXCY_L                     : 63
+#      MUXF5                       : 33
+#      MUXF6                       : 10
+#      VCC                         : 4
+#      XORCY                       : 138
+# FlipFlops/Latches                : 2205
+#      FD                          : 181
+#      FDC                         : 1
+#      FDCE                        : 190
+#      FDE                         : 1147
+#      FDP                         : 150
+#      FDPE                        : 4
+#      FDR                         : 210
+#      FDRE                        : 305
+#      FDRS                        : 4
+#      FDS                         : 10
+#      LD                          : 2
+#      LDC                         : 1
+# RAMS                             : 5
+#      RAMB16_S1_S36               : 5
+# Shift Registers                  : 201
+#      SRL16                       : 148
+#      SRL16E                      : 1
+#      SRLC16E                     : 52
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# MULTs                            : 4
+#      MULT18X18SIO                : 4
+# Others                           : 1
+#      BSCAN_SPARTAN3              : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                     1530  out of   4656    32%  
+ Number of Slice Flip Flops:           2205  out of   9312    23%  
+ Number of 4 input LUTs:               1150  out of   9312    12%  
+    Number used as logic:               949
+    Number used as Shift registers:     201
+ Number of IOs:                           1
+ Number of bonded IOBs:                   1  out of    232     0%  
+ Number of BRAMs:                         5  out of     20    25%  
+ Number of MULT18X18SIOs:                 4  out of     20    20%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------+------------------------------------------------------------+-------+
+Clock Signal                                                        | Clock buffer(FF name)                                      | Load  |
+--------------------------------------------------------------------+------------------------------------------------------------+-------+
+st1/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1                                | BUFG                                                       | 911   |
+st1/U0/iUPDATE_OUT                                                  | NONE(st1/U0/U_ICON/U_iDATA_CMD)                            | 1     |
+clk                                                                 | BUFGP                                                      | 1335  |
+data<0>(st4/stage2/stage1/c_var_mux0000<0>1:O)                      | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[0].SYNC_IN_CELL/U_RISING) | 2     |
+data<1>(st4/stage2/stage1/c_var_mux0000<1>1:O)                      | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[1].SYNC_IN_CELL/U_RISING) | 2     |
+data<2>(st4/stage2/stage1/c_var_mux0000<2>1:O)                      | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[2].SYNC_IN_CELL/U_RISING) | 2     |
+data<3>(st4/stage2/stage1/c_var_mux0000<3>1:O)                      | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[3].SYNC_IN_CELL/U_RISING) | 2     |
+data<4>(st4/stage2/stage1/c_var_mux0000<4>1:O)                      | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[4].SYNC_IN_CELL/U_RISING) | 2     |
+data<5>(st4/stage2/stage1/c_var_mux0000<5>1:O)                      | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[5].SYNC_IN_CELL/U_RISING) | 2     |
+data<6>(st4/stage2/stage1/c_var_mux0000<6>1:O)                      | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[6].SYNC_IN_CELL/U_RISING) | 2     |
+data<7>(st4/stage2/stage1/c_var_mux0000<7>1:O)                      | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[7].SYNC_IN_CELL/U_RISING) | 2     |
+data<8>(st4/stage2/stage1/c_var_mux0000<8>1:O)                      | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[8].SYNC_IN_CELL/U_RISING) | 2     |
+data<9>(st4/stage2/stage1/c_var_mux0000<9>1:O)                      | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[9].SYNC_IN_CELL/U_RISING) | 2     |
+data<10>(st4/stage2/stage1/c_var_mux0000<10>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[10].SYNC_IN_CELL/U_RISING)| 2     |
+data<11>(st4/stage2/stage1/c_var_mux0000<11>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[11].SYNC_IN_CELL/U_RISING)| 2     |
+data<12>(st4/stage2/stage1/c_var_mux0000<12>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[12].SYNC_IN_CELL/U_RISING)| 2     |
+data<13>(st4/stage2/stage1/c_var_mux0000<13>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[13].SYNC_IN_CELL/U_RISING)| 2     |
+data<14>(st4/stage2/stage1/c_var_mux0000<14>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[14].SYNC_IN_CELL/U_RISING)| 2     |
+data<15>(st4/stage2/stage1/c_var_mux0000<15>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[15].SYNC_IN_CELL/U_RISING)| 2     |
+data<16>(st4/stage2/stage1/c_var_mux0000<16>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[16].SYNC_IN_CELL/U_RISING)| 2     |
+data<17>(st4/stage2/stage1/c_var_mux0000<17>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[17].SYNC_IN_CELL/U_RISING)| 2     |
+data<18>(st4/stage2/stage1/c_var_mux0000<18>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[18].SYNC_IN_CELL/U_RISING)| 2     |
+data<19>(st4/stage2/stage1/c_var_mux0000<19>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[19].SYNC_IN_CELL/U_RISING)| 2     |
+data<20>(st4/stage2/stage1/c_var_mux0000<20>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[20].SYNC_IN_CELL/U_RISING)| 2     |
+data<21>(st4/stage2/stage1/c_var_mux0000<21>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[21].SYNC_IN_CELL/U_RISING)| 2     |
+data<22>(st4/stage2/stage1/c_var_mux0000<22>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[22].SYNC_IN_CELL/U_RISING)| 2     |
+data<23>(st4/stage2/stage1/c_var_mux0000<23>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[23].SYNC_IN_CELL/U_RISING)| 2     |
+data<24>(st4/stage2/stage1/c_var_mux0000<24>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[24].SYNC_IN_CELL/U_RISING)| 2     |
+data<25>(st4/stage2/stage1/c_var_mux0000<25>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[25].SYNC_IN_CELL/U_RISING)| 2     |
+data<26>(st4/stage2/stage1/c_var_mux0000<26>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[26].SYNC_IN_CELL/U_RISING)| 2     |
+data<27>(st4/stage2/stage1/c_var_mux0000<27>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[27].SYNC_IN_CELL/U_RISING)| 2     |
+data<28>(st4/stage2/stage1/c_var_mux0000<28>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[28].SYNC_IN_CELL/U_RISING)| 2     |
+data<29>(st4/stage2/stage1/c_var_mux0000<29>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[29].SYNC_IN_CELL/U_RISING)| 2     |
+data<30>(st4/stage2/stage1/c_var_mux0000<30>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[30].SYNC_IN_CELL/U_RISING)| 2     |
+data<31>(st4/stage2/stage1/c_var_mux0000<31>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[31].SYNC_IN_CELL/U_RISING)| 2     |
+data<32>(st4/stage2/stage1/c_var_mux0000<32>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[32].SYNC_IN_CELL/U_RISING)| 2     |
+data<33>(st4/stage2/stage1/c_var_mux0000<33>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[33].SYNC_IN_CELL/U_RISING)| 2     |
+data<34>(st4/stage2/stage1/c_var_mux0000<34>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[34].SYNC_IN_CELL/U_RISING)| 2     |
+data<35>(st4/stage2/stage1/c_var_mux0000<35>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[35].SYNC_IN_CELL/U_RISING)| 2     |
+data<36>(st4/stage2/stage1/c_var_mux0000<36>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[36].SYNC_IN_CELL/U_RISING)| 2     |
+data<37>(st4/stage2/stage1/c_var_mux0000<37>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[37].SYNC_IN_CELL/U_RISING)| 2     |
+data<38>(st4/stage2/stage1/c_var_mux0000<38>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[38].SYNC_IN_CELL/U_RISING)| 2     |
+data<39>(st4/stage2/stage1/c_var_mux0000<39>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[39].SYNC_IN_CELL/U_RISING)| 2     |
+data<40>(st4/stage2/stage1/c_var_mux0000<40>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[40].SYNC_IN_CELL/U_RISING)| 2     |
+data<41>(st4/stage2/stage1/c_var_mux0000<41>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[41].SYNC_IN_CELL/U_RISING)| 2     |
+data<42>(st4/stage2/stage1/c_var_mux0000<42>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[42].SYNC_IN_CELL/U_RISING)| 2     |
+data<43>(st4/stage2/stage1/c_var_mux0000<43>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[43].SYNC_IN_CELL/U_RISING)| 2     |
+data<44>(st4/stage2/stage1/c_var_mux0000<44>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[44].SYNC_IN_CELL/U_RISING)| 2     |
+data<45>(st4/stage2/stage1/c_var_mux0000<45>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[45].SYNC_IN_CELL/U_RISING)| 2     |
+data<46>(st4/stage2/stage1/c_var_mux0000<46>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[46].SYNC_IN_CELL/U_RISING)| 2     |
+data<47>(st4/stage2/stage1/c_var_mux0000<47>1:O)                    | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[47].SYNC_IN_CELL/U_RISING)| 2     |
+st4/stage2/stage3/over                                              | NONE(st2/U0/I_VIO/GEN_SYNC_IN[48].SYNC_IN_CELL/U_RISING)   | 2     |
+st4/stage1/nos_1                                                    | NONE(st2/U0/I_VIO/GEN_SYNC_IN[49].SYNC_IN_CELL/U_RISING)   | 2     |
+N1                                                                  | NONE(st2/U0/I_VIO/GEN_SYNC_IN[50].SYNC_IN_CELL/U_RISING)   | 2     |
+data<51>(st4/o<0>1:O)                                               | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[51].SYNC_IN_CELL/U_RISING)| 2     |
+data<52>(st4/o<1>1:O)                                               | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[52].SYNC_IN_CELL/U_RISING)| 2     |
+data<53>(st4/o<2>1:O)                                               | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[53].SYNC_IN_CELL/U_RISING)| 2     |
+data<54>(st4/o<3>1:O)                                               | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[54].SYNC_IN_CELL/U_RISING)| 2     |
+data<55>(st4/o<4>1:O)                                               | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[55].SYNC_IN_CELL/U_RISING)| 2     |
+data<56>(st4/o<5>1:O)                                               | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[56].SYNC_IN_CELL/U_RISING)| 2     |
+data<57>(st4/o<6>1:O)                                               | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[57].SYNC_IN_CELL/U_RISING)| 2     |
+data<58>(st4/o<7>1:O)                                               | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[58].SYNC_IN_CELL/U_RISING)| 2     |
+data<59>(st4/o<8>1:O)                                               | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[59].SYNC_IN_CELL/U_RISING)| 2     |
+data<60>(st4/o<9>1:O)                                               | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[60].SYNC_IN_CELL/U_RISING)| 2     |
+data<61>(st4/o<10>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[61].SYNC_IN_CELL/U_RISING)| 2     |
+data<62>(st4/o<11>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[62].SYNC_IN_CELL/U_RISING)| 2     |
+data<63>(st4/o<12>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[63].SYNC_IN_CELL/U_RISING)| 2     |
+data<64>(st4/o<13>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[64].SYNC_IN_CELL/U_RISING)| 2     |
+data<65>(st4/o<14>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[65].SYNC_IN_CELL/U_RISING)| 2     |
+data<66>(st4/o<15>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[66].SYNC_IN_CELL/U_RISING)| 2     |
+data<67>(st4/o<16>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[67].SYNC_IN_CELL/U_RISING)| 2     |
+data<68>(st4/o<17>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[68].SYNC_IN_CELL/U_RISING)| 2     |
+data<69>(st4/o<18>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[69].SYNC_IN_CELL/U_RISING)| 2     |
+data<70>(st4/o<19>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[70].SYNC_IN_CELL/U_RISING)| 2     |
+data<71>(st4/o<20>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[71].SYNC_IN_CELL/U_RISING)| 2     |
+data<72>(st4/o<21>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[72].SYNC_IN_CELL/U_RISING)| 2     |
+data<73>(st4/o<22>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[73].SYNC_IN_CELL/U_RISING)| 2     |
+data<74>(st4/o<23>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[74].SYNC_IN_CELL/U_RISING)| 2     |
+data<75>(st4/o<24>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[75].SYNC_IN_CELL/U_RISING)| 2     |
+data<76>(st4/o<25>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[76].SYNC_IN_CELL/U_RISING)| 2     |
+data<77>(st4/o<26>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[77].SYNC_IN_CELL/U_RISING)| 2     |
+data<78>(st4/o<27>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[78].SYNC_IN_CELL/U_RISING)| 2     |
+data<79>(st4/o<28>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[79].SYNC_IN_CELL/U_RISING)| 2     |
+data<80>(st4/o<29>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[80].SYNC_IN_CELL/U_RISING)| 2     |
+data<81>(st4/o<30>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[81].SYNC_IN_CELL/U_RISING)| 2     |
+data<82>(st4/o<31>1:O)                                              | NONE(*)(st2/U0/I_VIO/GEN_SYNC_IN[82].SYNC_IN_CELL/U_RISING)| 2     |
+st1/CONTROL1<13>(st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_LCE:O)| NONE(*)(st3/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC)           | 1     |
+st4/stage1/pos_1                                                    | NONE(st4/stage1/nos_0)                                     | 2     |
+--------------------------------------------------------------------+------------------------------------------------------------+-------+
+(*) These 81 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                     | Buffer(FF name)                                                                                                  | Load  |
+---------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------+
+st2/U0/I_VIO/RESET(st2/U0/I_VIO/reset_f_edge/I_H2L.U_DOUT:Q)                                       | NONE(st2/U0/I_VIO/GEN_SYNC_IN[0].SYNC_IN_CELL/U_FALLING)                                                         | 166   |
+st3/N0(st3/XST_GND:G)                                                                              | NONE(st3/U0/I_DQ.G_DW[0].U_DQ)                                                                                   | 150   |
+st1/U0/U_ICON/U_CMD/iSEL_n(st1/U0/U_ICON/U_CMD/U_SEL_n:O)                                          | NONE(st1/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET)                                                            | 10    |
+st3/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/iCLR(st3/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/U_CLEAR:O)        | NONE(st3/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT0)                                                              | 4     |
+st3/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/iCLR(st3/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_CLEAR:O)      | NONE(st3/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0)                                                             | 4     |
+st3/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/iCLR(st3/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_CLEAR:O)              | NONE(st3/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_DOUT0)                                                                 | 4     |
+st1/CONTROL1<20>(st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[0].U_HCE:O)                               | NONE(st3/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/F_TW[0].U_TREG)| 2     |
+st3/U0/I_YES_D.U_ILA/iARM(st3/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD:Q)             | NONE(st3/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE)                                                                   | 2     |
+st1/CONTROL1<13>(st1/U0/U_ICON/U_CTRL_OUT/F_NCP[1].F_CMD[9].U_LCE:O)                               | NONE(st3/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDPE)                                                                   | 1     |
+st1/U0/U_ICON/iSEL_n(st1/U0/U_ICON/U_iSEL_n:O)                                                     | NONE(st1/U0/U_ICON/U_iDATA_CMD)                                                                                  | 1     |
+st3/U0/I_YES_D.U_ILA/U_STAT/ACTRESET_pulse(st3/U0/I_YES_D.U_ILA/U_STAT/U_RESET_EDGE/I_H2L.U_DOUT:Q)| NONE(st3/U0/I_YES_D.U_ILA/U_STAT/U_RISING)                                                                       | 1     |
+st3/U0/I_YES_D.U_ILA/iRESET<1>(st3/U0/I_YES_D.U_ILA/U_RST/G_RST[1].U_RST:Q)                        | NONE(st3/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG)                                | 1     |
+---------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 8.703ns (Maximum Frequency: 114.903MHz)
+   Minimum input arrival time before clock: 7.564ns
+   Maximum output required time after clock: 0.514ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'st1/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1'
+  Clock period: 8.703ns (frequency: 114.903MHz)
+  Total number of paths / destination ports: 11245 / 1440
+-------------------------------------------------------------------------
+Delay:               8.703ns (Levels of Logic = 9)
+  Source:            st3/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i (RAM)
+  Destination:       st1/U0/U_ICON/U_TDO_reg (FF)
+  Source Clock:      st1/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+  Destination Clock: st1/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+
+  Data Path: st3/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i to st1/U0/U_ICON/U_TDO_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S1_S36:CLKA->DOA0    1   2.436   0.426  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s32_if.ram_rt1_s1_s32_i (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<0>)
+     LUT3:I1->O            1   0.612   0.000  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I3.U_MUX8/Mmux_O_7 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I3.U_MUX8/Mmux_O_7)
+     MUXF5:I0->O           1   0.278   0.357  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I3.U_MUX8/Mmux_O_5_f5 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I3.U_MUX8/Mmux_O_5_f5)
+     INV:I->O              1   0.612   0.000  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/muxAddrFF<2>2_INV_0 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/muxAddrFF<2>2)
+     MUXF5:I0->O           1   0.278   0.426  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/muxAddrFF<2>_f5 (U0/I_YES_D.U_ILA/iDATA_DOUT)
+     LUT3:I1->O            1   0.612   0.387  U0/I_YES_D.U_ILA/U_DOUT (CONTROL<3>)
+     end scope: 'st3'
+     begin scope: 'st1'
+     LUT4:I2->O            1   0.612   0.509  U0/U_ICON/iCORE_ID<1>1 (U0/U_ICON/iCORE_ID<1>1)
+     LUT2:I0->O            1   0.612   0.000  U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O_4 (U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O_4)
+     MUXF5:I0->O           1   0.278   0.000  U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O_2_f5 (U0/U_ICON/iTDO_next)
+     FDE:D                     0.268          U0/U_ICON/U_TDO_reg
+    ----------------------------------------
+    Total                      8.703ns (6.598ns logic, 2.105ns route)
+                                       (75.8% logic, 24.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'st1/U0/iUPDATE_OUT'
+  Clock period: 2.202ns (frequency: 454.060MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.202ns (Levels of Logic = 1)
+  Source:            st1/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:       st1/U0/U_ICON/U_iDATA_CMD (FF)
+  Source Clock:      st1/U0/iUPDATE_OUT rising
+  Destination Clock: st1/U0/iUPDATE_OUT rising
+
+  Data Path: st1/U0/U_ICON/U_iDATA_CMD to st1/U0/U_ICON/U_iDATA_CMD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.514   0.451  U0/U_ICON/U_iDATA_CMD (U0/U_ICON/iDATA_CMD)
+     INV:I->O              1   0.612   0.357  U0/U_ICON/U_iDATA_CMD_n (U0/U_ICON/iDATA_CMD_n)
+     FDC:D                     0.268          U0/U_ICON/U_iDATA_CMD
+    ----------------------------------------
+    Total                      2.202ns (1.394ns logic, 0.808ns route)
+                                       (63.3% logic, 36.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.068ns (frequency: 245.797MHz)
+  Total number of paths / destination ports: 1773 / 1482
+-------------------------------------------------------------------------
+Delay:               4.068ns (Levels of Logic = 2)
+  Source:            st3/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_GEN_DELAY[1].U_FD (FF)
+  Destination:       st3/U0/I_YES_D.U_ILA/U_RST/G_RST[0].U_RST (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: st3/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_GEN_DELAY[1].U_FD to st3/U0/I_YES_D.U_ILA/U_RST/G_RST[0].U_RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.514   0.532  U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_GEN_DELAY[1].U_FD (U0/I_YES_D.U_ILA/U_RST/HALT_pulse)
+     LUT3:I0->O            1   0.612   0.360  U0/I_YES_D.U_ILA/U_RST/U_PRST1 (U0/I_YES_D.U_ILA/U_RST/PRE_RESET1)
+     LUT4:I3->O            8   0.612   0.643  U0/I_YES_D.U_ILA/U_RST/U_PRST0 (U0/I_YES_D.U_ILA/U_RST/PRE_RESET0)
+     FDS:S                     0.795          U0/I_YES_D.U_ILA/U_RST/G_RST[0].U_RST
+    ----------------------------------------
+    Total                      4.068ns (2.533ns logic, 1.535ns route)
+                                       (62.3% logic, 37.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'st1/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1'
+  Total number of paths / destination ports: 902 / 846
+-------------------------------------------------------------------------
+Offset:              7.564ns (Levels of Logic = 7)
+  Source:            st1/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS:SHIFT (PAD)
+  Destination:       st2/U0/I_VIO/U_STATUS/U_TDO (FF)
+  Destination Clock: st1/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+
+  Data Path: st1/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS:SHIFT to st2/U0/I_VIO/U_STATUS/U_TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN3:SHIFT    3   0.000   0.520  U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS (U0/iSHIFT_OUT)
+     LUT2:I1->O           64   0.612   1.233  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
+     LUT4:I0->O            1   0.612   0.509  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_HCE (CONTROL0<33>)
+     end scope: 'st1'
+     begin scope: 'st2'
+     LUT4:I0->O            1   0.612   0.509  U0/I_VIO/U_STATUS/iSTAT_CNT<7>37 (U0/I_VIO/U_STATUS/iSTAT_CNT<7>37)
+     LUT3:I0->O            1   0.612   0.426  U0/I_VIO/U_STATUS/iSTAT_CNT<7>91_SW0 (N36)
+     LUT4:I1->O            1   0.612   0.426  U0/I_VIO/U_STATUS/iSTAT_CNT<7>91 (U0/I_VIO/U_STATUS/iSTAT_CNT<7>91)
+     LUT4:I1->O            1   0.612   0.000  U0/I_VIO/U_STATUS/iSTAT_CNT<7>221 (U0/I_VIO/U_STATUS/TDO_next)
+     FDE:D                     0.268          U0/I_VIO/U_STATUS/U_TDO
+    ----------------------------------------
+    Total                      7.564ns (3.940ns logic, 3.624ns route)
+                                       (52.1% logic, 47.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'st1/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.514ns (Levels of Logic = 0)
+  Source:            st1/U0/U_ICON/U_TDO_reg (FF)
+  Destination:       st1/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS:TDO1 (PAD)
+  Source Clock:      st1/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising
+
+  Data Path: st1/U0/U_ICON/U_TDO_reg to st1/U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS:TDO1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              0   0.514   0.000  U0/U_ICON/U_TDO_reg (U0/U_ICON/iTDO)
+    BSCAN_SPARTAN3:TDO1        0.000          U0/U_ICON/I_YES_BSCAN.U_BS/I_SPARTAN3.ISYN.I_USE_SOFTBSCAN_EQ0.I_3.U_BS
+    ----------------------------------------
+    Total                      0.514ns (0.514ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 19.86 secs
+ 
+--> 
+
+Total memory usage is 284572 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   87 (   0 filtered)
+Number of infos    :  171 (   0 filtered)
+
